@@ -7,7 +7,7 @@
       <Entity type="Class">
         <Name>Animal</Name>
         <Access>Public</Access>
-        <Location left="765" top="299" />
+        <Location left="603" top="293" />
         <Size width="162" height="230" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private bool adopted</Member>
@@ -67,7 +67,7 @@
       <Entity type="Class">
         <Name>ShelterManager</Name>
         <Access>Public</Access>
-        <Location left="220" top="299" />
+        <Location left="58" top="293" />
         <Size width="423" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Field">list&lt;Adoption&gt; Adoptions</Member>
@@ -82,7 +82,7 @@
       <Entity type="Enum">
         <Name>Gender</Name>
         <Access>Public</Access>
-        <Location left="1037" top="299" />
+        <Location left="837" top="293" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Value>Male</Value>
@@ -91,18 +91,32 @@
       <Entity type="Enum">
         <Name>Size</Name>
         <Access>Public</Access>
-        <Location left="1249" top="299" />
+        <Location left="1037" top="293" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Value>Small</Value>
         <Value>Medium</Value>
         <Value>Large</Value>
       </Entity>
+      <Entity type="Enum">
+        <Name>AnimalType</Name>
+        <Access>Public</Access>
+        <Location left="1250" top="293" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Value>Dog</Value>
+        <Value>Cat</Value>
+        <Value>Bird</Value>
+      </Entity>
     </Entities>
     <Relationships>
       <Relationship type="Generalization" first="1" second="0">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>713</X>
+          <Y>548</Y>
+        </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="2" second="0">
         <StartOrientation>Vertical</StartOrientation>
@@ -111,14 +125,22 @@
       <Relationship type="Generalization" first="3" second="0">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1092</X>
+          <Y>576</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>713</X>
+          <Y>548</Y>
+        </BendPoint>
       </Relationship>
       <Relationship type="Association" first="5" second="4">
         <Label>has</Label>
-        <StartOrientation>Horizontal</StartOrientation>
+        <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>194</X>
-          <Y>421</Y>
+          <X>144</X>
+          <Y>540</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>144</X>
@@ -135,8 +157,8 @@
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="False">
-          <X>724</X>
-          <Y>415</Y>
+          <X>562</X>
+          <Y>409</Y>
         </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
@@ -154,8 +176,8 @@
           <Y>576</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
-          <X>1335</X>
-          <Y>544</Y>
+          <X>1185</X>
+          <Y>539</Y>
         </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
