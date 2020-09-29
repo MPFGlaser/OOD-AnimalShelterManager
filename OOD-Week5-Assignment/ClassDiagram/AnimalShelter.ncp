@@ -7,10 +7,10 @@
       <Entity type="Class">
         <Name>Animal</Name>
         <Access>Public</Access>
-        <Location left="603" top="293" />
+        <Location left="618" top="41" />
         <Size width="162" height="264" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">int id</Member>
+        <Member type="Field">private int id</Member>
         <Member type="Field">string name</Member>
         <Member type="Field">int age</Member>
         <Member type="Field">gender gender</Member>
@@ -26,7 +26,7 @@
       <Entity type="Class">
         <Name>Dog</Name>
         <Access>Public</Access>
-        <Location left="283" top="601" />
+        <Location left="298" top="349" />
         <Size width="325" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Constructor">public Dog(string name, int age, gender gender, bool adopted)</Member>
@@ -36,7 +36,7 @@
       <Entity type="Class">
         <Name>Cat</Name>
         <Access>Public</Access>
-        <Location left="661" top="601" />
+        <Location left="676" top="349" />
         <Size width="325" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Constructor">public Cat(string name, int age, gender gender, bool adopted)</Member>
@@ -46,7 +46,7 @@
       <Entity type="Class">
         <Name>Bird</Name>
         <Access>Public</Access>
-        <Location left="1037" top="601" />
+        <Location left="1052" top="349" />
         <Size width="378" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Field">size size</Member>
@@ -58,18 +58,24 @@
       <Entity type="Class">
         <Name>Adoption</Name>
         <Access>Public</Access>
-        <Location left="58" top="601" />
-        <Size width="162" height="216" />
+        <Location left="73" top="349" />
+        <Size width="175" height="230" />
         <Collapsed>False</Collapsed>
         <Member type="Field">list&lt;Animal&gt; animals</Member>
+        <Member type="Field">int id</Member>
+        <Member type="Field">customer customer</Member>
+        <Member type="Constructor">public Adoption()</Member>
         <Member type="Method">public string ViewAdoptionInfo()</Member>
         <Member type="Method">private void CalculateFee()</Member>
+        <Member type="Method">public override string ToString()</Member>
+        <Member type="Method">public void AddAnimal(animal a)</Member>
+        <Member type="Method">public void RemoveAnimal(animal a)</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>ShelterManager</Name>
         <Access>Public</Access>
-        <Location left="58" top="293" />
+        <Location left="73" top="41" />
         <Size width="423" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Field">list&lt;Adoption&gt; Adoptions</Member>
@@ -84,7 +90,7 @@
       <Entity type="Enum">
         <Name>Gender</Name>
         <Access>Public</Access>
-        <Location left="837" top="293" />
+        <Location left="852" top="41" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Value>Male</Value>
@@ -93,7 +99,7 @@
       <Entity type="Enum">
         <Name>Size</Name>
         <Access>Public</Access>
-        <Location left="1037" top="293" />
+        <Location left="1052" top="41" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Value>Small</Value>
@@ -103,12 +109,26 @@
       <Entity type="Enum">
         <Name>AnimalType</Name>
         <Access>Public</Access>
-        <Location left="1250" top="293" />
+        <Location left="1265" top="41" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Value>Dog</Value>
         <Value>Cat</Value>
         <Value>Bird</Value>
+      </Entity>
+      <Entity type="Class">
+        <Name>Customer</Name>
+        <Access>Public</Access>
+        <Location left="73" top="617" />
+        <Size width="367" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string name</Member>
+        <Member type="Field">string address</Member>
+        <Member type="Field">string zipCode</Member>
+        <Member type="Field">string city</Member>
+        <Member type="Method">public string ViewCustomerInfo()</Member>
+        <Member type="Constructor">public Customer(string name, string address, string zipcode, string city)</Member>
+        <Modifier>None</Modifier>
       </Entity>
     </Entities>
     <Relationships>
@@ -116,28 +136,28 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
-          <X>713</X>
-          <Y>582</Y>
+          <X>728</X>
+          <Y>330</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="2" second="0">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>713</X>
-          <Y>576</Y>
+          <X>728</X>
+          <Y>324</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="3" second="0">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>1092</X>
-          <Y>576</Y>
+          <X>1107</X>
+          <Y>324</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
-          <X>713</X>
-          <Y>582</Y>
+          <X>728</X>
+          <Y>330</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Association" first="5" second="4">
@@ -145,12 +165,12 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>144</X>
-          <Y>540</Y>
+          <X>159</X>
+          <Y>302</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
-          <X>144</X>
-          <Y>540</Y>
+          <X>159</X>
+          <Y>288</Y>
         </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
@@ -163,8 +183,8 @@
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="False">
-          <X>562</X>
-          <Y>409</Y>
+          <X>577</X>
+          <Y>157</Y>
         </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
@@ -178,12 +198,12 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>1151</X>
-          <Y>576</Y>
+          <X>1166</X>
+          <Y>324</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
-          <X>1151</X>
-          <Y>539</Y>
+          <X>1166</X>
+          <Y>287</Y>
         </BendPoint>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
@@ -195,6 +215,34 @@
         <EndOrientation>Horizontal</EndOrientation>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="9">
+        <Label>has</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>270</X>
+          <Y>282</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndRole>- customers</EndRole>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="4" second="9">
+        <Label>has</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>47</X>
+          <Y>470</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndRole>- customer</EndRole>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
       </Relationship>
     </Relationships>
   </ProjectItem>
