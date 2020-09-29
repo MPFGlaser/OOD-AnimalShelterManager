@@ -172,11 +172,11 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>1335</X>
+          <X>1151</X>
           <Y>576</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
-          <X>1185</X>
+          <X>1151</X>
           <Y>539</Y>
         </BendPoint>
         <Direction>Unidirectional</Direction>
