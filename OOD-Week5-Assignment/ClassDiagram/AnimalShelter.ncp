@@ -8,17 +8,19 @@
         <Name>Animal</Name>
         <Access>Public</Access>
         <Location left="603" top="293" />
-        <Size width="162" height="230" />
+        <Size width="162" height="264" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">private bool adopted</Member>
+        <Member type="Field">int id</Member>
         <Member type="Field">string name</Member>
         <Member type="Field">int age</Member>
         <Member type="Field">gender gender</Member>
-        <Member type="Property">public bool adopted { get; set; }</Member>
+        <Member type="Field">private bool adopted</Member>
+        <Member type="Property">public int Id { get; }</Member>
         <Member type="Property">public string Name { get; set; }</Member>
         <Member type="Property">public int Age { get; set; }</Member>
         <Member type="Property">public gender Gender { get; set; }</Member>
-        <Member type="Method">public string ToString()</Member>
+        <Member type="Property">public bool Adopted { get; set; }</Member>
+        <Member type="Method">public abstract string ToString()</Member>
         <Modifier>Abstract</Modifier>
       </Entity>
       <Entity type="Class">
@@ -115,12 +117,16 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
           <X>713</X>
-          <Y>548</Y>
+          <Y>582</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="2" second="0">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>713</X>
+          <Y>576</Y>
+        </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="3" second="0">
         <StartOrientation>Vertical</StartOrientation>
@@ -131,7 +137,7 @@
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>713</X>
-          <Y>548</Y>
+          <Y>582</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Association" first="5" second="4">
