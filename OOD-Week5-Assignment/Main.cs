@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OOD_Week5_Assignment.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,10 +16,12 @@ namespace OOD_Week5_Assignment
         private NewAnimal newAnimal;
         private NewCustomer newCustomer;
         private NewAdoption newAdoption;
+        private ShelterManager shelterManager;
 
         public Main()
         {
             InitializeComponent();
+            shelterManager = new ShelterManager();
         }
 
         private void button1_Click(object sender, EventArgs e)
