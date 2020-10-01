@@ -38,5 +38,35 @@ namespace OOD_Week5_Assignment
             newAdoption = new NewAdoption();
             newAdoption.Show(this);
         }
+
+        private void buttonLoadData_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonSaveData_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAdoptionInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAnimalInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBoxAdoptions_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBoxAnimals_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -33,6 +33,10 @@
             this.buttonNewAdoption = new System.Windows.Forms.Button();
             this.buttonSaveData = new System.Windows.Forms.Button();
             this.buttonLoadData = new System.Windows.Forms.Button();
+            this.listBoxAdoptions = new System.Windows.Forms.ListBox();
+            this.listBoxAnimals = new System.Windows.Forms.ListBox();
+            this.buttonAdoptionInfo = new System.Windows.Forms.Button();
+            this.buttonAnimalInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonNewAnimal
@@ -73,6 +77,7 @@
             this.buttonSaveData.TabIndex = 3;
             this.buttonSaveData.Text = "Save";
             this.buttonSaveData.UseVisualStyleBackColor = true;
+            this.buttonSaveData.Click += new System.EventHandler(this.buttonSaveData_Click);
             // 
             // buttonLoadData
             // 
@@ -82,12 +87,55 @@
             this.buttonLoadData.TabIndex = 4;
             this.buttonLoadData.Text = "Load";
             this.buttonLoadData.UseVisualStyleBackColor = true;
+            this.buttonLoadData.Click += new System.EventHandler(this.buttonLoadData_Click);
+            // 
+            // listBoxAdoptions
+            // 
+            this.listBoxAdoptions.FormattingEnabled = true;
+            this.listBoxAdoptions.Location = new System.Drawing.Point(12, 41);
+            this.listBoxAdoptions.Name = "listBoxAdoptions";
+            this.listBoxAdoptions.Size = new System.Drawing.Size(263, 342);
+            this.listBoxAdoptions.TabIndex = 5;
+            this.listBoxAdoptions.SelectedIndexChanged += new System.EventHandler(this.listBoxAdoptions_SelectedIndexChanged);
+            // 
+            // listBoxAnimals
+            // 
+            this.listBoxAnimals.FormattingEnabled = true;
+            this.listBoxAnimals.Location = new System.Drawing.Point(281, 41);
+            this.listBoxAnimals.Name = "listBoxAnimals";
+            this.listBoxAnimals.Size = new System.Drawing.Size(263, 342);
+            this.listBoxAnimals.TabIndex = 6;
+            this.listBoxAnimals.SelectedIndexChanged += new System.EventHandler(this.listBoxAnimals_SelectedIndexChanged);
+            // 
+            // buttonAdoptionInfo
+            // 
+            this.buttonAdoptionInfo.Location = new System.Drawing.Point(200, 389);
+            this.buttonAdoptionInfo.Name = "buttonAdoptionInfo";
+            this.buttonAdoptionInfo.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdoptionInfo.TabIndex = 7;
+            this.buttonAdoptionInfo.Text = "View info";
+            this.buttonAdoptionInfo.UseVisualStyleBackColor = true;
+            this.buttonAdoptionInfo.Click += new System.EventHandler(this.buttonAdoptionInfo_Click);
+            // 
+            // buttonAnimalInfo
+            // 
+            this.buttonAnimalInfo.Location = new System.Drawing.Point(469, 389);
+            this.buttonAnimalInfo.Name = "buttonAnimalInfo";
+            this.buttonAnimalInfo.Size = new System.Drawing.Size(75, 23);
+            this.buttonAnimalInfo.TabIndex = 8;
+            this.buttonAnimalInfo.Text = "View info";
+            this.buttonAnimalInfo.UseVisualStyleBackColor = true;
+            this.buttonAnimalInfo.Click += new System.EventHandler(this.buttonAnimalInfo_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonAnimalInfo);
+            this.Controls.Add(this.buttonAdoptionInfo);
+            this.Controls.Add(this.listBoxAnimals);
+            this.Controls.Add(this.listBoxAdoptions);
             this.Controls.Add(this.buttonLoadData);
             this.Controls.Add(this.buttonSaveData);
             this.Controls.Add(this.buttonNewAdoption);
@@ -106,6 +154,10 @@
         private System.Windows.Forms.Button buttonNewAdoption;
         private System.Windows.Forms.Button buttonSaveData;
         private System.Windows.Forms.Button buttonLoadData;
+        private System.Windows.Forms.ListBox listBoxAdoptions;
+        private System.Windows.Forms.ListBox listBoxAnimals;
+        private System.Windows.Forms.Button buttonAdoptionInfo;
+        private System.Windows.Forms.Button buttonAnimalInfo;
     }
 }
 
