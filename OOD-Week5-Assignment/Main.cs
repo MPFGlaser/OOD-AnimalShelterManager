@@ -100,6 +100,7 @@ namespace OOD_Week5_Assignment
         {
             if(shelterManager.GetCustomers() != null)
             {
+                listBoxAdoptions.Items.Clear();
                 foreach(Customer c in shelterManager.GetCustomers())
                 {
                     listBoxAdoptions.Items.Add(c.Name);
@@ -108,9 +109,11 @@ namespace OOD_Week5_Assignment
 
             if (shelterManager.GetAnimals() != null)
             {
+                listBoxAnimals.Items.Clear();
                 foreach(Animal a in shelterManager.GetAnimals())
                 {
-                    listBoxAnimals.Items.Add(a.GetType().ToString() + " " + a.Name);
+                    string type = a.GetType().ToString().Split('.').Last();
+                    listBoxAnimals.Items.Add(type + " " + a.Name + " Age: " + a.Age.ToString());
                 }
             }
         }
