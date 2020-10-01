@@ -14,6 +14,7 @@ namespace OOD_Week5_Assignment
     {
         private NewAnimal newAnimal;
         private NewCustomer newCustomer;
+        private NewAdoption newAdoption;
 
         public Main()
         {
@@ -30,6 +31,12 @@ namespace OOD_Week5_Assignment
         {
             newCustomer = new NewCustomer();
             newCustomer.Show(this);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            newAdoption = new NewAdoption();
+            newAdoption.Show(this);
         }
     }
 }

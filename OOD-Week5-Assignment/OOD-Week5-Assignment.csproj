@@ -52,6 +52,12 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewAdoption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewAdoption.Designer.cs">
+      <DependentUpon>NewAdoption.cs</DependentUpon>
+    </Compile>
     <Compile Include="NewCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewAdoption.resx">
+      <DependentUpon>NewAdoption.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NewCustomer.resx">
       <DependentUpon>NewCustomer.cs</DependentUpon>
