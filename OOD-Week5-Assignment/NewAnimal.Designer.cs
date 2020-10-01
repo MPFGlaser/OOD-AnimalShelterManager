@@ -45,12 +45,14 @@
             // 
             // comboBoxAnimalType
             // 
-            this.comboBoxAnimalType.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.comboBoxAnimalType.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.comboBoxAnimalType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAnimalType.FormattingEnabled = true;
             this.comboBoxAnimalType.Location = new System.Drawing.Point(15, 25);
             this.comboBoxAnimalType.Name = "comboBoxAnimalType";
             this.comboBoxAnimalType.Size = new System.Drawing.Size(184, 21);
             this.comboBoxAnimalType.TabIndex = 0;
+            this.comboBoxAnimalType.SelectedIndexChanged += new System.EventHandler(this.comboBoxAnimalType_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -76,6 +78,7 @@
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(184, 20);
             this.textBoxName.TabIndex = 3;
+            this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
             // label3
             // 
@@ -104,6 +107,7 @@
             // 
             // comboBoxSize
             // 
+            this.comboBoxSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSize.FormattingEnabled = true;
             this.comboBoxSize.Location = new System.Drawing.Point(251, 25);
             this.comboBoxSize.Name = "comboBoxSize";
@@ -135,15 +139,18 @@
             this.buttonConfirm.TabIndex = 10;
             this.buttonConfirm.Text = "Confirm";
             this.buttonConfirm.UseVisualStyleBackColor = true;
+            this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
             // 
             // buttonCancel
             // 
+            this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonCancel.Location = new System.Drawing.Point(15, 465);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 11;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // NewAnimal
             // 
