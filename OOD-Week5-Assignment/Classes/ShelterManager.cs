@@ -72,5 +72,10 @@ namespace OOD_Week5_Assignment.Classes
                 customers.Add(c);
             }
         }
+
+        public List<Customer> GetCustomers()
+        {
+            return customers;
+        }
     }
 }

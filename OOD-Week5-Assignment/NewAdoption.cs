@@ -13,10 +13,10 @@ namespace OOD_Week5_Assignment
 {
     public partial class NewAdoption : Form
     {
-        public NewAdoption()
+        public NewAdoption(List<Customer> customers, List<Animal> animals)
         {
             InitializeComponent();
-            GetCustomers();
+            PopulateComboBoxCustomers(customers);
         }
 
         private void buttonConfirm_Click(object sender, EventArgs e)
@@ -29,9 +29,22 @@ namespace OOD_Week5_Assignment
             this.Close();
         }
 
-        private void GetCustomers()
+        private void PopulateComboBoxCustomers(List<Customer> customers)
         {
-            
+            foreach (Customer c in customers)
+            {
+                comboBoxCustomerName.Items.Add(c);
+            }
+        }
+
+        private void PopulateComboBoxAnimals(List<Animal> animals)
+        {
+            foreach (Animal a in animals)
+            {
+                comboBoxAnimal1.Items.Add(a);
+                comboBoxAnimal2.Items.Add(a);
+                comboBoxAnimal3.Items.Add(a);
+            }
         }
     }
 }

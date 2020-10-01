@@ -60,6 +60,7 @@ namespace OOD_Week5_Assignment.Classes
             this.adopted = adopted;
             this.notes = notes;
         }
+
         public override string ToString()
         {
             return base.ToString();
