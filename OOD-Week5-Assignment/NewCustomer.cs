@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOD_Week5_Assignment
 {
-    public partial class Form1 : Form
+    public partial class NewCustomer : Form
     {
-        public Form1()
+        public NewCustomer()
         {
             InitializeComponent();
         }
