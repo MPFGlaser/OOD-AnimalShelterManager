@@ -26,5 +26,10 @@ namespace OOD_Week5_Assignment.Classes
         public gender Gender { get; set; }
         public bool Adopted { get; set; }
         public string Notes { get; set; }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }
