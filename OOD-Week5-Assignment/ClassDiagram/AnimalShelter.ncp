@@ -8,49 +8,51 @@
         <Name>Animal</Name>
         <Access>Public</Access>
         <Location left="618" top="41" />
-        <Size width="162" height="264" />
+        <Size width="162" height="298" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private int id</Member>
         <Member type="Field">string name</Member>
         <Member type="Field">int age</Member>
         <Member type="Field">gender gender</Member>
         <Member type="Field">private bool adopted</Member>
+        <Member type="Field">string notes</Member>
         <Member type="Property">public int Id { get; }</Member>
         <Member type="Property">public string Name { get; set; }</Member>
         <Member type="Property">public int Age { get; set; }</Member>
         <Member type="Property">public gender Gender { get; set; }</Member>
         <Member type="Property">public bool Adopted { get; set; }</Member>
+        <Member type="Property">public string Notes { get; set; }</Member>
         <Member type="Method">public abstract string ToString()</Member>
         <Modifier>Abstract</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Dog</Name>
         <Access>Public</Access>
-        <Location left="298" top="349" />
-        <Size width="325" height="216" />
+        <Location left="298" top="423" />
+        <Size width="404" height="216" />
         <Collapsed>False</Collapsed>
-        <Member type="Constructor">public Dog(string name, int age, gender gender, bool adopted)</Member>
+        <Member type="Constructor">public Dog(string name, int age, gender gender, bool adopted, string notes)</Member>
         <Member type="Method">public string ToString()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Cat</Name>
         <Access>Public</Access>
-        <Location left="676" top="349" />
-        <Size width="325" height="216" />
+        <Location left="722" top="424" />
+        <Size width="385" height="216" />
         <Collapsed>False</Collapsed>
-        <Member type="Constructor">public Cat(string name, int age, gender gender, bool adopted)</Member>
+        <Member type="Constructor">public Cat(string name, int age, gender gender, bool adopted, string notes)</Member>
         <Member type="Method">public string ToString()</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Bird</Name>
         <Access>Public</Access>
-        <Location left="1052" top="349" />
-        <Size width="378" height="216" />
+        <Location left="1135" top="423" />
+        <Size width="436" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Field">size size</Member>
-        <Member type="Constructor">public Bird(string name, int age, gender gender, bool adopted, size size)</Member>
+        <Member type="Constructor">public Bird(string name, int age, gender gender, bool adopted, string notes, size size)</Member>
         <Member type="Property">public size Size { get; set; }</Member>
         <Member type="Method">public string ToString()</Member>
         <Modifier>None</Modifier>
@@ -119,7 +121,7 @@
       <Entity type="Class">
         <Name>Customer</Name>
         <Access>Public</Access>
-        <Location left="73" top="617" />
+        <Location left="73" top="693" />
         <Size width="367" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Field">string name</Member>
@@ -137,27 +139,31 @@
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="False">
           <X>728</X>
-          <Y>330</Y>
+          <Y>364</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="2" second="0">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
+          <X>774</X>
+          <Y>399</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
           <X>728</X>
-          <Y>324</Y>
+          <Y>365</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Generalization" first="3" second="0">
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>1107</X>
-          <Y>324</Y>
+          <X>1190</X>
+          <Y>398</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>728</X>
-          <Y>330</Y>
+          <Y>364</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Association" first="5" second="4">
@@ -193,13 +199,11 @@
         <EndMultiplicity>0..*</EndMultiplicity>
       </Relationship>
       <Relationship type="Association" first="3" second="7">
-        <Label>
-        </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>1166</X>
-          <Y>324</Y>
+          <X>1249</X>
+          <Y>398</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>1166</X>
@@ -209,8 +213,6 @@
         <AssociationType>Association</AssociationType>
       </Relationship>
       <Relationship type="Association" first="0" second="6">
-        <Label>
-        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <Direction>Unidirectional</Direction>
