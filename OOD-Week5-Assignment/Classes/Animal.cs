@@ -17,20 +17,48 @@ namespace OOD_Week5_Assignment.Classes
         private bool adopted;
         private string notes;
 
-        public int Id { get; }
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public Gender Gender { get; set; }
-        public bool Adopted { get; set; }
-        public string Notes { get; set; }
+        public int Id
+        {
+            get { return this.id; }
+        }
+
+        public string Name
+        {
+            get { return this.name; }
+            set { this.notes = value; }
+        }
+
+        public int Age
+        {
+            get { return this.age; }
+            set { this.age = value; }
+        }
+
+        public Gender Gender
+        {
+            get { return this.gender; }
+            set { this.gender = value; }
+        }
+
+        public bool Adopted
+        {
+            get { return this.adopted; }
+            set { this.adopted = value; }
+        }
+
+        public string Notes
+        {
+            get { return this.notes; }
+            set { this.notes = value; }
+        }
 
         public Animal(string name, int age, Gender gender, bool adopted, string notes)
         {
-            name = this.name;
-            age = this.age;
-            gender = this.gender;
-            adopted = this.adopted;
-            notes = this.notes;
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.adopted = adopted;
+            this.notes = notes;
         }
         public override string ToString()
         {

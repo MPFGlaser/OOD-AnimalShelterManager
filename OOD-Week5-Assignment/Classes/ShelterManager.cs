@@ -11,6 +11,7 @@ namespace OOD_Week5_Assignment.Classes
     {
         private List<Adoption> adoptions;
         private List<Animal> animals;
+        private List<Customer> customers;
 
         public ShelterManager()
         {
@@ -51,6 +52,24 @@ namespace OOD_Week5_Assignment.Classes
             if (1 == 1)
             {
                 animals.Add(a);
+            }
+        }
+
+        public void AddAdoption()
+        {
+            Adoption a = new Adoption();
+            if(1 == 1)
+            {
+                adoptions.Add(a);
+            }
+        }
+
+        public void AddCustomer()
+        {
+            Customer c = new Customer();
+            if(1 == 1)
+            {
+                customers.Add(c);
             }
         }
     }
