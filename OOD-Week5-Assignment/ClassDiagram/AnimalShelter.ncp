@@ -38,7 +38,7 @@
       <Entity type="Class">
         <Name>Cat</Name>
         <Access>Public</Access>
-        <Location left="795" top="431" />
+        <Location left="797" top="430" />
         <Size width="385" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Constructor">public Cat(string name, int age, gender gender, bool adopted, string notes)</Member>
@@ -61,15 +61,15 @@
         <Name>Adoption</Name>
         <Access>Public</Access>
         <Location left="73" top="349" />
-        <Size width="198" height="264" />
+        <Size width="212" height="281" />
         <Collapsed>False</Collapsed>
         <Member type="Field">list&lt;Animal&gt; animals</Member>
         <Member type="Field">int id</Member>
         <Member type="Field">customer customer</Member>
         <Member type="Field">datetime adoptionMoment</Member>
-        <Member type="Property">public datetime AdoptionMoment { get; }</Member>
+        <Member type="Field">float adoptionFee</Member>
         <Member type="Constructor">public Adoption()</Member>
-        <Member type="Method">public string ViewAdoptionInfo()</Member>
+        <Member type="Method">public string GetAdoptionInfo()</Member>
         <Member type="Method">private void CalculateFee()</Member>
         <Member type="Method">public override string ToString()</Member>
         <Member type="Method">public void AddAnimal(animal a)</Member>
@@ -136,38 +136,6 @@
       </Entity>
     </Entities>
     <Relationships>
-      <Relationship type="Generalization" first="1" second="0">
-        <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Vertical</EndOrientation>
-        <BendPoint relativeToStartShape="False">
-          <X>728</X>
-          <Y>364</Y>
-        </BendPoint>
-      </Relationship>
-      <Relationship type="Generalization" first="2" second="0">
-        <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Vertical</EndOrientation>
-        <BendPoint relativeToStartShape="True">
-          <X>847</X>
-          <Y>406</Y>
-        </BendPoint>
-        <BendPoint relativeToStartShape="False">
-          <X>728</X>
-          <Y>365</Y>
-        </BendPoint>
-      </Relationship>
-      <Relationship type="Generalization" first="3" second="0">
-        <StartOrientation>Vertical</StartOrientation>
-        <EndOrientation>Vertical</EndOrientation>
-        <BendPoint relativeToStartShape="True">
-          <X>1268</X>
-          <Y>405</Y>
-        </BendPoint>
-        <BendPoint relativeToStartShape="False">
-          <X>728</X>
-          <Y>364</Y>
-        </BendPoint>
-      </Relationship>
       <Relationship type="Association" first="5" second="4">
         <Label>has</Label>
         <StartOrientation>Vertical</StartOrientation>
@@ -204,7 +172,7 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>1327</X>
+          <X>1469</X>
           <Y>405</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
@@ -225,7 +193,7 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>270</X>
+          <X>302</X>
           <Y>282</Y>
         </BendPoint>
         <Direction>Unidirectional</Direction>
@@ -247,6 +215,22 @@
         <EndRole>- customer</EndRole>
         <StartMultiplicity>1</StartMultiplicity>
         <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Generalization" first="3" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="2" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="1" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>699</X>
+          <Y>406</Y>
+        </BendPoint>
       </Relationship>
     </Relationships>
   </ProjectItem>
