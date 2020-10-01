@@ -15,7 +15,9 @@ namespace OOD_Week5_Assignment.Classes
 
         public ShelterManager()
         {
-
+            adoptions = new List<Adoption>();
+            animals = new List<Animal>();
+            customers = new List<Customer>();
         }
 
         public void SaveData()
@@ -64,9 +66,9 @@ namespace OOD_Week5_Assignment.Classes
             }
         }
 
-        public void AddCustomer()
+        public void AddCustomer(string name, string address, string zipcode, string city)
         {
-            Customer c = new Customer();
+            Customer c = new Customer(name, address, zipcode, city);
             if(1 == 1)
             {
                 customers.Add(c);

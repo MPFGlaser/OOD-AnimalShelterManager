@@ -33,7 +33,10 @@ namespace OOD_Week5_Assignment
         private void button2_Click(object sender, EventArgs e)
         {
             newCustomer = new NewCustomer();
-            newCustomer.Show(this);
+            if(newCustomer.ShowDialog() == DialogResult.OK)
+            {
+                shelterManager.AddCustomer(newCustomer.CustomerName, newCustomer.CustomerAddress, newCustomer.CustomerZipCode, newCustomer.CustomerCity) ;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
