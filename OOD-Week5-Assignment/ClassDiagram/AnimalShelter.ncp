@@ -82,7 +82,7 @@
         <Location left="73" top="41" />
         <Size width="490" height="216" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">list&lt;Adoption&gt; Adoptions</Member>
+        <Member type="Field">list&lt;Adoption&gt; adoptions</Member>
         <Member type="Field">list&lt;Animal&gt; animals</Member>
         <Member type="Method">public void SaveData()</Member>
         <Member type="Method">public void LoadData()</Member>
