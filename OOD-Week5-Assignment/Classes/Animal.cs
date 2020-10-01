@@ -10,6 +10,13 @@ namespace OOD_Week5_Assignment.Classes
     [Serializable]
     public abstract class Animal
     {
+        private int id;
+        private string name;
+        private int age;
+        private Gender gender;
+        private bool adopted;
+        private string notes;
+
         public int Id
         {
             get { return this.Id; }
@@ -17,32 +24,32 @@ namespace OOD_Week5_Assignment.Classes
 
         public string Name
         {
-            get { return this.Name; }
-            set { this.Name = value; }
+            get { return this.name; }
+            set { this.name = value; }
         }
 
         public int Age
         {
-            get { return this.Age; }
-            set { this.Age = value; }
+            get { return this.age; }
+            set { this.age = value; }
         }
 
         public Gender Gender
         {
-            get { return this.Gender; }
-            set { this.Gender = value; }
+            get { return this.gender; }
+            set { this.gender = value; }
         }
 
         public bool Adopted
         {
-            get { return this.Adopted; }
-            set { this.Adopted = value; }
+            get { return this.adopted; }
+            set { this.adopted = value; }
         }
 
         public string Notes
         {
-            get { return this.Notes; }
-            set { this.Notes = value; }
+            get { return this.notes; }
+            set { this.notes = value; }
         }
 
         public Animal(string name, int age, Gender gender, string notes)

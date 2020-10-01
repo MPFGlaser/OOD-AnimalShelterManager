@@ -37,7 +37,7 @@
             this.labelSize = new System.Windows.Forms.Label();
             this.comboBoxSize = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxNotes = new System.Windows.Forms.RichTextBox();
             this.buttonConfirm = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
@@ -125,13 +125,13 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Notes:";
             // 
-            // richTextBox1
+            // richTextBoxNotes
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(15, 180);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(357, 269);
-            this.richTextBox1.TabIndex = 9;
-            this.richTextBox1.Text = "";
+            this.richTextBoxNotes.Location = new System.Drawing.Point(15, 180);
+            this.richTextBoxNotes.Name = "richTextBoxNotes";
+            this.richTextBoxNotes.Size = new System.Drawing.Size(357, 269);
+            this.richTextBoxNotes.TabIndex = 9;
+            this.richTextBoxNotes.Text = "";
             // 
             // buttonConfirm
             // 
@@ -183,7 +183,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonConfirm);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.richTextBoxNotes);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBoxSize);
             this.Controls.Add(this.labelSize);
@@ -214,7 +214,7 @@
         private System.Windows.Forms.Label labelSize;
         private System.Windows.Forms.ComboBox comboBoxSize;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBoxNotes;
         private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.ComboBox comboBoxGender;

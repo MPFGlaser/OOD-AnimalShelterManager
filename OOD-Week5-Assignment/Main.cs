@@ -29,15 +29,22 @@ namespace OOD_Week5_Assignment
             newAnimal = new NewAnimal();
             if(newAnimal.ShowDialog() == DialogResult.OK)
             {
-                //switch (newAnimal.Type)
-                //{
-                //    case Dog:
-                //        shelterManager.AddDog(newAnimal.Name, newAnimal.Age, newAnimal.Gender, newAnimal.Notes);
-                //        break;
-                //    default:
-                //        break;
-                //}
+                switch (newAnimal.Type)
+                {
+                    case Models.AnimalType.Dog:
+                        shelterManager.AddDog(newAnimal.Name, newAnimal.Age, newAnimal.AnimalGender, newAnimal.Notes);
+                        break;
+                    case Models.AnimalType.Cat:
+                        shelterManager.AddCat(newAnimal.Name, newAnimal.Age, newAnimal.AnimalGender, newAnimal.Notes);
+                        break;
+                    case Models.AnimalType.Bird:
+                        shelterManager.AddBird(newAnimal.Name, newAnimal.Age, newAnimal.AnimalGender, newAnimal.Notes, newAnimal.AnimalSize);
+                        break;
+                    default:
+                        break;
+                }
             }
+            TestUpdateListboxes();
         }
 
         private void buttonNewCustomer_Click(object sender, EventArgs e)
@@ -47,6 +54,7 @@ namespace OOD_Week5_Assignment
             {
                 shelterManager.AddCustomer(newCustomer.Name, newCustomer.Address, newCustomer.ZipCode, newCustomer.City) ;
             }
+            TestUpdateListboxes();
         }
 
         private void buttonNewAdoption_Click(object sender, EventArgs e)
@@ -86,6 +94,25 @@ namespace OOD_Week5_Assignment
         private void listBoxAnimals_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void TestUpdateListboxes()
+        {
+            if(shelterManager.GetCustomers() != null)
+            {
+                foreach(Customer c in shelterManager.GetCustomers())
+                {
+                    listBoxAdoptions.Items.Add(c.Name);
+                }
+            }
+
+            if (shelterManager.GetAnimals() != null)
+            {
+                foreach(Animal a in shelterManager.GetAnimals())
+                {
+                    listBoxAnimals.Items.Add(a.GetType().ToString() + " " + a.Name);
+                }
+            }
         }
     }
 }

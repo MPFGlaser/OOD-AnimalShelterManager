@@ -33,6 +33,7 @@ namespace OOD_Week5_Assignment
         public int Age { get; set; }
         public Models.Size AnimalSize { get; set; }
         public Gender AnimalGender { get; set; }
+        public string Notes { get; set; }
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
@@ -47,6 +48,7 @@ namespace OOD_Week5_Assignment
             this.Age = Convert.ToInt32(numericUpDownAge.Value);
             this.AnimalSize = (Models.Size)comboBoxSize.SelectedItem;
             this.AnimalGender = (Gender)comboBoxGender.SelectedItem;
+            this.Notes = richTextBoxNotes.Text;
             this.DialogResult = DialogResult.OK;
         }
 
