@@ -13,9 +13,15 @@ namespace OOD_Week5_Assignment
 {
     public partial class NewCustomer : Form
     {
+        bool nameCorrect = false;
+        bool addressCorrect = false;
+        bool zipcodeCorrect = false;
+        bool cityCorrect = false;
+
         public NewCustomer()
         {
             InitializeComponent();
+            buttonConfirm.Enabled = false;
         }
 
         public string Name { get; set; }
@@ -31,31 +37,75 @@ namespace OOD_Week5_Assignment
 
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
-            this.Name = textBoxName.Text;
-            this.Address = textBoxAddress.Text;
-            this.ZipCode = textBoxZipCode.Text;
-            this.City = textBoxCity.Text;
             this.DialogResult = DialogResult.OK;
         }
 
         private void textBoxName_TextChanged(object sender, EventArgs e)
         {
-            this.name = textBoxName.Text;
+            ConfirmButtonEnabler();
+            if(textBoxName.Text != null)
+            {
+                this.Name = textBoxName.Text;
+                nameCorrect = true;
+            }
+            else 
+            { 
+                nameCorrect = false;  
+            }
         }
 
         private void textBoxAddress_TextChanged(object sender, EventArgs e)
         {
-            this.address = textBoxAddress.Text;
+            ConfirmButtonEnabler();
+            if (textBoxAddress.Text != null)
+            {
+                this.Address = textBoxAddress.Text;
+                addressCorrect = true;
+            }
+            else
+            {
+                addressCorrect = false;
+            }
         }
 
         private void textBoxZipCode_TextChanged(object sender, EventArgs e)
         {
-            this.zipcode = textBoxZipCode.Text;
+            ConfirmButtonEnabler();
+            if (textBoxZipCode.Text != null)
+            {
+                this.ZipCode = textBoxZipCode.Text;
+                zipcodeCorrect = true;
+            }
+            else
+            {
+                zipcodeCorrect = false;
+            }
         }
 
         private void textBoxCity_TextChanged(object sender, EventArgs e)
         {
-            this.city = textBoxCity.Text;
+            ConfirmButtonEnabler();
+            if(textBoxCity.Text != null)
+            {
+                this.City = textBoxCity.Text;
+                cityCorrect = true;
+            }
+            else
+            {
+                cityCorrect = false;
+            }
+        }
+
+        private void ConfirmButtonEnabler()
+        {
+            if(nameCorrect && addressCorrect && zipcodeCorrect && cityCorrect)
+            {
+                buttonConfirm.Enabled = true;
+            }
+            else
+            {
+                buttonConfirm.Enabled = false;
+            }
         }
     }
 }
