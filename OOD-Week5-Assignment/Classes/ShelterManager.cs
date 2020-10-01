@@ -77,5 +77,10 @@ namespace OOD_Week5_Assignment.Classes
         {
             return customers;
         }
+
+        public List<Animal> GetAnimals()
+        {
+            return animals;
+        }
     }
 }

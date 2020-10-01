@@ -16,7 +16,11 @@ namespace OOD_Week5_Assignment
         public NewAdoption(List<Customer> customers, List<Animal> animals)
         {
             InitializeComponent();
-            PopulateComboBoxCustomers(customers);
+            if(customers != null || animals != null)
+            {
+                PopulateComboBoxCustomers(customers);
+                PopulateComboBoxAnimals(animals);
+            }
         }
 
         private void buttonConfirm_Click(object sender, EventArgs e)
@@ -31,20 +35,38 @@ namespace OOD_Week5_Assignment
 
         private void PopulateComboBoxCustomers(List<Customer> customers)
         {
-            foreach (Customer c in customers)
+            try
             {
-                comboBoxCustomerName.Items.Add(c);
+                foreach (Customer c in customers)
+                {
+                    comboBoxCustomerName.Items.Add(c);
+                }
             }
+            catch (Exception)
+            {
+                MessageBox.Show("There are no customers in the system");
+                throw;
+            }
+            
         }
 
         private void PopulateComboBoxAnimals(List<Animal> animals)
         {
-            foreach (Animal a in animals)
+            try
             {
-                comboBoxAnimal1.Items.Add(a);
-                comboBoxAnimal2.Items.Add(a);
-                comboBoxAnimal3.Items.Add(a);
+                foreach (Animal a in animals)
+                {
+                    comboBoxAnimal1.Items.Add(a);
+                    comboBoxAnimal2.Items.Add(a);
+                    comboBoxAnimal3.Items.Add(a);
+                }
             }
+            catch (Exception)
+            {
+                MessageBox.Show("There are no animals in the system.");
+                throw;
+            }
+            
         }
     }
 }
