@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Adoption.cs" />
+    <Compile Include="Classes\Animal.cs" />
+    <Compile Include="Classes\Bird.cs" />
+    <Compile Include="Classes\Cat.cs" />
+    <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Classes\Dog.cs" />
+    <Compile Include="Classes\ShelterManager.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
