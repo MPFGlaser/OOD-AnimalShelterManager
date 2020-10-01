@@ -14,5 +14,7 @@ namespace OOD_Week5_Assignment.Classes
         {
             size = this.size;
         }
+
+        public Size Size { get; set; }
     }
 }
