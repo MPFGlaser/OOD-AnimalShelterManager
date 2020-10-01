@@ -24,6 +24,14 @@ namespace OOD_Week5_Assignment.Classes
         public bool Adopted { get; set; }
         public string Notes { get; set; }
 
+        public Animal(string name, int age, Gender gender, bool adopted, string notes)
+        {
+            name = this.name;
+            age = this.age;
+            gender = this.gender;
+            adopted = this.adopted;
+            notes = this.notes;
+        }
         public override string ToString()
         {
             return base.ToString();
