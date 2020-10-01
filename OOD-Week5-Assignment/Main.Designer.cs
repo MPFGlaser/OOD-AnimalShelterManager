@@ -47,7 +47,7 @@
             this.buttonNewAnimal.TabIndex = 0;
             this.buttonNewAnimal.Text = "New animal";
             this.buttonNewAnimal.UseVisualStyleBackColor = true;
-            this.buttonNewAnimal.Click += new System.EventHandler(this.button1_Click);
+            this.buttonNewAnimal.Click += new System.EventHandler(this.buttonNewAnimal_Click);
             // 
             // buttonNewCustomer
             // 
@@ -57,7 +57,7 @@
             this.buttonNewCustomer.TabIndex = 1;
             this.buttonNewCustomer.Text = "New customer";
             this.buttonNewCustomer.UseVisualStyleBackColor = true;
-            this.buttonNewCustomer.Click += new System.EventHandler(this.button2_Click);
+            this.buttonNewCustomer.Click += new System.EventHandler(this.buttonNewCustomer_Click);
             // 
             // buttonNewAdoption
             // 
@@ -67,7 +67,7 @@
             this.buttonNewAdoption.TabIndex = 2;
             this.buttonNewAdoption.Text = "New Adoption";
             this.buttonNewAdoption.UseVisualStyleBackColor = true;
-            this.buttonNewAdoption.Click += new System.EventHandler(this.button3_Click);
+            this.buttonNewAdoption.Click += new System.EventHandler(this.buttonNewAdoption_Click);
             // 
             // buttonSaveData
             // 

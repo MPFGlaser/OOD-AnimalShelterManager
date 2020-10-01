@@ -24,13 +24,23 @@ namespace OOD_Week5_Assignment
             shelterManager = new ShelterManager();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonNewAnimal_Click(object sender, EventArgs e)
         {
             newAnimal = new NewAnimal();
-            newAnimal.Show(this);
+            if(newAnimal.ShowDialog() == DialogResult.OK)
+            {
+                //switch (newAnimal.Type)
+                //{
+                //    case Dog:
+                //        shelterManager.AddDog(newAnimal.Name, newAnimal.Age, newAnimal.Gender, newAnimal.Notes);
+                //        break;
+                //    default:
+                //        break;
+                //}
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonNewCustomer_Click(object sender, EventArgs e)
         {
             newCustomer = new NewCustomer();
             if(newCustomer.ShowDialog() == DialogResult.OK)
@@ -39,10 +49,13 @@ namespace OOD_Week5_Assignment
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void buttonNewAdoption_Click(object sender, EventArgs e)
         {
             newAdoption = new NewAdoption(shelterManager.GetCustomers(), shelterManager.GetAnimals());
-            newAdoption.Show(this);
+            if(newAdoption.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
 
         private void buttonLoadData_Click(object sender, EventArgs e)

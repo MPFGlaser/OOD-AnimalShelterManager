@@ -45,12 +45,12 @@ namespace OOD_Week5_Assignment.Classes
             set { this.Notes = value; }
         }
 
-        public Animal(string name, int age, Gender gender, bool adopted, string notes)
+        public Animal(string name, int age, Gender gender, string notes)
         {
             this.Name = name;
             this.Age = age;
             this.Gender = gender;
-            this.Adopted = adopted;
+            this.Adopted = false;
             this.Notes = notes;
         }
 

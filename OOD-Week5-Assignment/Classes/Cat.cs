@@ -9,7 +9,7 @@ namespace OOD_Week5_Assignment.Classes
 {
     public class Cat : Animal
     {
-        public Cat(string name, int age, Gender gender, bool adopted, string notes) : base(name, age, gender, adopted, notes)
+        public Cat(string name, int age, Gender gender,  string notes) : base(name, age, gender, notes)
         {
 
         }

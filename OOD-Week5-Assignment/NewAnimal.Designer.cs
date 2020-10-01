@@ -33,14 +33,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownAge = new System.Windows.Forms.NumericUpDown();
             this.labelSize = new System.Windows.Forms.Label();
             this.comboBoxSize = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.buttonConfirm = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.comboBoxGender = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAge)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxAnimalType
@@ -89,12 +91,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Age:";
             // 
-            // numericUpDown1
+            // numericUpDownAge
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(15, 128);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 5;
+            this.numericUpDownAge.Location = new System.Drawing.Point(15, 128);
+            this.numericUpDownAge.Name = "numericUpDownAge";
+            this.numericUpDownAge.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDownAge.TabIndex = 5;
             // 
             // labelSize
             // 
@@ -152,6 +154,24 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
+            // comboBoxGender
+            // 
+            this.comboBoxGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxGender.FormattingEnabled = true;
+            this.comboBoxGender.Location = new System.Drawing.Point(251, 77);
+            this.comboBoxGender.Name = "comboBoxGender";
+            this.comboBoxGender.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxGender.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(248, 61);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Gender:";
+            // 
             // NewAnimal
             // 
             this.AcceptButton = this.buttonConfirm;
@@ -159,13 +179,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(384, 500);
+            this.Controls.Add(this.comboBoxGender);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBoxSize);
             this.Controls.Add(this.labelSize);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numericUpDownAge);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label2);
@@ -175,7 +197,7 @@
             this.MinimumSize = new System.Drawing.Size(400, 539);
             this.Name = "NewAnimal";
             this.Text = "NewAnimal";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAge)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,12 +210,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownAge;
         private System.Windows.Forms.Label labelSize;
         private System.Windows.Forms.ComboBox comboBoxSize;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.ComboBox comboBoxGender;
+        private System.Windows.Forms.Label label5;
     }
 }

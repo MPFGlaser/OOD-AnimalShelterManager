@@ -25,12 +25,14 @@ namespace OOD_Week5_Assignment
             comboBoxSize.Visible = false;
             comboBoxAnimalType.DataSource = Enum.GetValues(typeof(AnimalType));
             comboBoxSize.DataSource = Enum.GetValues(typeof(Models.Size));
+            comboBoxGender.DataSource = Enum.GetValues(typeof(Gender));
         }
 
-        public AnimalType Species { get; set; }
+        public AnimalType Type { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
         public Models.Size AnimalSize { get; set; }
+        public Gender AnimalGender { get; set; }
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
@@ -40,12 +42,17 @@ namespace OOD_Week5_Assignment
 
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
+            this.Type = (AnimalType)comboBoxAnimalType.SelectedItem;
+            this.Name = textBoxName.Text;
+            this.Age = Convert.ToInt32(numericUpDownAge.Value);
+            this.AnimalSize = (Models.Size)comboBoxSize.SelectedItem;
+            this.AnimalGender = (Gender)comboBoxGender.SelectedItem;
             this.DialogResult = DialogResult.OK;
         }
 
         private void comboBoxAnimalType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxAnimalType.SelectedItem.ToString() == "Bird")
+            if ((AnimalType)comboBoxAnimalType.SelectedItem == AnimalType.Bird)
             {
                 labelSize.Visible = true;
                 comboBoxSize.Visible = true;
