@@ -39,13 +39,13 @@ namespace OOD_Week5_Assignment
             {
                 foreach (Customer c in customers)
                 {
-                    comboBoxCustomerName.Items.Add(c);
+                    comboBoxCustomerName.Items.Add(c.Name);
                 }
             }
             catch (Exception)
             {
                 MessageBox.Show("There are no customers in the system");
-                throw;
+                this.Close();
             }
             
         }

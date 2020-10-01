@@ -13,28 +13,28 @@ namespace OOD_Week5_Assignment
 {
     public partial class NewCustomer : Form
     {
-        private string name;
-        private string address;
-        private string zipcode;
-        private string city;
-
         public NewCustomer()
         {
             InitializeComponent();
         }
 
-        public string CustomerName { get; set; }
-        public string CustomerAddress { get; set; }
-        public string CustomerZipCode { get; set; }
-        public string CustomerCity { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public string ZipCode { get; set; }
+        public string City { get; set; }
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
+            this.Name = textBoxName.Text;
+            this.Address = textBoxAddress.Text;
+            this.ZipCode = textBoxZipCode.Text;
+            this.City = textBoxCity.Text;
             this.DialogResult = DialogResult.OK;
         }
 
