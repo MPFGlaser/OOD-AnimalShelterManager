@@ -40,17 +40,18 @@ namespace OOD_Week5_Assignment
             this.DialogResult = DialogResult.OK;
         }
 
+        // Checks if the data in the textboxes has changed, then checks if the data is possibly valid. If it is, it saves the data to its corresponding property.
         private void textBoxName_TextChanged(object sender, EventArgs e)
         {
             ConfirmButtonEnabler();
-            if(textBoxName.Text != null)
+            if (textBoxName.Text != null)
             {
                 this.Name = textBoxName.Text;
                 nameCorrect = true;
             }
-            else 
-            { 
-                nameCorrect = false;  
+            else
+            {
+                nameCorrect = false;
             }
         }
 
@@ -85,7 +86,7 @@ namespace OOD_Week5_Assignment
         private void textBoxCity_TextChanged(object sender, EventArgs e)
         {
             ConfirmButtonEnabler();
-            if(textBoxCity.Text != null)
+            if (textBoxCity.Text != null)
             {
                 this.City = textBoxCity.Text;
                 cityCorrect = true;
@@ -96,9 +97,12 @@ namespace OOD_Week5_Assignment
             }
         }
 
+        /// <summary>
+        /// Checks if all fields are filled in, and if that is the case, it enables the confirm button.
+        /// </summary>
         private void ConfirmButtonEnabler()
         {
-            if(nameCorrect && addressCorrect && zipcodeCorrect && cityCorrect)
+            if (nameCorrect && addressCorrect && zipcodeCorrect && cityCorrect)
             {
                 buttonConfirm.Enabled = true;
             }
