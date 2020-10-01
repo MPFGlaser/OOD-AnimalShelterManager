@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD_Week5_Assignment.Classes
 {
-    public class Animal
+    public abstract class Animal
     {
         private int id;
         private string name;
@@ -14,11 +14,6 @@ namespace OOD_Week5_Assignment.Classes
         private gender gender;
         private bool adopted;
         private string notes;
-
-        Animal()
-        {
-
-        }
 
         public int Id { get; }
         public string Name { get; set; }
