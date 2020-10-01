@@ -28,7 +28,7 @@
       <Entity type="Class">
         <Name>Dog</Name>
         <Access>Public</Access>
-        <Location left="298" top="423" />
+        <Location left="371" top="431" />
         <Size width="404" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Constructor">public Dog(string name, int age, gender gender, bool adopted, string notes)</Member>
@@ -38,7 +38,7 @@
       <Entity type="Class">
         <Name>Cat</Name>
         <Access>Public</Access>
-        <Location left="722" top="424" />
+        <Location left="795" top="431" />
         <Size width="385" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Constructor">public Cat(string name, int age, gender gender, bool adopted, string notes)</Member>
@@ -48,7 +48,7 @@
       <Entity type="Class">
         <Name>Bird</Name>
         <Access>Public</Access>
-        <Location left="1135" top="423" />
+        <Location left="1213" top="430" />
         <Size width="436" height="216" />
         <Collapsed>False</Collapsed>
         <Member type="Field">size size</Member>
@@ -61,11 +61,13 @@
         <Name>Adoption</Name>
         <Access>Public</Access>
         <Location left="73" top="349" />
-        <Size width="175" height="230" />
+        <Size width="198" height="264" />
         <Collapsed>False</Collapsed>
         <Member type="Field">list&lt;Animal&gt; animals</Member>
         <Member type="Field">int id</Member>
         <Member type="Field">customer customer</Member>
+        <Member type="Field">datetime adoptionMoment</Member>
+        <Member type="Property">public datetime AdoptionMoment { get; }</Member>
         <Member type="Constructor">public Adoption()</Member>
         <Member type="Method">public string ViewAdoptionInfo()</Member>
         <Member type="Method">private void CalculateFee()</Member>
@@ -146,8 +148,8 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>774</X>
-          <Y>399</Y>
+          <X>847</X>
+          <Y>406</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>728</X>
@@ -158,8 +160,8 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>1190</X>
-          <Y>398</Y>
+          <X>1268</X>
+          <Y>405</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>728</X>
@@ -202,8 +204,8 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>1249</X>
-          <Y>398</Y>
+          <X>1327</X>
+          <Y>405</Y>
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>1166</X>
