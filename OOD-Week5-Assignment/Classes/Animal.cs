@@ -10,55 +10,48 @@ namespace OOD_Week5_Assignment.Classes
     [Serializable]
     public abstract class Animal
     {
-        private int id;
-        private string name;
-        private int age;
-        private Gender gender;
-        private bool adopted;
-        private string notes;
-
         public int Id
         {
-            get { return this.id; }
+            get { return this.Id; }
         }
 
         public string Name
         {
-            get { return this.name; }
-            set { this.notes = value; }
+            get { return this.Name; }
+            set { this.Name = value; }
         }
 
         public int Age
         {
-            get { return this.age; }
-            set { this.age = value; }
+            get { return this.Age; }
+            set { this.Age = value; }
         }
 
         public Gender Gender
         {
-            get { return this.gender; }
-            set { this.gender = value; }
+            get { return this.Gender; }
+            set { this.Gender = value; }
         }
 
         public bool Adopted
         {
-            get { return this.adopted; }
-            set { this.adopted = value; }
+            get { return this.Adopted; }
+            set { this.Adopted = value; }
         }
 
         public string Notes
         {
-            get { return this.notes; }
-            set { this.notes = value; }
+            get { return this.Notes; }
+            set { this.Notes = value; }
         }
 
         public Animal(string name, int age, Gender gender, bool adopted, string notes)
         {
-            this.name = name;
-            this.age = age;
-            this.gender = gender;
-            this.adopted = adopted;
-            this.notes = notes;
+            this.Name = name;
+            this.Age = age;
+            this.Gender = gender;
+            this.Adopted = adopted;
+            this.Notes = notes;
         }
 
         public override string ToString()
