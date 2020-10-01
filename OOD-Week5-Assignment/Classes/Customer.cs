@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD_Week5_Assignment.Classes
 {
+    [Serializable]
     public class Customer 
     {
         private string name;
