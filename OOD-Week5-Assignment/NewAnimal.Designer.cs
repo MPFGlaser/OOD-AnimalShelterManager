@@ -196,7 +196,7 @@
             this.MaximumSize = new System.Drawing.Size(400, 539);
             this.MinimumSize = new System.Drawing.Size(400, 539);
             this.Name = "NewAnimal";
-            this.Text = "NewAnimal";
+            this.Text = "New Animal";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAge)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

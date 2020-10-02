@@ -142,7 +142,7 @@
             this.Controls.Add(this.buttonNewCustomer);
             this.Controls.Add(this.buttonNewAnimal);
             this.Name = "Main";
-            this.Text = "Form1";
+            this.Text = "Shelter Manager";
             this.ResumeLayout(false);
 
         }

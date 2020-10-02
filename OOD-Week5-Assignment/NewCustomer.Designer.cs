@@ -149,7 +149,7 @@
             this.MaximumSize = new System.Drawing.Size(400, 539);
             this.MinimumSize = new System.Drawing.Size(400, 539);
             this.Name = "NewCustomer";
-            this.Text = "NewCustomer";
+            this.Text = "New Customer";
             this.ResumeLayout(false);
             this.PerformLayout();
 
