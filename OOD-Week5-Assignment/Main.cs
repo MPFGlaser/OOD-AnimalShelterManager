@@ -103,19 +103,24 @@ namespace OOD_Week5_Assignment
         {
             if(shelterManager.Adoptions != null)
             {
+                listBoxAdoptions.DisplayMember = "Text";
+                listBoxAdoptions.ValueMember = "Value";
                 listBoxAdoptions.Items.Clear();
                 foreach (Adoption a in shelterManager.Adoptions)
                 {
-                    listBoxAdoptions.Items.Add(a.ToString());
+                    listBoxAdoptions.Items.Add(new { Text = a.ToString(), Value = a });
                 }
             }
 
             if (shelterManager.Animals != null)
             {
+                listBoxAnimals.DisplayMember = "Text";
+                listBoxAnimals.ValueMember = "Value";
                 listBoxAnimals.Items.Clear();
+
                 foreach(Animal a in shelterManager.Animals)
                 {
-                    listBoxAnimals.Items.Add(a.ToString());
+                    listBoxAnimals.Items.Add(new { Text = a.ToString(), Value = a });
                 }
             }
         }
