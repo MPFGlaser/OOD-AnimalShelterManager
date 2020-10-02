@@ -112,8 +112,6 @@ namespace OOD_Week5_Assignment
                 listBoxAnimals.Items.Clear();
                 foreach(Animal a in shelterManager.Animals)
                 {
-                    //string type = a.GetType().ToString().Split('.').Last();
-                    //listBoxAnimals.Items.Add(type + " " + a.Name + " Age: " + a.Age.ToString());
                     listBoxAnimals.Items.Add(a.ToString());
                 }
             }
