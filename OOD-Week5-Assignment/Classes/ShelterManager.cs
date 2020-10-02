@@ -37,46 +37,31 @@ namespace OOD_Week5_Assignment.Classes
         public void AddDog(string name, int age, Gender gender, string notes)
         {
             Animal a = new Dog(name, age, gender, notes);
-            if(1 == 1)
-            {
-                animals.Add(a);
-            }
+            animals.Add(a);
         }
 
         public void AddCat(string name, int age, Gender gender, string notes)
         {
             Animal a = new Cat(name, age, gender, notes);
-            if (1 == 1)
-            {
-                animals.Add(a);
-            }
+            animals.Add(a);
         }
 
         public void AddBird(string name, int age, Gender gender, string notes, Size size)
         {
             Animal a = new Bird(name, age, gender, notes, size);
-            if (1 == 1)
-            {
-                animals.Add(a);
-            }
+            animals.Add(a);
         }
 
         public void AddAdoption(List<Animal> animals, Customer customer, DateTime adoptionMoment, double adoptionFee)
         {
             Adoption a = new Adoption(animals, customer, adoptionMoment, adoptionFee);
-            if(1 == 1)
-            {
-                adoptions.Add(a);
-            }
+            animals.Add(a);
         }
 
         public void AddCustomer(string name, string address, string zipcode, string city)
         {
             Customer c = new Customer(name, address, zipcode, city);
-            if(1 == 1)
-            {
-                customers.Add(c);
-            }
+            animals.Add(a);
         }
         #endregion
     }
