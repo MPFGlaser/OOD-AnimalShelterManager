@@ -13,22 +13,42 @@ namespace OOD_Week5_Assignment
 {
     public partial class NewCustomer : Form
     {
+        #region Fields and properties
         bool nameCorrect = false;
         bool addressCorrect = false;
         bool zipcodeCorrect = false;
         bool cityCorrect = false;
 
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public string ZipCode { get; set; }
+        public string City { get; set; }
+        #endregion
+
+        #region Logic
         public NewCustomer()
         {
             InitializeComponent();
             buttonConfirm.Enabled = false;
         }
 
-        public string Name { get; set; }
-        public string Address { get; set; }
-        public string ZipCode { get; set; }
-        public string City { get; set; }
+        /// <summary>
+        /// Checks if all fields are filled in, and if that is the case, it enables the confirm button.
+        /// </summary>
+        private void ConfirmButtonEnabler()
+        {
+            if (nameCorrect && addressCorrect && zipcodeCorrect && cityCorrect)
+            {
+                buttonConfirm.Enabled = true;
+            }
+            else
+            {
+                buttonConfirm.Enabled = false;
+            }
+        }
+        #endregion
 
+        #region Control event handlers
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
@@ -96,20 +116,6 @@ namespace OOD_Week5_Assignment
                 cityCorrect = false;
             }
         }
-
-        /// <summary>
-        /// Checks if all fields are filled in, and if that is the case, it enables the confirm button.
-        /// </summary>
-        private void ConfirmButtonEnabler()
-        {
-            if (nameCorrect && addressCorrect && zipcodeCorrect && cityCorrect)
-            {
-                buttonConfirm.Enabled = true;
-            }
-            else
-            {
-                buttonConfirm.Enabled = false;
-            }
-        }
+        #endregion
     }
 }
