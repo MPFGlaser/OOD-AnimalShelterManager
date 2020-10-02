@@ -68,12 +68,12 @@ namespace OOD_Week5_Assignment
 
         private void buttonLoadData_Click(object sender, EventArgs e)
         {
-            shelterManager.LoadData();
+            // Load data
         }
 
         private void buttonSaveData_Click(object sender, EventArgs e)
         {
-            shelterManager.SaveData();
+            // Save data
         }
 
         private void buttonAdoptionInfo_Click(object sender, EventArgs e)

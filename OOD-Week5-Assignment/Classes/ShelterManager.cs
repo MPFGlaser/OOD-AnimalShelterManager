@@ -21,16 +21,6 @@ namespace OOD_Week5_Assignment.Classes
             customers = new List<Customer>();
         }
 
-        public void SaveData()
-        {
-
-        }
-
-        public void LoadData()
-        {
-
-        }
-
         public void AddDog(string name, int age, Gender gender, string notes)
         {
             Animal a = new Dog(name, age, gender, notes);
