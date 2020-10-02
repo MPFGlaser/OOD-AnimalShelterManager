@@ -109,6 +109,7 @@
             this.comboBoxCustomerName.Name = "comboBoxCustomerName";
             this.comboBoxCustomerName.Size = new System.Drawing.Size(200, 21);
             this.comboBoxCustomerName.TabIndex = 1;
+            this.comboBoxCustomerName.SelectedIndexChanged += new System.EventHandler(this.comboBoxCustomerName_SelectedIndexChanged);
             // 
             // comboBoxAnimal1
             // 

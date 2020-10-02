@@ -19,6 +19,8 @@ namespace OOD_Week5_Assignment
         private Customer adoptionCustomer;
         private double calculatedFee = 0;
         private DateTime adoptionMoment;
+        private bool customerCorrect = false;
+        private bool animalsCorrect = false;
 
         public List<Animal> AdoptedAnimals
         {
@@ -60,6 +62,7 @@ namespace OOD_Week5_Assignment
             comboBoxAnimal3.Visible = false;
             comboBoxAnimal3.Enabled = false;
             buttonRemoveAnimal3.Visible = false;
+            buttonConfirm.Enabled = false;
         }
 
         // Calculates the adoption fee based on the currently selected animals, and, if applicable, their properties.
@@ -70,6 +73,9 @@ namespace OOD_Week5_Assignment
             // Calculates the fee for the animal selected in comboBoxAnimal1
             if (comboBoxAnimal1.Enabled && comboBoxAnimal1.SelectedIndex != -1)
             {
+                animalsCorrect = true;
+                ConfirmButtonEnabler(); 
+
                 Animal animal1 = (comboBoxAnimal1.SelectedItem as dynamic).Value;
                 if (animal1.GetType() == typeof(Dog))
                 {
@@ -190,6 +196,21 @@ namespace OOD_Week5_Assignment
             calculatedFee = Math.Round(calculatedFee, 2);
             labelTotalAdoptionFee.Text = "€" + calculatedFee.ToString();
         }
+
+        /// <summary>
+        /// Checks if all fields are filled in, and if that is the case, it enables the confirm button.
+        /// </summary>
+        private void ConfirmButtonEnabler()
+        {
+            if (customerCorrect && animalsCorrect)
+            {
+                buttonConfirm.Enabled = true;
+            }
+            else
+            {
+                buttonConfirm.Enabled = false;
+            }
+        }
         #endregion
 
         #region Control event handlers
@@ -292,6 +313,20 @@ namespace OOD_Week5_Assignment
         {
             UpdateComboBoxAnimals();
             CalculateAdoptionFee();
+        }
+
+        private void comboBoxCustomerName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBoxCustomerName.SelectedIndex != -1)
+            {
+                customerCorrect = true;
+                ConfirmButtonEnabler();
+            }
+            else
+            {
+                customerCorrect = false;
+                ConfirmButtonEnabler();
+            }
         }
         #endregion
 
