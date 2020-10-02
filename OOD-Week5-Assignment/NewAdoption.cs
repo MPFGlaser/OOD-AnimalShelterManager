@@ -59,7 +59,7 @@ namespace OOD_Week5_Assignment
         {
             calculatedFee = 0;
 
-            if (comboBoxAnimal1.Enabled)
+            if (comboBoxAnimal1.Enabled && comboBoxAnimal1.SelectedIndex != -1)
             {
                 Animal animal1 = (comboBoxAnimal1.SelectedItem as dynamic).Value;
                 if (animal1.GetType() == typeof(Dog))
@@ -94,7 +94,7 @@ namespace OOD_Week5_Assignment
                 }
             }
 
-            if (comboBoxAnimal2.Enabled)
+            if (comboBoxAnimal2.Enabled && comboBoxAnimal2.SelectedIndex != -1)
             {
                 Animal animal2 = (comboBoxAnimal2.SelectedItem as dynamic).Value;
                 if (animal2.GetType() == typeof(Dog))
@@ -129,7 +129,7 @@ namespace OOD_Week5_Assignment
                 }
             }
 
-            if (comboBoxAnimal3.Enabled)
+            if (comboBoxAnimal3.Enabled && comboBoxAnimal3.SelectedIndex != -1)
             {
                 Animal animal3 = (comboBoxAnimal3.SelectedItem as dynamic).Value;
                 if (animal3.GetType() == typeof(Dog))
@@ -222,6 +222,27 @@ namespace OOD_Week5_Assignment
 
         }
 
+        private void UpdateComboBoxAnimals()
+        {
+            // Idea is to remove already chosen animals from the remaining comboboxes. Something for later, perhaps.
+
+            //if (comboBoxAnimal2.Enabled)
+            //{
+            //    //comboBoxAnimal1.Items.Remove((comboBoxAnimal2.SelectedItem as dynamic).Value);
+            //    //comboBoxAnimal2.Items.Remove((comboBoxAnimal1.SelectedItem as dynamic).Value);
+
+            //    (comboBoxAnimal1.Items as dynamic).Value.Remove((comboBoxAnimal2.SelectedItem as dynamic).Value);
+            //    (comboBoxAnimal2.Items as dynamic).Value.Remove((comboBoxAnimal1.SelectedItem as dynamic).Value);
+            //}
+            //if (comboBoxAnimal3.Enabled)
+            //{
+            //    comboBoxAnimal1.Items.Remove((comboBoxAnimal3.SelectedItem as dynamic).Value);
+            //    comboBoxAnimal2.Items.Remove((comboBoxAnimal3.SelectedItem as dynamic).Value);
+            //    comboBoxAnimal3.Items.Remove((comboBoxAnimal1.SelectedItem as dynamic).Value);
+            //    comboBoxAnimal3.Items.Remove((comboBoxAnimal2.SelectedItem as dynamic).Value);
+            //}
+        }
+
         // Method to add new comboboxes for extra animals, if desired.
         private void buttonNewAnimalComboBox_Click(object sender, EventArgs e)
         {
@@ -252,6 +273,7 @@ namespace OOD_Week5_Assignment
             buttonRemoveAnimal2.Visible = false;
             comboBoxAnimal2.Visible = false;
             comboBoxAnimal2.Enabled = false;
+            comboBoxAnimal2.SelectedIndex = -1;
             labelAnimal.Text = "Animal:";
             CalculateAdoptionFee();
         }
@@ -262,6 +284,7 @@ namespace OOD_Week5_Assignment
             buttonNewAnimalComboBox.Enabled = true;
             comboBoxAnimal3.Visible = false;
             comboBoxAnimal3.Enabled = false;
+            comboBoxAnimal3.SelectedIndex = -1;
             buttonRemoveAnimal3.Visible = false;
             buttonRemoveAnimal2.Visible = true;
             CalculateAdoptionFee();
@@ -270,16 +293,19 @@ namespace OOD_Week5_Assignment
         // Multiple methods to call for recalculation of the adoption fee when a different animal is selected.
         private void comboBoxAnimal1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            UpdateComboBoxAnimals();
             CalculateAdoptionFee();
         }
 
         private void comboBoxAnimal2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            UpdateComboBoxAnimals();
             CalculateAdoptionFee();
         }
 
         private void comboBoxAnimal3_SelectedIndexChanged(object sender, EventArgs e)
         {
+            UpdateComboBoxAnimals();
             CalculateAdoptionFee();
         }
     }
