@@ -21,5 +21,10 @@ namespace OOD_Week5_Assignment.Classes
         {
             this.Size = size;
         }
+
+        public override string ToString()
+        {
+            return "[Bird, " + this.size.ToString() + "]" + base.ToString();
+        }
     }
 }

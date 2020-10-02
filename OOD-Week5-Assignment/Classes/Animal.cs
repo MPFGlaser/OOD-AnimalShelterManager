@@ -59,7 +59,7 @@ namespace OOD_Week5_Assignment.Classes
 
         public override string ToString()
         {
-            return base.ToString();
+            return " " + this.name + " (" + this.age.ToString() + ", " + this.gender.ToString() + ") ";
         }
     }
 }

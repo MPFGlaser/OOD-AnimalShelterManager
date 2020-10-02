@@ -13,5 +13,10 @@ namespace OOD_Week5_Assignment.Classes
         {
 
         }
+
+        public override string ToString()
+        {
+            return "[Cat]" + base.ToString();
+        }
     }
 }
