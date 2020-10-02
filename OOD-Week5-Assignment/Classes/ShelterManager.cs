@@ -24,6 +24,11 @@ namespace OOD_Week5_Assignment.Classes
         {
             get { return this.animals; }
         }
+
+        public List<Adoption> Adoptions
+        {
+            get { return this.adoptions; }
+        }
         #endregion
 
         #region Logic

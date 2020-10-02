@@ -48,5 +48,26 @@ namespace OOD_Week5_Assignment.Classes
                 a.Adopted = true;
             }
         }
+
+        // Returns a string in the format of "Customer Name (City) [AdoptedAnimals]"
+        public override string ToString()
+        {
+            string output = "";
+
+            output += customer.Name + " (" + customer.City + ") [";
+
+            // Adds animals involved in adoption between the brackets, seperated by a comma and a space.
+            foreach (Animal a in animals)
+            {
+                output += a.Name + ", ";
+            }
+
+            // Removes the last comma and space as to not break English grammar rules. ;)
+            output = output.Substring(0, output.Length - 2);
+
+            output += "]";
+
+            return output;
+        }
     }
 }

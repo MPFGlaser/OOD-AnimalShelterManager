@@ -22,6 +22,7 @@ namespace OOD_Week5_Assignment
         {
             InitializeComponent();
             shelterManager = new ShelterManager();
+            UpdateListboxes();
         }
 
         private void buttonNewAnimal_Click(object sender, EventArgs e)
@@ -44,7 +45,7 @@ namespace OOD_Week5_Assignment
                         break;
                 }
             }
-            TestUpdateListboxes();
+            UpdateListboxes();
         }
 
         private void buttonNewCustomer_Click(object sender, EventArgs e)
@@ -54,7 +55,7 @@ namespace OOD_Week5_Assignment
             {
                 shelterManager.AddCustomer(newCustomer.Name, newCustomer.Address, newCustomer.ZipCode, newCustomer.City) ;
             }
-            TestUpdateListboxes();
+            UpdateListboxes();
         }
 
         private void buttonNewAdoption_Click(object sender, EventArgs e)
@@ -64,6 +65,7 @@ namespace OOD_Week5_Assignment
             {
                 shelterManager.AddAdoption(newAdoption.AdoptedAnimals, newAdoption.AdoptionCustomer, newAdoption.AdoptionMoment, newAdoption.AdoptionFee);
             }
+            UpdateListboxes();
         }
 
         private void buttonLoadData_Click(object sender, EventArgs e)
@@ -96,14 +98,15 @@ namespace OOD_Week5_Assignment
 
         }
 
-        private void TestUpdateListboxes()
+        // Updates the Adoptions and Animals listboxes, assuming there is data to populate them.
+        private void UpdateListboxes()
         {
-            if(shelterManager.Customers != null)
+            if(shelterManager.Adoptions != null)
             {
                 listBoxAdoptions.Items.Clear();
-                foreach(Customer c in shelterManager.Customers)
+                foreach (Adoption a in shelterManager.Adoptions)
                 {
-                    listBoxAdoptions.Items.Add(c.Name);
+                    listBoxAdoptions.Items.Add(a.ToString());
                 }
             }
 
