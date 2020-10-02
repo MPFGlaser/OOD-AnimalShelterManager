@@ -55,13 +55,13 @@ namespace OOD_Week5_Assignment.Classes
         public void AddAdoption(List<Animal> animals, Customer customer, DateTime adoptionMoment, double adoptionFee)
         {
             Adoption a = new Adoption(animals, customer, adoptionMoment, adoptionFee);
-            animals.Add(a);
+            adoptions.Add(a);
         }
 
         public void AddCustomer(string name, string address, string zipcode, string city)
         {
             Customer c = new Customer(name, address, zipcode, city);
-            animals.Add(a);
+            customers.Add(c);
         }
         #endregion
     }
