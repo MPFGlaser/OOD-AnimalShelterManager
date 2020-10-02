@@ -59,7 +59,7 @@ namespace OOD_Week5_Assignment
 
         private void buttonNewAdoption_Click(object sender, EventArgs e)
         {
-            newAdoption = new NewAdoption(shelterManager.GetCustomers(), shelterManager.GetAnimals());
+            newAdoption = new NewAdoption(shelterManager.Customers, shelterManager.Animals);
             if(newAdoption.ShowDialog() == DialogResult.OK)
             {
                 shelterManager.AddAdoption(newAdoption.AdoptedAnimals, newAdoption.AdoptionCustomer, newAdoption.AdoptionMoment, newAdoption.AdoptionFee);
@@ -98,19 +98,19 @@ namespace OOD_Week5_Assignment
 
         private void TestUpdateListboxes()
         {
-            if(shelterManager.GetCustomers() != null)
+            if(shelterManager.Customers != null)
             {
                 listBoxAdoptions.Items.Clear();
-                foreach(Customer c in shelterManager.GetCustomers())
+                foreach(Customer c in shelterManager.Customers)
                 {
                     listBoxAdoptions.Items.Add(c.Name);
                 }
             }
 
-            if (shelterManager.GetAnimals() != null)
+            if (shelterManager.Animals != null)
             {
                 listBoxAnimals.Items.Clear();
-                foreach(Animal a in shelterManager.GetAnimals())
+                foreach(Animal a in shelterManager.Animals)
                 {
                     string type = a.GetType().ToString().Split('.').Last();
                     listBoxAnimals.Items.Add(type + " " + a.Name + " Age: " + a.Age.ToString());

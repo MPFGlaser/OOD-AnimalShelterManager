@@ -15,14 +15,14 @@ namespace OOD_Week5_Assignment.Classes
         private List<Animal> animals;
         private List<Customer> customers;
 
-        public List<Customer> GetCustomers()
+        public List<Customer> Customers
         {
-            return customers;
+            get { return this.customers; }
         }
 
-        public List<Animal> GetAnimals()
+        public List<Animal> Animals
         {
-            return animals;
+            get { return this.animals; }
         }
         #endregion
 
