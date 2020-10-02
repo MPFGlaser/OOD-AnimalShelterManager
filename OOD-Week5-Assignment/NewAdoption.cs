@@ -165,7 +165,12 @@ namespace OOD_Week5_Assignment
             }
 
             // Applies a discount if more than 1 animal was selected for adoption
-            if (comboBoxAnimal2.Enabled)
+            // Is this a cumulative discount (so 10% per animal, stacking) or not? Wasn't entirely sure.
+            if(comboBoxAnimal2.Enabled && comboBoxAnimal3.Enabled)
+            {
+                calculatedFee = calculatedFee * 0.8;
+            }
+            else if (comboBoxAnimal2.Enabled)
             {
                 calculatedFee = calculatedFee * 0.9;
             }
