@@ -14,6 +14,7 @@ namespace OOD_Week5_Assignment
 {
     public partial class NewAdoption : Form
     {
+        #region Fields and properties
         private List<Animal> adoptedAnimals;
         private Customer adoptionCustomer;
         private double calculatedFee = 0;
@@ -41,7 +42,9 @@ namespace OOD_Week5_Assignment
             get { return calculatedFee; }
             private set { calculatedFee = value; }
         }
+        #endregion
 
+        #region Logic
         public NewAdoption(List<Customer> customers, List<Animal> animals)
         {
             InitializeComponent();
@@ -59,45 +62,12 @@ namespace OOD_Week5_Assignment
             buttonRemoveAnimal3.Visible = false;
         }
 
-        private void buttonConfirm_Click(object sender, EventArgs e)
-        {
-            if(comboBoxAnimal1.Enabled && comboBoxAnimal1.SelectedIndex != -1)
-            {
-                adoptedAnimals.Add((comboBoxAnimal1.SelectedItem as dynamic).Value);
-            }
-
-            if (comboBoxAnimal2.Enabled && comboBoxAnimal2.SelectedIndex != -1)
-            {
-                adoptedAnimals.Add((comboBoxAnimal2.SelectedItem as dynamic).Value);
-            }
-
-            if (comboBoxAnimal3.Enabled && comboBoxAnimal3.SelectedIndex != -1)
-            {
-                adoptedAnimals.Add((comboBoxAnimal3.SelectedItem as dynamic).Value);
-            }
-
-            if(comboBoxCustomerName.SelectedIndex != -1)
-            {
-                AdoptionCustomer = (comboBoxCustomerName.SelectedItem as dynamic).Value;
-            }
-
-            AdoptionMoment = dateTimePickerAdoptionMoment.Value;
-
-            CalculateAdoptionFee();
-
-            this.DialogResult = DialogResult.OK;
-        }
-
-        private void buttonCancel_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.Cancel;
-            this.Close();
-        }
-
+        // Calculates the adoption fee based on the currently selected animals, and, if applicable, their properties.
         private void CalculateAdoptionFee()
         {
             calculatedFee = 0;
 
+            // Calculates the fee for the animal selected in comboBoxAnimal1
             if (comboBoxAnimal1.Enabled && comboBoxAnimal1.SelectedIndex != -1)
             {
                 Animal animal1 = (comboBoxAnimal1.SelectedItem as dynamic).Value;
@@ -133,6 +103,7 @@ namespace OOD_Week5_Assignment
                 }
             }
 
+            // Calculates the fee for the animal selected in comboBoxAnimal2
             if (comboBoxAnimal2.Enabled && comboBoxAnimal2.SelectedIndex != -1)
             {
                 Animal animal2 = (comboBoxAnimal2.SelectedItem as dynamic).Value;
@@ -168,6 +139,7 @@ namespace OOD_Week5_Assignment
                 }
             }
 
+            // Calculates the fee for the animal selected in comboBoxAnimal3
             if (comboBoxAnimal3.Enabled && comboBoxAnimal3.SelectedIndex != -1)
             {
                 Animal animal3 = (comboBoxAnimal3.SelectedItem as dynamic).Value;
@@ -218,73 +190,42 @@ namespace OOD_Week5_Assignment
             calculatedFee = Math.Round(calculatedFee, 2);
             labelTotalAdoptionFee.Text = "€" + calculatedFee.ToString();
         }
+        #endregion
 
-        private void PopulateComboBoxCustomers(List<Customer> customers)
+        #region Control event handlers
+        private void buttonConfirm_Click(object sender, EventArgs e)
         {
-            comboBoxCustomerName.DisplayMember = "Text";
-            comboBoxCustomerName.ValueMember = "Value";
-            try
+            if (comboBoxAnimal1.Enabled && comboBoxAnimal1.SelectedIndex != -1)
             {
-                foreach (Customer c in customers)
-                {
-                    comboBoxCustomerName.Items.Add(new { Text = c.Name, Value = c });
-                }
+                adoptedAnimals.Add((comboBoxAnimal1.SelectedItem as dynamic).Value);
             }
-            catch (Exception)
+
+            if (comboBoxAnimal2.Enabled && comboBoxAnimal2.SelectedIndex != -1)
             {
-                MessageBox.Show("There are no customers in the system");
-                this.Close();
+                adoptedAnimals.Add((comboBoxAnimal2.SelectedItem as dynamic).Value);
             }
+
+            if (comboBoxAnimal3.Enabled && comboBoxAnimal3.SelectedIndex != -1)
+            {
+                adoptedAnimals.Add((comboBoxAnimal3.SelectedItem as dynamic).Value);
+            }
+
+            if (comboBoxCustomerName.SelectedIndex != -1)
+            {
+                AdoptionCustomer = (comboBoxCustomerName.SelectedItem as dynamic).Value;
+            }
+
+            AdoptionMoment = dateTimePickerAdoptionMoment.Value;
+
+            CalculateAdoptionFee();
+
+            this.DialogResult = DialogResult.OK;
         }
 
-        // Method to add animals to the comboBoxes.
-        private void PopulateComboBoxAnimals(List<Animal> animals)
+        private void buttonCancel_Click(object sender, EventArgs e)
         {
-            comboBoxAnimal1.DisplayMember = "Text";
-            comboBoxAnimal1.ValueMember = "Value";
-            comboBoxAnimal2.DisplayMember = "Text";
-            comboBoxAnimal2.ValueMember = "Value";
-            comboBoxAnimal3.DisplayMember = "Text";
-            comboBoxAnimal3.ValueMember = "Value";
-            try
-            {
-                foreach (Animal a in animals)
-                {
-                    if (!a.Adopted)
-                    {
-                        comboBoxAnimal1.Items.Add(new { Text = a.Name, Value = a });
-                        comboBoxAnimal2.Items.Add(new { Text = a.Name, Value = a });
-                        comboBoxAnimal3.Items.Add(new { Text = a.Name, Value = a });
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("There are no animals in the system.");
-                throw;
-            }
-
-        }
-
-        private void UpdateComboBoxAnimals()
-        {
-            // Idea is to remove already chosen animals from the remaining comboboxes. Something for later, perhaps.
-
-            //if (comboBoxAnimal2.Enabled)
-            //{
-            //    //comboBoxAnimal1.Items.Remove((comboBoxAnimal2.SelectedItem as dynamic).Value);
-            //    //comboBoxAnimal2.Items.Remove((comboBoxAnimal1.SelectedItem as dynamic).Value);
-
-            //    (comboBoxAnimal1.Items as dynamic).Value.Remove((comboBoxAnimal2.SelectedItem as dynamic).Value);
-            //    (comboBoxAnimal2.Items as dynamic).Value.Remove((comboBoxAnimal1.SelectedItem as dynamic).Value);
-            //}
-            //if (comboBoxAnimal3.Enabled)
-            //{
-            //    comboBoxAnimal1.Items.Remove((comboBoxAnimal3.SelectedItem as dynamic).Value);
-            //    comboBoxAnimal2.Items.Remove((comboBoxAnimal3.SelectedItem as dynamic).Value);
-            //    comboBoxAnimal3.Items.Remove((comboBoxAnimal1.SelectedItem as dynamic).Value);
-            //    comboBoxAnimal3.Items.Remove((comboBoxAnimal2.SelectedItem as dynamic).Value);
-            //}
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
 
         // Method to add new comboboxes for extra animals, if desired.
@@ -352,5 +293,78 @@ namespace OOD_Week5_Assignment
             UpdateComboBoxAnimals();
             CalculateAdoptionFee();
         }
+        #endregion
+
+        #region Form control source data methods
+        // Method to add customers to the combobox
+        private void PopulateComboBoxCustomers(List<Customer> customers)
+        {
+            comboBoxCustomerName.DisplayMember = "Text";
+            comboBoxCustomerName.ValueMember = "Value";
+            try
+            {
+                foreach (Customer c in customers)
+                {
+                    comboBoxCustomerName.Items.Add(new { Text = c.Name, Value = c });
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("There are no customers in the system");
+                this.Close();
+            }
+        }
+
+        // Method to add animals to the comboBoxes.
+        private void PopulateComboBoxAnimals(List<Animal> animals)
+        {
+            comboBoxAnimal1.DisplayMember = "Text";
+            comboBoxAnimal1.ValueMember = "Value";
+            comboBoxAnimal2.DisplayMember = "Text";
+            comboBoxAnimal2.ValueMember = "Value";
+            comboBoxAnimal3.DisplayMember = "Text";
+            comboBoxAnimal3.ValueMember = "Value";
+            try
+            {
+                foreach (Animal a in animals)
+                {
+                    if (!a.Adopted)
+                    {
+                        comboBoxAnimal1.Items.Add(new { Text = a.Name, Value = a });
+                        comboBoxAnimal2.Items.Add(new { Text = a.Name, Value = a });
+                        comboBoxAnimal3.Items.Add(new { Text = a.Name, Value = a });
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("There are no animals in the system.");
+                throw;
+            }
+
+        }
+
+        // Method to remove already chosen animals from the other comboboxes
+        private void UpdateComboBoxAnimals()
+        {
+            // Idea is to remove already chosen animals from the remaining comboboxes. Something for later, perhaps.
+
+            //if (comboBoxAnimal2.Enabled)
+            //{
+            //    //comboBoxAnimal1.Items.Remove((comboBoxAnimal2.SelectedItem as dynamic).Value);
+            //    //comboBoxAnimal2.Items.Remove((comboBoxAnimal1.SelectedItem as dynamic).Value);
+
+            //    (comboBoxAnimal1.Items as dynamic).Value.Remove((comboBoxAnimal2.SelectedItem as dynamic).Value);
+            //    (comboBoxAnimal2.Items as dynamic).Value.Remove((comboBoxAnimal1.SelectedItem as dynamic).Value);
+            //}
+            //if (comboBoxAnimal3.Enabled)
+            //{
+            //    comboBoxAnimal1.Items.Remove((comboBoxAnimal3.SelectedItem as dynamic).Value);
+            //    comboBoxAnimal2.Items.Remove((comboBoxAnimal3.SelectedItem as dynamic).Value);
+            //    comboBoxAnimal3.Items.Remove((comboBoxAnimal1.SelectedItem as dynamic).Value);
+            //    comboBoxAnimal3.Items.Remove((comboBoxAnimal2.SelectedItem as dynamic).Value);
+            //}
+        }
+        #endregion
     }
 }
