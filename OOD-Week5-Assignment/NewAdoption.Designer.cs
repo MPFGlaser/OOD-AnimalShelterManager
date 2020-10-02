@@ -104,6 +104,7 @@
             // 
             // comboBoxCustomerName
             // 
+            this.comboBoxCustomerName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCustomerName.FormattingEnabled = true;
             this.comboBoxCustomerName.Location = new System.Drawing.Point(12, 29);
             this.comboBoxCustomerName.Name = "comboBoxCustomerName";
@@ -113,6 +114,7 @@
             // 
             // comboBoxAnimal1
             // 
+            this.comboBoxAnimal1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAnimal1.FormattingEnabled = true;
             this.comboBoxAnimal1.Location = new System.Drawing.Point(12, 141);
             this.comboBoxAnimal1.Name = "comboBoxAnimal1";
@@ -122,6 +124,7 @@
             // 
             // comboBoxAnimal2
             // 
+            this.comboBoxAnimal2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAnimal2.FormattingEnabled = true;
             this.comboBoxAnimal2.Location = new System.Drawing.Point(12, 168);
             this.comboBoxAnimal2.Name = "comboBoxAnimal2";
@@ -131,6 +134,7 @@
             // 
             // comboBoxAnimal3
             // 
+            this.comboBoxAnimal3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxAnimal3.FormattingEnabled = true;
             this.comboBoxAnimal3.Location = new System.Drawing.Point(12, 195);
             this.comboBoxAnimal3.Name = "comboBoxAnimal3";
