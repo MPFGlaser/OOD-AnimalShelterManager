@@ -14,8 +14,12 @@ namespace OOD_Week5_Assignment
 {
     public partial class NewAdoption : Form
     {
-        public List<Animal> adoptedAnimals;
+        private List<Animal> adoptedAnimals;
+        private Customer adoptionCustomer;
         private double calculatedFee = 0;
+
+        public List<Animal> AdoptedAnimals { get; }
+        public Customer AdoptionCustomer { get; }
 
         public NewAdoption(List<Customer> customers, List<Animal> animals)
         {
@@ -36,15 +40,24 @@ namespace OOD_Week5_Assignment
 
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
-            adoptedAnimals.Add((comboBoxAnimal1.SelectedItem as dynamic).Value);
-
-            if (comboBoxAnimal2.Enabled == true)
+            if(comboBoxAnimal1.Enabled && comboBoxAnimal1.SelectedIndex != -1)
             {
-                adoptedAnimals.Add((Animal)comboBoxAnimal2.SelectedItem);
+                adoptedAnimals.Add((comboBoxAnimal1.SelectedItem as dynamic).Value);
             }
-            if (comboBoxAnimal3.Enabled == true)
+
+            if (comboBoxAnimal2.Enabled && comboBoxAnimal2.SelectedIndex != -1)
             {
-                adoptedAnimals.Add((Animal)comboBoxAnimal3.SelectedItem);
+                adoptedAnimals.Add((comboBoxAnimal2.SelectedItem as dynamic).Value);
+            }
+
+            if (comboBoxAnimal3.Enabled && comboBoxAnimal3.SelectedIndex != -1)
+            {
+                adoptedAnimals.Add((comboBoxAnimal3.SelectedItem as dynamic).Value);
+            }
+
+            if(comboBoxCustomerName.SelectedIndex != -1)
+            {
+                adoptionCustomer = (comboBoxCustomerName.SelectedItem as dynamic).Value;
             }
             this.DialogResult = DialogResult.OK;
         }
@@ -182,11 +195,13 @@ namespace OOD_Week5_Assignment
 
         private void PopulateComboBoxCustomers(List<Customer> customers)
         {
+            comboBoxCustomerName.DisplayMember = "Text";
+            comboBoxCustomerName.ValueMember = "Value";
             try
             {
                 foreach (Customer c in customers)
                 {
-                    comboBoxCustomerName.Items.Add(c.Name);
+                    comboBoxAnimal1.Items.Add(new { Text = c.Name, Value = c });
                 }
             }
             catch (Exception)
