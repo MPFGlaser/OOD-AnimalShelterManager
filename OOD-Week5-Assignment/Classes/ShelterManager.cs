@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace OOD_Week5_Assignment.Classes
 {
+    [Serializable]
     public class ShelterManager
     {
         private List<Adoption> adoptions;
