@@ -50,7 +50,7 @@
             this.buttonConfirm.Location = new System.Drawing.Point(297, 465);
             this.buttonConfirm.Name = "buttonConfirm";
             this.buttonConfirm.Size = new System.Drawing.Size(75, 23);
-            this.buttonConfirm.TabIndex = 10;
+            this.buttonConfirm.TabIndex = 9;
             this.buttonConfirm.Text = "Confirm";
             this.buttonConfirm.UseVisualStyleBackColor = true;
             this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
@@ -61,7 +61,7 @@
             this.buttonCancel.Location = new System.Drawing.Point(15, 465);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancel.TabIndex = 11;
+            this.buttonCancel.TabIndex = 10;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
@@ -100,7 +100,7 @@
             this.dateTimePickerAdoptionMoment.Location = new System.Drawing.Point(12, 89);
             this.dateTimePickerAdoptionMoment.Name = "dateTimePickerAdoptionMoment";
             this.dateTimePickerAdoptionMoment.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerAdoptionMoment.TabIndex = 15;
+            this.dateTimePickerAdoptionMoment.TabIndex = 2;
             // 
             // comboBoxCustomerName
             // 
@@ -108,7 +108,7 @@
             this.comboBoxCustomerName.Location = new System.Drawing.Point(12, 29);
             this.comboBoxCustomerName.Name = "comboBoxCustomerName";
             this.comboBoxCustomerName.Size = new System.Drawing.Size(200, 21);
-            this.comboBoxCustomerName.TabIndex = 16;
+            this.comboBoxCustomerName.TabIndex = 1;
             // 
             // comboBoxAnimal1
             // 
@@ -116,7 +116,7 @@
             this.comboBoxAnimal1.Location = new System.Drawing.Point(12, 141);
             this.comboBoxAnimal1.Name = "comboBoxAnimal1";
             this.comboBoxAnimal1.Size = new System.Drawing.Size(200, 21);
-            this.comboBoxAnimal1.TabIndex = 17;
+            this.comboBoxAnimal1.TabIndex = 3;
             this.comboBoxAnimal1.SelectedIndexChanged += new System.EventHandler(this.comboBoxAnimal1_SelectedIndexChanged);
             // 
             // comboBoxAnimal2
@@ -125,7 +125,7 @@
             this.comboBoxAnimal2.Location = new System.Drawing.Point(12, 168);
             this.comboBoxAnimal2.Name = "comboBoxAnimal2";
             this.comboBoxAnimal2.Size = new System.Drawing.Size(200, 21);
-            this.comboBoxAnimal2.TabIndex = 18;
+            this.comboBoxAnimal2.TabIndex = 5;
             this.comboBoxAnimal2.SelectedIndexChanged += new System.EventHandler(this.comboBoxAnimal2_SelectedIndexChanged);
             // 
             // comboBoxAnimal3
@@ -134,7 +134,7 @@
             this.comboBoxAnimal3.Location = new System.Drawing.Point(12, 195);
             this.comboBoxAnimal3.Name = "comboBoxAnimal3";
             this.comboBoxAnimal3.Size = new System.Drawing.Size(200, 21);
-            this.comboBoxAnimal3.TabIndex = 19;
+            this.comboBoxAnimal3.TabIndex = 7;
             this.comboBoxAnimal3.SelectedIndexChanged += new System.EventHandler(this.comboBoxAnimal3_SelectedIndexChanged);
             // 
             // label4
@@ -160,7 +160,7 @@
             this.buttonRemoveAnimal2.Location = new System.Drawing.Point(218, 168);
             this.buttonRemoveAnimal2.Name = "buttonRemoveAnimal2";
             this.buttonRemoveAnimal2.Size = new System.Drawing.Size(21, 21);
-            this.buttonRemoveAnimal2.TabIndex = 22;
+            this.buttonRemoveAnimal2.TabIndex = 6;
             this.buttonRemoveAnimal2.Text = "🗑️";
             this.buttonRemoveAnimal2.UseVisualStyleBackColor = true;
             this.buttonRemoveAnimal2.Click += new System.EventHandler(this.buttonRemoveAnimal2_Click);
@@ -170,7 +170,7 @@
             this.buttonRemoveAnimal3.Location = new System.Drawing.Point(218, 195);
             this.buttonRemoveAnimal3.Name = "buttonRemoveAnimal3";
             this.buttonRemoveAnimal3.Size = new System.Drawing.Size(21, 21);
-            this.buttonRemoveAnimal3.TabIndex = 23;
+            this.buttonRemoveAnimal3.TabIndex = 8;
             this.buttonRemoveAnimal3.Text = "🗑️";
             this.buttonRemoveAnimal3.UseVisualStyleBackColor = true;
             this.buttonRemoveAnimal3.Click += new System.EventHandler(this.buttonRemoveAnimal3_Click);
@@ -181,7 +181,7 @@
             this.buttonNewAnimalComboBox.Location = new System.Drawing.Point(218, 141);
             this.buttonNewAnimalComboBox.Name = "buttonNewAnimalComboBox";
             this.buttonNewAnimalComboBox.Size = new System.Drawing.Size(21, 21);
-            this.buttonNewAnimalComboBox.TabIndex = 24;
+            this.buttonNewAnimalComboBox.TabIndex = 4;
             this.buttonNewAnimalComboBox.Text = "➕";
             this.buttonNewAnimalComboBox.UseVisualStyleBackColor = true;
             this.buttonNewAnimalComboBox.Click += new System.EventHandler(this.buttonNewAnimalComboBox_Click);

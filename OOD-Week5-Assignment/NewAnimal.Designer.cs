@@ -53,7 +53,7 @@
             this.comboBoxAnimalType.Location = new System.Drawing.Point(15, 25);
             this.comboBoxAnimalType.Name = "comboBoxAnimalType";
             this.comboBoxAnimalType.Size = new System.Drawing.Size(184, 21);
-            this.comboBoxAnimalType.TabIndex = 0;
+            this.comboBoxAnimalType.TabIndex = 1;
             this.comboBoxAnimalType.SelectedIndexChanged += new System.EventHandler(this.comboBoxAnimalType_SelectedIndexChanged);
             // 
             // label1
@@ -114,7 +114,7 @@
             this.comboBoxSize.Location = new System.Drawing.Point(251, 25);
             this.comboBoxSize.Name = "comboBoxSize";
             this.comboBoxSize.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxSize.TabIndex = 7;
+            this.comboBoxSize.TabIndex = 2;
             // 
             // label4
             // 
@@ -130,7 +130,7 @@
             this.richTextBoxNotes.Location = new System.Drawing.Point(15, 180);
             this.richTextBoxNotes.Name = "richTextBoxNotes";
             this.richTextBoxNotes.Size = new System.Drawing.Size(357, 269);
-            this.richTextBoxNotes.TabIndex = 9;
+            this.richTextBoxNotes.TabIndex = 6;
             this.richTextBoxNotes.Text = "";
             // 
             // buttonConfirm
@@ -138,7 +138,7 @@
             this.buttonConfirm.Location = new System.Drawing.Point(297, 465);
             this.buttonConfirm.Name = "buttonConfirm";
             this.buttonConfirm.Size = new System.Drawing.Size(75, 23);
-            this.buttonConfirm.TabIndex = 10;
+            this.buttonConfirm.TabIndex = 7;
             this.buttonConfirm.Text = "Confirm";
             this.buttonConfirm.UseVisualStyleBackColor = true;
             this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
@@ -149,7 +149,7 @@
             this.buttonCancel.Location = new System.Drawing.Point(15, 465);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancel.TabIndex = 11;
+            this.buttonCancel.TabIndex = 8;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
@@ -161,7 +161,7 @@
             this.comboBoxGender.Location = new System.Drawing.Point(251, 77);
             this.comboBoxGender.Name = "comboBoxGender";
             this.comboBoxGender.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxGender.TabIndex = 13;
+            this.comboBoxGender.TabIndex = 4;
             // 
             // label5
             // 

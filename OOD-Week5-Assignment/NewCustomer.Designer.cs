@@ -54,7 +54,7 @@
             this.textBoxName.Location = new System.Drawing.Point(15, 26);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(184, 20);
-            this.textBoxName.TabIndex = 3;
+            this.textBoxName.TabIndex = 1;
             this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
             // buttonConfirm
@@ -62,7 +62,7 @@
             this.buttonConfirm.Location = new System.Drawing.Point(297, 465);
             this.buttonConfirm.Name = "buttonConfirm";
             this.buttonConfirm.Size = new System.Drawing.Size(75, 23);
-            this.buttonConfirm.TabIndex = 10;
+            this.buttonConfirm.TabIndex = 5;
             this.buttonConfirm.Text = "Confirm";
             this.buttonConfirm.UseVisualStyleBackColor = true;
             this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
@@ -73,7 +73,7 @@
             this.buttonCancel.Location = new System.Drawing.Point(15, 465);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
-            this.buttonCancel.TabIndex = 11;
+            this.buttonCancel.TabIndex = 6;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
@@ -83,7 +83,7 @@
             this.textBoxAddress.Location = new System.Drawing.Point(15, 80);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(184, 20);
-            this.textBoxAddress.TabIndex = 13;
+            this.textBoxAddress.TabIndex = 2;
             this.textBoxAddress.TextChanged += new System.EventHandler(this.textBoxAddress_TextChanged);
             // 
             // label1
@@ -100,7 +100,7 @@
             this.textBoxZipCode.Location = new System.Drawing.Point(15, 134);
             this.textBoxZipCode.Name = "textBoxZipCode";
             this.textBoxZipCode.Size = new System.Drawing.Size(184, 20);
-            this.textBoxZipCode.TabIndex = 15;
+            this.textBoxZipCode.TabIndex = 3;
             this.textBoxZipCode.TextChanged += new System.EventHandler(this.textBoxZipCode_TextChanged);
             // 
             // label5
@@ -117,7 +117,7 @@
             this.textBoxCity.Location = new System.Drawing.Point(15, 187);
             this.textBoxCity.Name = "textBoxCity";
             this.textBoxCity.Size = new System.Drawing.Size(184, 20);
-            this.textBoxCity.TabIndex = 17;
+            this.textBoxCity.TabIndex = 4;
             this.textBoxCity.TextChanged += new System.EventHandler(this.textBoxCity_TextChanged);
             // 
             // label3
