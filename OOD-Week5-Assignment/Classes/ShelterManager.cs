@@ -10,10 +10,23 @@ namespace OOD_Week5_Assignment.Classes
     [Serializable]
     public class ShelterManager
     {
+        #region Fields and properties
         private List<Adoption> adoptions;
         private List<Animal> animals;
         private List<Customer> customers;
 
+        public List<Customer> GetCustomers()
+        {
+            return customers;
+        }
+
+        public List<Animal> GetAnimals()
+        {
+            return animals;
+        }
+        #endregion
+
+        #region Logic
         public ShelterManager()
         {
             adoptions = new List<Adoption>();
@@ -65,15 +78,6 @@ namespace OOD_Week5_Assignment.Classes
                 customers.Add(c);
             }
         }
-
-        public List<Customer> GetCustomers()
-        {
-            return customers;
-        }
-
-        public List<Animal> GetAnimals()
-        {
-            return animals;
-        }
+        #endregion
     }
 }
