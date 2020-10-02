@@ -117,6 +117,7 @@
             this.comboBoxAnimal1.Name = "comboBoxAnimal1";
             this.comboBoxAnimal1.Size = new System.Drawing.Size(200, 21);
             this.comboBoxAnimal1.TabIndex = 17;
+            this.comboBoxAnimal1.SelectedIndexChanged += new System.EventHandler(this.comboBoxAnimal1_SelectedIndexChanged);
             // 
             // comboBoxAnimal2
             // 
@@ -125,6 +126,7 @@
             this.comboBoxAnimal2.Name = "comboBoxAnimal2";
             this.comboBoxAnimal2.Size = new System.Drawing.Size(200, 21);
             this.comboBoxAnimal2.TabIndex = 18;
+            this.comboBoxAnimal2.SelectedIndexChanged += new System.EventHandler(this.comboBoxAnimal2_SelectedIndexChanged);
             // 
             // comboBoxAnimal3
             // 
@@ -133,6 +135,7 @@
             this.comboBoxAnimal3.Name = "comboBoxAnimal3";
             this.comboBoxAnimal3.Size = new System.Drawing.Size(200, 21);
             this.comboBoxAnimal3.TabIndex = 19;
+            this.comboBoxAnimal3.SelectedIndexChanged += new System.EventHandler(this.comboBoxAnimal3_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -148,9 +151,9 @@
             this.labelTotalAdoptionFee.AutoSize = true;
             this.labelTotalAdoptionFee.Location = new System.Drawing.Point(111, 235);
             this.labelTotalAdoptionFee.Name = "labelTotalAdoptionFee";
-            this.labelTotalAdoptionFee.Size = new System.Drawing.Size(25, 13);
+            this.labelTotalAdoptionFee.Size = new System.Drawing.Size(34, 13);
             this.labelTotalAdoptionFee.TabIndex = 21;
-            this.labelTotalAdoptionFee.Text = "€12";
+            this.labelTotalAdoptionFee.Text = "€0.00";
             // 
             // buttonRemoveAnimal2
             // 

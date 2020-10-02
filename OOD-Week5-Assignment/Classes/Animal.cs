@@ -17,10 +17,10 @@ namespace OOD_Week5_Assignment.Classes
         private bool adopted;
         private string notes;
 
-        public int Id
-        {
-            get { return this.Id; }
-        }
+        //public int Id
+        //{
+        //    get { return this.Id; }
+        //}
 
         public string Name
         {
