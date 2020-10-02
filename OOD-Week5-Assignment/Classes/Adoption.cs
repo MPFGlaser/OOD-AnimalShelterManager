@@ -8,6 +8,7 @@ namespace OOD_Week5_Assignment.Classes
 {
     public class Adoption
     {
+        #region Fields and properties
         private List<Animal> animals;
         private Customer customer;
         private DateTime adoptionMoment;
@@ -32,6 +33,7 @@ namespace OOD_Week5_Assignment.Classes
         {
             get { return this.adoptionFee; }
         }
+        #endregion
 
         public Adoption(List<Animal> animals, Customer customer, DateTime adoptionMoment, double adoptionFee)
         {

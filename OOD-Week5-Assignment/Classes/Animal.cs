@@ -10,17 +10,12 @@ namespace OOD_Week5_Assignment.Classes
     [Serializable]
     public abstract class Animal
     {
-        private int id;
+        #region Fields and properties
         private string name;
         private int age;
         private Gender gender;
         private bool adopted;
         private string notes;
-
-        //public int Id
-        //{
-        //    get { return this.Id; }
-        //}
 
         public string Name
         {
@@ -51,6 +46,7 @@ namespace OOD_Week5_Assignment.Classes
             get { return this.notes; }
             set { this.notes = value; }
         }
+        #endregion
 
         public Animal(string name, int age, Gender gender, string notes)
         {
