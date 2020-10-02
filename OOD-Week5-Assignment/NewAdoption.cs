@@ -201,7 +201,7 @@ namespace OOD_Week5_Assignment
             {
                 foreach (Customer c in customers)
                 {
-                    comboBoxAnimal1.Items.Add(new { Text = c.Name, Value = c });
+                    comboBoxCustomerName.Items.Add(new { Text = c.Name, Value = c });
                 }
             }
             catch (Exception)
