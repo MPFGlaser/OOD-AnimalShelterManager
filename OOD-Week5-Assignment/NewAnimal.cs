@@ -14,9 +14,19 @@ namespace OOD_Week5_Assignment
 {
     public partial class NewAnimal : Form
     {
+        #region Fields and properties
         private bool typeCorrect;
         private bool nameCorrect;
 
+        public AnimalType Type { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public Models.Size AnimalSize { get; set; }
+        public Gender AnimalGender { get; set; }
+        public string Notes { get; set; }
+        #endregion
+
+        #region Logic
         public NewAnimal()
         {
             InitializeComponent();
@@ -28,13 +38,23 @@ namespace OOD_Week5_Assignment
             comboBoxGender.DataSource = Enum.GetValues(typeof(Gender));
         }
 
-        public AnimalType Type { get; set; }
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public Models.Size AnimalSize { get; set; }
-        public Gender AnimalGender { get; set; }
-        public string Notes { get; set; }
+        /// <summary>
+        /// Checks if all fields are filled in, and if that is the case, it enables the confirm button.
+        /// </summary>
+        private void ConfirmButtonEnabler()
+        {
+            if (nameCorrect)
+            {
+                buttonConfirm.Enabled = true;
+            }
+            else
+            {
+                buttonConfirm.Enabled = false;
+            }
+        }
+        #endregion
 
+        #region Control event handlers
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
@@ -79,20 +99,6 @@ namespace OOD_Week5_Assignment
                 nameCorrect = false;
             }
         }
-
-        /// <summary>
-        /// Checks if all fields are filled in, and if that is the case, it enables the confirm button.
-        /// </summary>
-        private void ConfirmButtonEnabler()
-        {
-            if (nameCorrect)
-            {
-                buttonConfirm.Enabled = true;
-            }
-            else
-            {
-                buttonConfirm.Enabled = false;
-            }
-        }
+        #endregion
     }
 }
