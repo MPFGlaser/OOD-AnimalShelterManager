@@ -250,9 +250,12 @@ namespace OOD_Week5_Assignment
             {
                 foreach (Animal a in animals)
                 {
-                    comboBoxAnimal1.Items.Add(new { Text = a.Name, Value = a });
-                    comboBoxAnimal2.Items.Add(new { Text = a.Name, Value = a });
-                    comboBoxAnimal3.Items.Add(new { Text = a.Name, Value = a });
+                    if (!a.Adopted)
+                    {
+                        comboBoxAnimal1.Items.Add(new { Text = a.Name, Value = a });
+                        comboBoxAnimal2.Items.Add(new { Text = a.Name, Value = a });
+                        comboBoxAnimal3.Items.Add(new { Text = a.Name, Value = a });
+                    }
                 }
             }
             catch (Exception)

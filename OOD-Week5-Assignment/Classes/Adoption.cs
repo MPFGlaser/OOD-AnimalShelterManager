@@ -39,6 +39,12 @@ namespace OOD_Week5_Assignment.Classes
             this.customer = customer;
             this.adoptionMoment = adoptionMoment;
             this.adoptionFee = adoptionFee;
+
+            // Sets the Adopted bool in the animal class to true
+            foreach(Animal a in animals)
+            {
+                a.Adopted = true;
+            }
         }
     }
 }
