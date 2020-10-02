@@ -9,18 +9,11 @@ namespace OOD_Week5_Assignment.Classes
     [Serializable]
     public class Customer 
     {
+        #region Fields and properties
         private string name;
         private string address;
         private string zipcode;
         private string city;
-
-        public Customer(string name, string address, string zipcode, string city)
-        {
-            this.name = name;
-            this.address = address;
-            this.zipcode = zipcode;
-            this.city = city;
-        }
 
         public string Name
         {
@@ -42,8 +35,19 @@ namespace OOD_Week5_Assignment.Classes
 
         public string City
         {
-            get { return this.city;  }
+            get { return this.city; }
             set { this.city = value; }
         }
+        #endregion
+
+        public Customer(string name, string address, string zipcode, string city)
+        {
+            this.name = name;
+            this.address = address;
+            this.zipcode = zipcode;
+            this.city = city;
+        }
+
+
     }
 }
