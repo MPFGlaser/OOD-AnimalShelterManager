@@ -58,9 +58,9 @@ namespace OOD_Week5_Assignment.Classes
             }
         }
 
-        public void AddAdoption()
+        public void AddAdoption(List<Animal> animals, Customer customer, DateTime adoptionMoment, double adoptionFee)
         {
-            Adoption a = new Adoption();
+            Adoption a = new Adoption(animals, customer, adoptionMoment, adoptionFee);
             if(1 == 1)
             {
                 adoptions.Add(a);

@@ -17,9 +17,30 @@ namespace OOD_Week5_Assignment
         private List<Animal> adoptedAnimals;
         private Customer adoptionCustomer;
         private double calculatedFee = 0;
+        private DateTime adoptionMoment;
 
-        public List<Animal> AdoptedAnimals { get; }
-        public Customer AdoptionCustomer { get; }
+        public List<Animal> AdoptedAnimals
+        {
+            get { return this.adoptedAnimals; }
+        }
+
+        public Customer AdoptionCustomer
+        {
+            get { return adoptionCustomer; }
+            private set { adoptionCustomer = value; }
+        }
+
+        public DateTime AdoptionMoment
+        {
+            get { return adoptionMoment; }
+            private set { adoptionMoment = value; }
+        }
+
+        public double AdoptionFee
+        {
+            get { return calculatedFee; }
+            private set { calculatedFee = value; }
+        }
 
         public NewAdoption(List<Customer> customers, List<Animal> animals)
         {
@@ -57,8 +78,13 @@ namespace OOD_Week5_Assignment
 
             if(comboBoxCustomerName.SelectedIndex != -1)
             {
-                adoptionCustomer = (comboBoxCustomerName.SelectedItem as dynamic).Value;
+                AdoptionCustomer = (comboBoxCustomerName.SelectedItem as dynamic).Value;
             }
+
+            AdoptionMoment = dateTimePickerAdoptionMoment.Value;
+
+            CalculateAdoptionFee();
+
             this.DialogResult = DialogResult.OK;
         }
 

@@ -62,7 +62,7 @@ namespace OOD_Week5_Assignment
             newAdoption = new NewAdoption(shelterManager.GetCustomers(), shelterManager.GetAnimals());
             if(newAdoption.ShowDialog() == DialogResult.OK)
             {
-
+                shelterManager.AddAdoption(newAdoption.AdoptedAnimals, newAdoption.AdoptionCustomer, newAdoption.AdoptionMoment, newAdoption.AdoptionFee);
             }
         }
 

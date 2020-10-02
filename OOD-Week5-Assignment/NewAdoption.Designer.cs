@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelAnimal = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerAdoptionMoment = new System.Windows.Forms.DateTimePicker();
             this.comboBoxCustomerName = new System.Windows.Forms.ComboBox();
             this.comboBoxAnimal1 = new System.Windows.Forms.ComboBox();
             this.comboBoxAnimal2 = new System.Windows.Forms.ComboBox();
@@ -93,14 +93,14 @@
             this.labelAnimal.TabIndex = 14;
             this.labelAnimal.Text = "Animal:";
             // 
-            // dateTimePicker1
+            // dateTimePickerAdoptionMoment
             // 
-            this.dateTimePicker1.CustomFormat = "HH:mm:ss dd/MM/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(12, 89);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 15;
+            this.dateTimePickerAdoptionMoment.CustomFormat = "HH:mm:ss dd/MM/yyyy";
+            this.dateTimePickerAdoptionMoment.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerAdoptionMoment.Location = new System.Drawing.Point(12, 89);
+            this.dateTimePickerAdoptionMoment.Name = "dateTimePickerAdoptionMoment";
+            this.dateTimePickerAdoptionMoment.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerAdoptionMoment.TabIndex = 15;
             // 
             // comboBoxCustomerName
             // 
@@ -202,7 +202,7 @@
             this.Controls.Add(this.comboBoxAnimal2);
             this.Controls.Add(this.comboBoxAnimal1);
             this.Controls.Add(this.comboBoxCustomerName);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePickerAdoptionMoment);
             this.Controls.Add(this.labelAnimal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -223,7 +223,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelAnimal;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerAdoptionMoment;
         private System.Windows.Forms.ComboBox comboBoxCustomerName;
         private System.Windows.Forms.ComboBox comboBoxAnimal1;
         private System.Windows.Forms.ComboBox comboBoxAnimal2;
