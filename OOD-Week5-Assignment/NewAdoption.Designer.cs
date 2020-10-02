@@ -32,7 +32,7 @@
             this.buttonCancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelAnimal = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBoxCustomerName = new System.Windows.Forms.ComboBox();
             this.comboBoxAnimal1 = new System.Windows.Forms.ComboBox();
@@ -40,6 +40,9 @@
             this.comboBoxAnimal3 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.labelTotalAdoptionFee = new System.Windows.Forms.Label();
+            this.buttonRemoveAnimal2 = new System.Windows.Forms.Button();
+            this.buttonRemoveAnimal3 = new System.Windows.Forms.Button();
+            this.buttonNewAnimalComboBox = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonConfirm
@@ -81,14 +84,14 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Date and time:";
             // 
-            // label3
+            // labelAnimal
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 125);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Animal";
+            this.labelAnimal.AutoSize = true;
+            this.labelAnimal.Location = new System.Drawing.Point(15, 125);
+            this.labelAnimal.Name = "labelAnimal";
+            this.labelAnimal.Size = new System.Drawing.Size(41, 13);
+            this.labelAnimal.TabIndex = 14;
+            this.labelAnimal.Text = "Animal:";
             // 
             // dateTimePicker1
             // 
@@ -149,6 +152,37 @@
             this.labelTotalAdoptionFee.TabIndex = 21;
             this.labelTotalAdoptionFee.Text = "€12";
             // 
+            // buttonRemoveAnimal2
+            // 
+            this.buttonRemoveAnimal2.Location = new System.Drawing.Point(218, 168);
+            this.buttonRemoveAnimal2.Name = "buttonRemoveAnimal2";
+            this.buttonRemoveAnimal2.Size = new System.Drawing.Size(21, 21);
+            this.buttonRemoveAnimal2.TabIndex = 22;
+            this.buttonRemoveAnimal2.Text = "🗑️";
+            this.buttonRemoveAnimal2.UseVisualStyleBackColor = true;
+            this.buttonRemoveAnimal2.Click += new System.EventHandler(this.buttonRemoveAnimal2_Click);
+            // 
+            // buttonRemoveAnimal3
+            // 
+            this.buttonRemoveAnimal3.Location = new System.Drawing.Point(218, 195);
+            this.buttonRemoveAnimal3.Name = "buttonRemoveAnimal3";
+            this.buttonRemoveAnimal3.Size = new System.Drawing.Size(21, 21);
+            this.buttonRemoveAnimal3.TabIndex = 23;
+            this.buttonRemoveAnimal3.Text = "🗑️";
+            this.buttonRemoveAnimal3.UseVisualStyleBackColor = true;
+            this.buttonRemoveAnimal3.Click += new System.EventHandler(this.buttonRemoveAnimal3_Click);
+            // 
+            // buttonNewAnimalComboBox
+            // 
+            this.buttonNewAnimalComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.buttonNewAnimalComboBox.Location = new System.Drawing.Point(218, 141);
+            this.buttonNewAnimalComboBox.Name = "buttonNewAnimalComboBox";
+            this.buttonNewAnimalComboBox.Size = new System.Drawing.Size(21, 21);
+            this.buttonNewAnimalComboBox.TabIndex = 24;
+            this.buttonNewAnimalComboBox.Text = "➕";
+            this.buttonNewAnimalComboBox.UseVisualStyleBackColor = true;
+            this.buttonNewAnimalComboBox.Click += new System.EventHandler(this.buttonNewAnimalComboBox_Click);
+            // 
             // NewAdoption
             // 
             this.AcceptButton = this.buttonConfirm;
@@ -156,6 +190,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(384, 500);
+            this.Controls.Add(this.buttonNewAnimalComboBox);
+            this.Controls.Add(this.buttonRemoveAnimal3);
+            this.Controls.Add(this.buttonRemoveAnimal2);
             this.Controls.Add(this.labelTotalAdoptionFee);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBoxAnimal3);
@@ -163,7 +200,7 @@
             this.Controls.Add(this.comboBoxAnimal1);
             this.Controls.Add(this.comboBoxCustomerName);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelAnimal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonCancel);
@@ -182,7 +219,7 @@
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelAnimal;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBoxCustomerName;
         private System.Windows.Forms.ComboBox comboBoxAnimal1;
@@ -190,5 +227,8 @@
         private System.Windows.Forms.ComboBox comboBoxAnimal3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelTotalAdoptionFee;
+        private System.Windows.Forms.Button buttonRemoveAnimal2;
+        private System.Windows.Forms.Button buttonRemoveAnimal3;
+        private System.Windows.Forms.Button buttonNewAnimalComboBox;
     }
 }

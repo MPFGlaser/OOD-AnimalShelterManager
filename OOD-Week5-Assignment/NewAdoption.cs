@@ -21,6 +21,12 @@ namespace OOD_Week5_Assignment
                 PopulateComboBoxCustomers(customers);
                 PopulateComboBoxAnimals(animals);
             }
+            comboBoxAnimal2.Visible = false;
+            comboBoxAnimal2.Enabled = false;
+            buttonRemoveAnimal2.Visible = false;
+            comboBoxAnimal3.Visible = false;
+            comboBoxAnimal3.Enabled = false;
+            buttonRemoveAnimal3.Visible = false;
         }
 
         private void buttonConfirm_Click(object sender, EventArgs e)
@@ -67,6 +73,44 @@ namespace OOD_Week5_Assignment
                 throw;
             }
             
+        }
+
+        private void buttonNewAnimalComboBox_Click(object sender, EventArgs e)
+        {
+            if(comboBoxAnimal2.Visible == true)
+            {
+                comboBoxAnimal3.Visible = true;
+                comboBoxAnimal3.Enabled = true;
+                buttonRemoveAnimal3.Visible = true;
+                buttonRemoveAnimal2.Visible = false;
+                buttonNewAnimalComboBox.Enabled = false;
+            }
+            else if(comboBoxAnimal2.Visible == true && comboBoxAnimal3.Visible == true)
+            {
+                buttonNewAnimalComboBox.Enabled = false;
+            }
+            else
+            {
+                comboBoxAnimal2.Visible = true;
+                comboBoxAnimal2.Enabled = true;
+                buttonRemoveAnimal2.Visible = true;
+                labelAnimal.Text = "Animals: ";
+            }
+        }
+
+        private void buttonRemoveAnimal2_Click(object sender, EventArgs e)
+        {
+            buttonRemoveAnimal2.Visible = false;
+            comboBoxAnimal2.Visible = false;
+            labelAnimal.Text = "Animal:";
+        }
+
+        private void buttonRemoveAnimal3_Click(object sender, EventArgs e)
+        {
+            buttonNewAnimalComboBox.Enabled = true;
+            comboBoxAnimal3.Visible = false;
+            buttonRemoveAnimal3.Visible = false;
+            buttonRemoveAnimal2.Visible = true;
         }
     }
 }
