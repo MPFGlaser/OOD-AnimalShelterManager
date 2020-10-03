@@ -22,7 +22,7 @@ namespace OOD_Week5_Assignment
         Regex regexName = new Regex(@"^([a-zA-Z]+\s?\b){1,}");
 
         public AnimalType Type { get; set; }
-        public string Name { get; set; }
+        public string AnimalName { get; set; }
         public int Age { get; set; }
         public Models.Size AnimalSize { get; set; }
         public Gender AnimalGender { get; set; }
