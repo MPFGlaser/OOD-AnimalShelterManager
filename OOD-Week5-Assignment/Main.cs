@@ -20,7 +20,10 @@ namespace OOD_Week5_Assignment
         private NewCustomer newCustomer;
         private NewAdoption newAdoption;
         private ViewAdoption viewAdoption;
+        private ViewAnimal viewAnimal;
+        private ViewCustomer viewCustomer;
         private ShelterManager shelterManager;
+        private bool newChanges = false;
 
         #region Logic
         public Main()
@@ -50,9 +53,40 @@ namespace OOD_Week5_Assignment
                 listBoxAnimals.ValueMember = "Value";
                 listBoxAnimals.Items.Clear();
 
-                foreach (Animal a in shelterManager.Animals)
+                if (checkBoxShowAdopted.Checked)
                 {
-                    listBoxAnimals.Items.Add(new { Text = a.ToString(), Value = a });
+                    foreach (Animal a in shelterManager.Animals)
+                    {
+                        if (a.Adopted)
+                        {
+                            listBoxAnimals.Items.Add(new { Text = a.ToString() + " [Adopted]", Value = a });
+                        }
+                        else
+                        {
+                            listBoxAnimals.Items.Add(new { Text = a.ToString(), Value = a });
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (Animal a in shelterManager.Animals)
+                    {
+                        if (!a.Adopted)
+                        {
+                            listBoxAnimals.Items.Add(new { Text = a.ToString(), Value = a });
+                        }
+                    }
+                }
+            }
+
+            if (shelterManager.Customers != null)
+            {
+                listBoxCustomers.DisplayMember = "Text";
+                listBoxCustomers.ValueMember = "Value";
+                listBoxCustomers.Items.Clear();
+                foreach (Customer c in shelterManager.Customers)
+                {
+                    listBoxCustomers.Items.Add(new { Text = c.Name + " (" + c.City + ")", Value = c });
                 }
             }
         }
@@ -77,6 +111,7 @@ namespace OOD_Week5_Assignment
                     default:
                         break;
                 }
+                newChanges = true;
             }
             UpdateListboxes();
         }
@@ -88,6 +123,7 @@ namespace OOD_Week5_Assignment
             if (newCustomer.ShowDialog() == DialogResult.OK)
             {
                 shelterManager.AddCustomer(newCustomer.CustomerName, newCustomer.Address, newCustomer.ZipCode, newCustomer.City);
+                newChanges = true;
             }
             UpdateListboxes();
         }
@@ -99,6 +135,7 @@ namespace OOD_Week5_Assignment
             if (newAdoption.ShowDialog() == DialogResult.OK)
             {
                 shelterManager.AddAdoption(newAdoption.AdoptedAnimals, newAdoption.AdoptionCustomer, newAdoption.AdoptionMoment, newAdoption.AdoptionFee);
+                newChanges = true;
             }
             UpdateListboxes();
         }
@@ -187,7 +224,35 @@ namespace OOD_Week5_Assignment
         // Shows a popup window with information about the animal selected in the listbox
         private void ShowAnimalInfo()
         {
-            // Add similar popup window as ShowAdoptionInfo, but then for animals.
+            if (listBoxAnimals.SelectedIndex != -1)
+            {
+                viewAnimal = new ViewAnimal((listBoxAnimals.SelectedItem as dynamic).Value);
+                viewAnimal.ShowDialog();
+            }
+        }
+
+        // Shows a popup window with information about the customer selected in the listbox
+        private void ShowCustomerInfo()
+        {
+            if (listBoxCustomers.SelectedIndex != -1)
+            {
+                viewCustomer = new ViewCustomer((listBoxCustomers.SelectedItem as dynamic).Value);
+                viewCustomer.ShowDialog();
+            }
+        }
+
+        // Checks for unsaved changes and asks the user whether they want to save or not.
+        private void CheckForUnsavedChanges()
+        {
+            if (newChanges)
+            {
+                if (MessageBox.Show("There are unsaved changes. Do you want to save before exiting?", "Unsaved changes",
+                   MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    SaveData();
+                }
+
+            }
         }
         #endregion
 
@@ -225,6 +290,21 @@ namespace OOD_Week5_Assignment
         private void buttonAnimalInfo_Click(object sender, EventArgs e)
         {
             ShowAnimalInfo();
+        }
+
+        private void buttonCustomerInfo_Click(object sender, EventArgs e)
+        {
+            ShowCustomerInfo();
+        }
+
+        private void checkBoxShowAdopted_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateListboxes();
+        }
+
+        private void Main_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+            CheckForUnsavedChanges();
         }
         #endregion
     }

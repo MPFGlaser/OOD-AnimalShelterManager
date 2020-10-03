@@ -1,6 +1,6 @@
 ﻿namespace OOD_Week5_Assignment
 {
-    partial class ViewAdoption
+    partial class ViewCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAdoption));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewCustomer));
             this.groupBoxCustomerDetails = new System.Windows.Forms.GroupBox();
             this.labelCustomerCity = new System.Windows.Forms.Label();
             this.labelCustomerZipcode = new System.Windows.Forms.Label();
@@ -38,14 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.labelAdoptionDateTime = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBoxAdoptedAnimals = new System.Windows.Forms.ListBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelAdoptionFee = new System.Windows.Forms.Label();
             this.groupBoxCustomerDetails.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxCustomerDetails
@@ -60,7 +53,7 @@
             this.groupBoxCustomerDetails.Controls.Add(this.label1);
             this.groupBoxCustomerDetails.Location = new System.Drawing.Point(15, 13);
             this.groupBoxCustomerDetails.Name = "groupBoxCustomerDetails";
-            this.groupBoxCustomerDetails.Size = new System.Drawing.Size(200, 129);
+            this.groupBoxCustomerDetails.Size = new System.Drawing.Size(357, 236);
             this.groupBoxCustomerDetails.TabIndex = 13;
             this.groupBoxCustomerDetails.TabStop = false;
             this.groupBoxCustomerDetails.Text = "Customer Details";
@@ -137,81 +130,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(238, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 13);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Adoption date && time:";
-            // 
-            // labelAdoptionDateTime
-            // 
-            this.labelAdoptionDateTime.AutoSize = true;
-            this.labelAdoptionDateTime.Location = new System.Drawing.Point(241, 30);
-            this.labelAdoptionDateTime.Name = "labelAdoptionDateTime";
-            this.labelAdoptionDateTime.Size = new System.Drawing.Size(97, 13);
-            this.labelAdoptionDateTime.TabIndex = 15;
-            this.labelAdoptionDateTime.Text = "Date and time here";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.listBoxAdoptedAnimals);
-            this.groupBox1.Location = new System.Drawing.Point(15, 149);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(357, 108);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Adopted Animals";
-            // 
-            // listBoxAdoptedAnimals
-            // 
-            this.listBoxAdoptedAnimals.FormattingEnabled = true;
-            this.listBoxAdoptedAnimals.Location = new System.Drawing.Point(7, 20);
-            this.listBoxAdoptedAnimals.Name = "listBoxAdoptedAnimals";
-            this.listBoxAdoptedAnimals.Size = new System.Drawing.Size(344, 82);
-            this.listBoxAdoptedAnimals.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(238, 57);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Total adoption fee:";
-            // 
-            // labelAdoptionFee
-            // 
-            this.labelAdoptionFee.AutoSize = true;
-            this.labelAdoptionFee.Location = new System.Drawing.Point(241, 70);
-            this.labelAdoptionFee.Name = "labelAdoptionFee";
-            this.labelAdoptionFee.Size = new System.Drawing.Size(34, 13);
-            this.labelAdoptionFee.TabIndex = 17;
-            this.labelAdoptionFee.Text = "€0.00";
-            // 
-            // ViewAdoption
+            // ViewCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 261);
-            this.Controls.Add(this.labelAdoptionFee);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.labelAdoptionDateTime);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBoxCustomerDetails);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(400, 300);
             this.MinimumSize = new System.Drawing.Size(400, 300);
-            this.Name = "ViewAdoption";
-            this.Text = "View Adoption";
+            this.Name = "ViewCustomer";
+            this.Text = "View Customer";
             this.groupBoxCustomerDetails.ResumeLayout(false);
             this.groupBoxCustomerDetails.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -225,11 +157,5 @@
         private System.Windows.Forms.Label labelCustomerZipcode;
         private System.Windows.Forms.Label labelCustomerAddress;
         private System.Windows.Forms.Label labelCustomerName;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label labelAdoptionDateTime;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListBox listBoxAdoptedAnimals;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label labelAdoptionFee;
     }
 }
