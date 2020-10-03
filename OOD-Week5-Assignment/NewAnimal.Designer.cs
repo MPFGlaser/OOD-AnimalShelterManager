@@ -42,6 +42,7 @@
             this.buttonCancel = new System.Windows.Forms.Button();
             this.comboBoxGender = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.labelNameInvalid = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAge)).BeginInit();
             this.SuspendLayout();
             // 
@@ -172,6 +173,16 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Gender:";
             // 
+            // labelNameInvalid
+            // 
+            this.labelNameInvalid.AutoSize = true;
+            this.labelNameInvalid.ForeColor = System.Drawing.Color.Red;
+            this.labelNameInvalid.Location = new System.Drawing.Point(74, 61);
+            this.labelNameInvalid.Name = "labelNameInvalid";
+            this.labelNameInvalid.Size = new System.Drawing.Size(125, 13);
+            this.labelNameInvalid.TabIndex = 21;
+            this.labelNameInvalid.Text = "Please fill in a valid name";
+            // 
             // NewAnimal
             // 
             this.AcceptButton = this.buttonConfirm;
@@ -179,6 +190,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(384, 500);
+            this.Controls.Add(this.labelNameInvalid);
             this.Controls.Add(this.comboBoxGender);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonCancel);
@@ -219,5 +231,6 @@
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.ComboBox comboBoxGender;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelNameInvalid;
     }
 }

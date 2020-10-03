@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,6 +18,8 @@ namespace OOD_Week5_Assignment
         #region Fields and properties
         private bool typeCorrect;
         private bool nameCorrect;
+
+        Regex regexName = new Regex(@"^([a-zA-Z]+\s?\b){1,}");
 
         public AnimalType Type { get; set; }
         public string Name { get; set; }
@@ -88,16 +91,18 @@ namespace OOD_Week5_Assignment
 
         private void textBoxName_TextChanged(object sender, EventArgs e)
         {
-            ConfirmButtonEnabler();
-            if (textBoxName.Text != null)
+            if (textBoxName.Text != "" && regexName.IsMatch(textBoxName.Text))
             {
+                labelNameInvalid.Visible = false;
                 this.Name = textBoxName.Text;
                 nameCorrect = true;
             }
             else
             {
+                labelNameInvalid.Visible = true;
                 nameCorrect = false;
             }
+            ConfirmButtonEnabler();
         }
         #endregion
     }
