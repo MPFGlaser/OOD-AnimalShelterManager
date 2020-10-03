@@ -7,6 +7,7 @@ using OOD_Week5_Assignment.Models;
 
 namespace OOD_Week5_Assignment.Classes
 {
+    [Serializable]
     public class Bird : Animal
     {
         private Size size;

@@ -76,11 +76,52 @@ namespace OOD_Week5_Assignment
         private void buttonLoadData_Click(object sender, EventArgs e)
         {
             // Load data
+            FileStream fs = null;
+            BinaryFormatter bf = null;
+
+            try
+            {
+                fs = new FileStream("../../ShelterData.txt", FileMode.Open, FileAccess.Read);
+                bf = new BinaryFormatter();
+                shelterManager = (ShelterManager)(bf.Deserialize(fs));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                if(fs != null)
+                {
+                    fs.Close();
+                }
+            }
+            UpdateListboxes();
         }
 
         private void buttonSaveData_Click(object sender, EventArgs e)
         {
             // Save data
+            FileStream fs = null;
+            BinaryFormatter bf = null;
+
+            try
+            {
+                fs = new FileStream("../../ShelterData.txt", FileMode.Create, FileAccess.Write);
+                bf = new BinaryFormatter();
+                bf.Serialize(fs, shelterManager);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (fs != null)
+                {
+                    fs.Close();
+                }
+            }
         }
 
         private void buttonAdoptionInfo_Click(object sender, EventArgs e)

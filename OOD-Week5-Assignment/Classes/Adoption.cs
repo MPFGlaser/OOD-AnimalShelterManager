@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD_Week5_Assignment.Classes
 {
+    [Serializable]
     public class Adoption
     {
         #region Fields and properties
