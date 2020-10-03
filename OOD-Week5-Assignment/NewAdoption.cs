@@ -73,8 +73,8 @@ namespace OOD_Week5_Assignment
             // Calculates the fee for the animal selected in comboBoxAnimal1
             if (comboBoxAnimal1.Enabled && comboBoxAnimal1.SelectedIndex != -1)
             {
-                animalsCorrect = true;
-                ConfirmButtonEnabler(); 
+                //animalsCorrect = true;
+                //ConfirmButtonEnabler(); 
 
                 Animal animal1 = (comboBoxAnimal1.SelectedItem as dynamic).Value;
                 if (animal1.GetType() == typeof(Dog))
@@ -271,6 +271,9 @@ namespace OOD_Week5_Assignment
                 buttonRemoveAnimal2.Visible = true;
                 labelAnimal.Text = "Animals: ";
             }
+            UpdateComboBoxAnimals();
+            CalculateAdoptionFee();
+            ConfirmButtonEnabler();
         }
 
         // Method to remove comboBoxAnimal2
@@ -281,7 +284,10 @@ namespace OOD_Week5_Assignment
             comboBoxAnimal2.Enabled = false;
             comboBoxAnimal2.SelectedIndex = -1;
             labelAnimal.Text = "Animal:";
+            labelAnimal2AlreadyChosen.Visible = false;
+            UpdateComboBoxAnimals();
             CalculateAdoptionFee();
+            ConfirmButtonEnabler();
         }
 
         // Method to remove comboBoxAnimal3
@@ -293,7 +299,10 @@ namespace OOD_Week5_Assignment
             comboBoxAnimal3.SelectedIndex = -1;
             buttonRemoveAnimal3.Visible = false;
             buttonRemoveAnimal2.Visible = true;
+            labelAnimal3AlreadyChosen.Visible = false;
+            UpdateComboBoxAnimals();
             CalculateAdoptionFee();
+            ConfirmButtonEnabler();
         }
 
         // Multiple methods to call for recalculation of the adoption fee when a different animal is selected.
@@ -301,18 +310,21 @@ namespace OOD_Week5_Assignment
         {
             UpdateComboBoxAnimals();
             CalculateAdoptionFee();
+            ConfirmButtonEnabler();
         }
 
         private void comboBoxAnimal2_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateComboBoxAnimals();
             CalculateAdoptionFee();
+            ConfirmButtonEnabler();
         }
 
         private void comboBoxAnimal3_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateComboBoxAnimals();
             CalculateAdoptionFee();
+            ConfirmButtonEnabler();
         }
 
         private void comboBoxCustomerName_SelectedIndexChanged(object sender, EventArgs e)
@@ -365,9 +377,9 @@ namespace OOD_Week5_Assignment
                 {
                     if (!a.Adopted)
                     {
-                        comboBoxAnimal1.Items.Add(new { Text = a.Name, Value = a });
-                        comboBoxAnimal2.Items.Add(new { Text = a.Name, Value = a });
-                        comboBoxAnimal3.Items.Add(new { Text = a.Name, Value = a });
+                        comboBoxAnimal1.Items.Add(new { Text = a.ToString(), Value = a });
+                        comboBoxAnimal2.Items.Add(new { Text = a.ToString(), Value = a });
+                        comboBoxAnimal3.Items.Add(new { Text = a.ToString(), Value = a });
                     }
                 }
             }
@@ -382,23 +394,53 @@ namespace OOD_Week5_Assignment
         // Method to remove already chosen animals from the other comboboxes
         private void UpdateComboBoxAnimals()
         {
-            // Idea is to remove already chosen animals from the remaining comboboxes. Something for later, perhaps.
+            // Idea is to eventually remove the animals from the next listboxes if its already chosen, but for now disabling the confirm button as well as showing a warning will have to do.
 
-            //if (comboBoxAnimal2.Enabled)
-            //{
-            //    //comboBoxAnimal1.Items.Remove((comboBoxAnimal2.SelectedItem as dynamic).Value);
-            //    //comboBoxAnimal2.Items.Remove((comboBoxAnimal1.SelectedItem as dynamic).Value);
+            animalsCorrect = true;
+            try
+            {
+                if ((comboBoxAnimal2.SelectedItem as dynamic).Value == (comboBoxAnimal1.SelectedItem as dynamic).Value)
+                {
+                    labelAnimal2AlreadyChosen.Visible = true;
+                    animalsCorrect = false;
+                }
+                else
+                {
+                    labelAnimal2AlreadyChosen.Visible = false;
+                    animalsCorrect = true;
+                }
+            }
+            catch (Exception) { }
 
-            //    (comboBoxAnimal1.Items as dynamic).Value.Remove((comboBoxAnimal2.SelectedItem as dynamic).Value);
-            //    (comboBoxAnimal2.Items as dynamic).Value.Remove((comboBoxAnimal1.SelectedItem as dynamic).Value);
-            //}
-            //if (comboBoxAnimal3.Enabled)
-            //{
-            //    comboBoxAnimal1.Items.Remove((comboBoxAnimal3.SelectedItem as dynamic).Value);
-            //    comboBoxAnimal2.Items.Remove((comboBoxAnimal3.SelectedItem as dynamic).Value);
-            //    comboBoxAnimal3.Items.Remove((comboBoxAnimal1.SelectedItem as dynamic).Value);
-            //    comboBoxAnimal3.Items.Remove((comboBoxAnimal2.SelectedItem as dynamic).Value);
-            //}
+            try
+            {
+                if ((comboBoxAnimal3.SelectedItem as dynamic).Value == (comboBoxAnimal2.SelectedItem as dynamic).Value)
+                {
+                    labelAnimal3AlreadyChosen.Visible = true;
+                    animalsCorrect = false;
+                }
+                else
+                {
+                    labelAnimal3AlreadyChosen.Visible = false;
+                    animalsCorrect = true;
+                }
+            }
+            catch (Exception) { }
+
+            try
+            {
+                if((comboBoxAnimal3.SelectedItem as dynamic).Value == (comboBoxAnimal1.SelectedItem as dynamic).Value)
+                {
+                    labelAnimal3AlreadyChosen.Visible = true;
+                    animalsCorrect = false;
+                }
+                else
+                {
+                    labelAnimal3AlreadyChosen.Visible = false;
+                    animalsCorrect = true;
+                }
+            }
+            catch (Exception) { }
         }
         #endregion
     }

@@ -43,6 +43,8 @@
             this.buttonRemoveAnimal2 = new System.Windows.Forms.Button();
             this.buttonRemoveAnimal3 = new System.Windows.Forms.Button();
             this.buttonNewAnimalComboBox = new System.Windows.Forms.Button();
+            this.labelAnimal2AlreadyChosen = new System.Windows.Forms.Label();
+            this.labelAnimal3AlreadyChosen = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonConfirm
@@ -191,6 +193,28 @@
             this.buttonNewAnimalComboBox.UseVisualStyleBackColor = true;
             this.buttonNewAnimalComboBox.Click += new System.EventHandler(this.buttonNewAnimalComboBox_Click);
             // 
+            // labelAnimal2AlreadyChosen
+            // 
+            this.labelAnimal2AlreadyChosen.AutoSize = true;
+            this.labelAnimal2AlreadyChosen.ForeColor = System.Drawing.Color.Red;
+            this.labelAnimal2AlreadyChosen.Location = new System.Drawing.Point(245, 172);
+            this.labelAnimal2AlreadyChosen.Name = "labelAnimal2AlreadyChosen";
+            this.labelAnimal2AlreadyChosen.Size = new System.Drawing.Size(113, 13);
+            this.labelAnimal2AlreadyChosen.TabIndex = 22;
+            this.labelAnimal2AlreadyChosen.Text = "Animal already chosen";
+            this.labelAnimal2AlreadyChosen.Visible = false;
+            // 
+            // labelAnimal3AlreadyChosen
+            // 
+            this.labelAnimal3AlreadyChosen.AutoSize = true;
+            this.labelAnimal3AlreadyChosen.ForeColor = System.Drawing.Color.Red;
+            this.labelAnimal3AlreadyChosen.Location = new System.Drawing.Point(245, 199);
+            this.labelAnimal3AlreadyChosen.Name = "labelAnimal3AlreadyChosen";
+            this.labelAnimal3AlreadyChosen.Size = new System.Drawing.Size(113, 13);
+            this.labelAnimal3AlreadyChosen.TabIndex = 23;
+            this.labelAnimal3AlreadyChosen.Text = "Animal already chosen";
+            this.labelAnimal3AlreadyChosen.Visible = false;
+            // 
             // NewAdoption
             // 
             this.AcceptButton = this.buttonConfirm;
@@ -198,6 +222,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(384, 500);
+            this.Controls.Add(this.labelAnimal3AlreadyChosen);
+            this.Controls.Add(this.labelAnimal2AlreadyChosen);
             this.Controls.Add(this.buttonNewAnimalComboBox);
             this.Controls.Add(this.buttonRemoveAnimal3);
             this.Controls.Add(this.buttonRemoveAnimal2);
@@ -238,5 +264,7 @@
         private System.Windows.Forms.Button buttonRemoveAnimal2;
         private System.Windows.Forms.Button buttonRemoveAnimal3;
         private System.Windows.Forms.Button buttonNewAnimalComboBox;
+        private System.Windows.Forms.Label labelAnimal2AlreadyChosen;
+        private System.Windows.Forms.Label labelAnimal3AlreadyChosen;
     }
 }
