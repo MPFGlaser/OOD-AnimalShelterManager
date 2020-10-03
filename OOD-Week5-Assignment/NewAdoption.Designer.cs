@@ -112,6 +112,7 @@
             this.comboBoxCustomerName.Location = new System.Drawing.Point(12, 29);
             this.comboBoxCustomerName.Name = "comboBoxCustomerName";
             this.comboBoxCustomerName.Size = new System.Drawing.Size(200, 21);
+            this.comboBoxCustomerName.Sorted = true;
             this.comboBoxCustomerName.TabIndex = 1;
             this.comboBoxCustomerName.SelectedIndexChanged += new System.EventHandler(this.comboBoxCustomerName_SelectedIndexChanged);
             // 
@@ -122,6 +123,7 @@
             this.comboBoxAnimal1.Location = new System.Drawing.Point(12, 141);
             this.comboBoxAnimal1.Name = "comboBoxAnimal1";
             this.comboBoxAnimal1.Size = new System.Drawing.Size(200, 21);
+            this.comboBoxAnimal1.Sorted = true;
             this.comboBoxAnimal1.TabIndex = 3;
             this.comboBoxAnimal1.SelectedIndexChanged += new System.EventHandler(this.comboBoxAnimal1_SelectedIndexChanged);
             // 
@@ -132,6 +134,7 @@
             this.comboBoxAnimal2.Location = new System.Drawing.Point(12, 168);
             this.comboBoxAnimal2.Name = "comboBoxAnimal2";
             this.comboBoxAnimal2.Size = new System.Drawing.Size(200, 21);
+            this.comboBoxAnimal2.Sorted = true;
             this.comboBoxAnimal2.TabIndex = 5;
             this.comboBoxAnimal2.SelectedIndexChanged += new System.EventHandler(this.comboBoxAnimal2_SelectedIndexChanged);
             // 
@@ -142,6 +145,7 @@
             this.comboBoxAnimal3.Location = new System.Drawing.Point(12, 195);
             this.comboBoxAnimal3.Name = "comboBoxAnimal3";
             this.comboBoxAnimal3.Size = new System.Drawing.Size(200, 21);
+            this.comboBoxAnimal3.Sorted = true;
             this.comboBoxAnimal3.TabIndex = 7;
             this.comboBoxAnimal3.SelectedIndexChanged += new System.EventHandler(this.comboBoxAnimal3_SelectedIndexChanged);
             // 
