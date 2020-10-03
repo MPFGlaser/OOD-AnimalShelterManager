@@ -29,6 +29,7 @@ namespace OOD_Week5_Assignment
             labelCustomerZipcode.Text = adoption.Customer.Zipcode;
             labelCustomerCity.Text = adoption.Customer.City;
             labelAdoptionDateTime.Text = adoption.AdoptionMoment.ToString();
+            labelAdoptionFee.Text = "€" + adoption.AdoptionFee.ToString();
             foreach(Animal a in adoption.Animals)
             {
                 listBoxAdoptedAnimals.Items.Add(a.ToString());

@@ -41,6 +41,8 @@
             this.labelAdoptionDateTime = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listBoxAdoptedAnimals = new System.Windows.Forms.ListBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelAdoptionFee = new System.Windows.Forms.Label();
             this.groupBoxCustomerDetails.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -170,11 +172,31 @@
             this.listBoxAdoptedAnimals.Size = new System.Drawing.Size(344, 82);
             this.listBoxAdoptedAnimals.TabIndex = 0;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(238, 57);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Total adoption fee:";
+            // 
+            // labelAdoptionFee
+            // 
+            this.labelAdoptionFee.AutoSize = true;
+            this.labelAdoptionFee.Location = new System.Drawing.Point(241, 70);
+            this.labelAdoptionFee.Name = "labelAdoptionFee";
+            this.labelAdoptionFee.Size = new System.Drawing.Size(34, 13);
+            this.labelAdoptionFee.TabIndex = 17;
+            this.labelAdoptionFee.Text = "€0.00";
+            // 
             // ViewAdoption
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 261);
+            this.Controls.Add(this.labelAdoptionFee);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelAdoptionDateTime);
             this.Controls.Add(this.label5);
@@ -205,5 +227,7 @@
         private System.Windows.Forms.Label labelAdoptionDateTime;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox listBoxAdoptedAnimals;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelAdoptionFee;
     }
 }
