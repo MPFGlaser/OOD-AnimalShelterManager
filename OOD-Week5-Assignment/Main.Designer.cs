@@ -106,6 +106,7 @@
             this.listBoxAdoptions.Location = new System.Drawing.Point(11, 57);
             this.listBoxAdoptions.Name = "listBoxAdoptions";
             this.listBoxAdoptions.Size = new System.Drawing.Size(240, 303);
+            this.listBoxAdoptions.Sorted = true;
             this.listBoxAdoptions.TabIndex = 3;
             // 
             // listBoxAnimals
@@ -115,6 +116,7 @@
             this.listBoxAnimals.Location = new System.Drawing.Point(257, 57);
             this.listBoxAnimals.Name = "listBoxAnimals";
             this.listBoxAnimals.Size = new System.Drawing.Size(240, 303);
+            this.listBoxAnimals.Sorted = true;
             this.listBoxAnimals.TabIndex = 5;
             // 
             // buttonAdoptionInfo
@@ -146,6 +148,7 @@
             this.listBoxCustomers.Location = new System.Drawing.Point(503, 57);
             this.listBoxCustomers.Name = "listBoxCustomers";
             this.listBoxCustomers.Size = new System.Drawing.Size(240, 303);
+            this.listBoxCustomers.Sorted = true;
             this.listBoxCustomers.TabIndex = 9;
             // 
             // button1
