@@ -47,7 +47,5 @@ namespace OOD_Week5_Assignment.Classes
             this.zipcode = zipcode;
             this.city = city;
         }
-
-
     }
 }
