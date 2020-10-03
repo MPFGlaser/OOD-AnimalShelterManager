@@ -13,27 +13,32 @@ namespace OOD_Week5_Assignment
 {
     public partial class ViewAnimal : Form
     {
-        private Adoption adoption;
+        private Animal animal;
+        private string species;
 
-        public ViewAnimal(Adoption adoption)
+        public ViewAnimal(Animal animal)
         {
             InitializeComponent();
-            this.adoption = adoption;
+            this.animal = animal;
+            species = animal.GetType().ToString();
             ShowDetails();
         }
 
         // Shows all relevant details about the adoption in the various labels.
         private void ShowDetails()
         {
-            labelCustomerName.Text = adoption.Customer.Name;
-            labelCustomerAddress.Text = adoption.Customer.Address;
-            labelCustomerZipcode.Text = adoption.Customer.Zipcode;
-            labelCustomerCity.Text = adoption.Customer.City;
-            labelAdoptionDateTime.Text = adoption.AdoptionMoment.ToString();
-            labelAdoptionFee.Text = "€" + adoption.AdoptionFee.ToString();
-            foreach(Animal a in adoption.Animals)
+            labelAnimalName.Text = animal.Name;
+            labelAnimalSpecies.Text = species.Substring(species.LastIndexOf('.') + 1);
+            labelAnimalGender.Text = animal.Gender.ToString();
+            labelAnimalAge.Text = animal.Age.ToString();
+            richTextBoxNotes.Text = animal.Notes;
+            if (animal.Adopted)
             {
-                listBoxAdoptedAnimals.Items.Add(a.ToString());
+                labelAnimalAdopted.Text = "Yes";
+            }
+            else
+            {
+                labelAnimalAdopted.Text = "No";
             }
         }
     }

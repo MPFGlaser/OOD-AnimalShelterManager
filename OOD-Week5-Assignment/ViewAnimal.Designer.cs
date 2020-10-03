@@ -30,94 +30,112 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAnimal));
             this.groupBoxCustomerDetails = new System.Windows.Forms.GroupBox();
-            this.labelCustomerCity = new System.Windows.Forms.Label();
-            this.labelCustomerZipcode = new System.Windows.Forms.Label();
-            this.labelCustomerAddress = new System.Windows.Forms.Label();
-            this.labelCustomerName = new System.Windows.Forms.Label();
+            this.labelAnimalAdopted = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelAnimalAge = new System.Windows.Forms.Label();
+            this.labelAnimalGender = new System.Windows.Forms.Label();
+            this.labelAnimalSpecies = new System.Windows.Forms.Label();
+            this.labelAnimalName = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.labelAdoptionDateTime = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBoxAdoptedAnimals = new System.Windows.Forms.ListBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelAdoptionFee = new System.Windows.Forms.Label();
+            this.richTextBoxNotes = new System.Windows.Forms.RichTextBox();
             this.groupBoxCustomerDetails.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxCustomerDetails
             // 
-            this.groupBoxCustomerDetails.Controls.Add(this.labelCustomerCity);
-            this.groupBoxCustomerDetails.Controls.Add(this.labelCustomerZipcode);
-            this.groupBoxCustomerDetails.Controls.Add(this.labelCustomerAddress);
-            this.groupBoxCustomerDetails.Controls.Add(this.labelCustomerName);
+            this.groupBoxCustomerDetails.Controls.Add(this.labelAnimalAdopted);
+            this.groupBoxCustomerDetails.Controls.Add(this.label5);
+            this.groupBoxCustomerDetails.Controls.Add(this.labelAnimalAge);
+            this.groupBoxCustomerDetails.Controls.Add(this.labelAnimalGender);
+            this.groupBoxCustomerDetails.Controls.Add(this.labelAnimalSpecies);
+            this.groupBoxCustomerDetails.Controls.Add(this.labelAnimalName);
             this.groupBoxCustomerDetails.Controls.Add(this.label4);
             this.groupBoxCustomerDetails.Controls.Add(this.label3);
             this.groupBoxCustomerDetails.Controls.Add(this.label2);
             this.groupBoxCustomerDetails.Controls.Add(this.label1);
             this.groupBoxCustomerDetails.Location = new System.Drawing.Point(15, 13);
             this.groupBoxCustomerDetails.Name = "groupBoxCustomerDetails";
-            this.groupBoxCustomerDetails.Size = new System.Drawing.Size(200, 129);
+            this.groupBoxCustomerDetails.Size = new System.Drawing.Size(357, 95);
             this.groupBoxCustomerDetails.TabIndex = 13;
             this.groupBoxCustomerDetails.TabStop = false;
-            this.groupBoxCustomerDetails.Text = "Customer Details";
+            this.groupBoxCustomerDetails.Text = "Animal Details";
             // 
-            // labelCustomerCity
+            // labelAnimalAdopted
             // 
-            this.labelCustomerCity.AutoSize = true;
-            this.labelCustomerCity.Location = new System.Drawing.Point(71, 103);
-            this.labelCustomerCity.Name = "labelCustomerCity";
-            this.labelCustomerCity.Size = new System.Drawing.Size(71, 13);
-            this.labelCustomerCity.TabIndex = 7;
-            this.labelCustomerCity.Text = "Customer City";
+            this.labelAnimalAdopted.AutoSize = true;
+            this.labelAnimalAdopted.Location = new System.Drawing.Point(244, 16);
+            this.labelAnimalAdopted.Name = "labelAnimalAdopted";
+            this.labelAnimalAdopted.Size = new System.Drawing.Size(77, 13);
+            this.labelAnimalAdopted.TabIndex = 9;
+            this.labelAnimalAdopted.Text = "AdoptedStatus";
             // 
-            // labelCustomerZipcode
+            // label5
             // 
-            this.labelCustomerZipcode.AutoSize = true;
-            this.labelCustomerZipcode.Location = new System.Drawing.Point(71, 74);
-            this.labelCustomerZipcode.Name = "labelCustomerZipcode";
-            this.labelCustomerZipcode.Size = new System.Drawing.Size(93, 13);
-            this.labelCustomerZipcode.TabIndex = 6;
-            this.labelCustomerZipcode.Text = "Customer Zipcode";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(188, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Adopted:";
             // 
-            // labelCustomerAddress
+            // labelAnimalAge
             // 
-            this.labelCustomerAddress.AutoSize = true;
-            this.labelCustomerAddress.Location = new System.Drawing.Point(71, 44);
-            this.labelCustomerAddress.Name = "labelCustomerAddress";
-            this.labelCustomerAddress.Size = new System.Drawing.Size(92, 13);
-            this.labelCustomerAddress.TabIndex = 5;
-            this.labelCustomerAddress.Text = "Customer Address";
+            this.labelAnimalAge.AutoSize = true;
+            this.labelAnimalAge.Location = new System.Drawing.Point(244, 44);
+            this.labelAnimalAge.Name = "labelAnimalAge";
+            this.labelAnimalAge.Size = new System.Drawing.Size(60, 13);
+            this.labelAnimalAge.TabIndex = 7;
+            this.labelAnimalAge.Text = "Animal Age";
             // 
-            // labelCustomerName
+            // labelAnimalGender
             // 
-            this.labelCustomerName.AutoSize = true;
-            this.labelCustomerName.Location = new System.Drawing.Point(71, 16);
-            this.labelCustomerName.Name = "labelCustomerName";
-            this.labelCustomerName.Size = new System.Drawing.Size(82, 13);
-            this.labelCustomerName.TabIndex = 4;
-            this.labelCustomerName.Text = "Customer Name";
+            this.labelAnimalGender.AutoSize = true;
+            this.labelAnimalGender.Location = new System.Drawing.Point(71, 74);
+            this.labelAnimalGender.Name = "labelAnimalGender";
+            this.labelAnimalGender.Size = new System.Drawing.Size(76, 13);
+            this.labelAnimalGender.TabIndex = 6;
+            this.labelAnimalGender.Text = "Animal Gender";
+            // 
+            // labelAnimalSpecies
+            // 
+            this.labelAnimalSpecies.AutoSize = true;
+            this.labelAnimalSpecies.Location = new System.Drawing.Point(71, 44);
+            this.labelAnimalSpecies.Name = "labelAnimalSpecies";
+            this.labelAnimalSpecies.Size = new System.Drawing.Size(77, 13);
+            this.labelAnimalSpecies.TabIndex = 5;
+            this.labelAnimalSpecies.Text = "Animal species";
+            // 
+            // labelAnimalName
+            // 
+            this.labelAnimalName.AutoSize = true;
+            this.labelAnimalName.Location = new System.Drawing.Point(71, 16);
+            this.labelAnimalName.Name = "labelAnimalName";
+            this.labelAnimalName.Size = new System.Drawing.Size(69, 13);
+            this.labelAnimalName.TabIndex = 4;
+            this.labelAnimalName.Text = "Animal Name";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 103);
+            this.label4.Location = new System.Drawing.Point(188, 44);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 13);
+            this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "City:";
+            this.label4.Text = "Age:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 74);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Zipcode:";
+            this.label3.Text = "Gender:";
             // 
             // label2
             // 
@@ -126,7 +144,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Address:";
+            this.label2.Text = "Species:";
             // 
             // label1
             // 
@@ -137,70 +155,31 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(238, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 13);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Adoption date && time:";
-            // 
-            // labelAdoptionDateTime
-            // 
-            this.labelAdoptionDateTime.AutoSize = true;
-            this.labelAdoptionDateTime.Location = new System.Drawing.Point(241, 30);
-            this.labelAdoptionDateTime.Name = "labelAdoptionDateTime";
-            this.labelAdoptionDateTime.Size = new System.Drawing.Size(97, 13);
-            this.labelAdoptionDateTime.TabIndex = 15;
-            this.labelAdoptionDateTime.Text = "Date and time here";
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.listBoxAdoptedAnimals);
-            this.groupBox1.Location = new System.Drawing.Point(15, 149);
+            this.groupBox1.Controls.Add(this.richTextBoxNotes);
+            this.groupBox1.Location = new System.Drawing.Point(15, 114);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(357, 108);
+            this.groupBox1.Size = new System.Drawing.Size(357, 143);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Adopted Animals";
+            this.groupBox1.Text = "Notes";
             // 
-            // listBoxAdoptedAnimals
+            // richTextBoxNotes
             // 
-            this.listBoxAdoptedAnimals.FormattingEnabled = true;
-            this.listBoxAdoptedAnimals.Location = new System.Drawing.Point(7, 20);
-            this.listBoxAdoptedAnimals.Name = "listBoxAdoptedAnimals";
-            this.listBoxAdoptedAnimals.Size = new System.Drawing.Size(344, 82);
-            this.listBoxAdoptedAnimals.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(238, 57);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Total adoption fee:";
-            // 
-            // labelAdoptionFee
-            // 
-            this.labelAdoptionFee.AutoSize = true;
-            this.labelAdoptionFee.Location = new System.Drawing.Point(241, 70);
-            this.labelAdoptionFee.Name = "labelAdoptionFee";
-            this.labelAdoptionFee.Size = new System.Drawing.Size(34, 13);
-            this.labelAdoptionFee.TabIndex = 17;
-            this.labelAdoptionFee.Text = "€0.00";
+            this.richTextBoxNotes.Location = new System.Drawing.Point(7, 20);
+            this.richTextBoxNotes.Name = "richTextBoxNotes";
+            this.richTextBoxNotes.ReadOnly = true;
+            this.richTextBoxNotes.Size = new System.Drawing.Size(344, 115);
+            this.richTextBoxNotes.TabIndex = 0;
+            this.richTextBoxNotes.Text = "";
             // 
             // ViewAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 261);
-            this.Controls.Add(this.labelAdoptionFee);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.labelAdoptionDateTime);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBoxCustomerDetails);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(400, 300);
@@ -211,7 +190,6 @@
             this.groupBoxCustomerDetails.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -221,15 +199,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelCustomerCity;
-        private System.Windows.Forms.Label labelCustomerZipcode;
-        private System.Windows.Forms.Label labelCustomerAddress;
-        private System.Windows.Forms.Label labelCustomerName;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label labelAdoptionDateTime;
+        private System.Windows.Forms.Label labelAnimalAge;
+        private System.Windows.Forms.Label labelAnimalGender;
+        private System.Windows.Forms.Label labelAnimalSpecies;
+        private System.Windows.Forms.Label labelAnimalName;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListBox listBoxAdoptedAnimals;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label labelAdoptionFee;
+        private System.Windows.Forms.Label labelAnimalAdopted;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RichTextBox richTextBoxNotes;
     }
 }

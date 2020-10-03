@@ -20,6 +20,8 @@ namespace OOD_Week5_Assignment
         private NewCustomer newCustomer;
         private NewAdoption newAdoption;
         private ViewAdoption viewAdoption;
+        private ViewAnimal viewAnimal;
+        private ViewCustomer viewCustomer;
         private ShelterManager shelterManager;
 
         #region Logic
@@ -207,7 +209,11 @@ namespace OOD_Week5_Assignment
         // Shows a popup window with information about the animal selected in the listbox
         private void ShowAnimalInfo()
         {
-            // Add similar popup window as ShowAdoptionInfo, but then for animals.
+            if (listBoxAnimals.SelectedIndex != -1)
+            {
+                viewAnimal = new ViewAnimal((listBoxAnimals.SelectedItem as dynamic).Value);
+                viewAnimal.ShowDialog();
+            }
         }
         #endregion
 
