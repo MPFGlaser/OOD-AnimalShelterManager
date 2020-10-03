@@ -23,6 +23,7 @@ namespace OOD_Week5_Assignment
         private ViewAnimal viewAnimal;
         private ViewCustomer viewCustomer;
         private ShelterManager shelterManager;
+        private bool newChanges = false;
 
         #region Logic
         public Main()
@@ -110,6 +111,7 @@ namespace OOD_Week5_Assignment
                     default:
                         break;
                 }
+                newChanges = true;
             }
             UpdateListboxes();
         }
@@ -121,6 +123,7 @@ namespace OOD_Week5_Assignment
             if (newCustomer.ShowDialog() == DialogResult.OK)
             {
                 shelterManager.AddCustomer(newCustomer.CustomerName, newCustomer.Address, newCustomer.ZipCode, newCustomer.City);
+                newChanges = true;
             }
             UpdateListboxes();
         }
@@ -132,6 +135,7 @@ namespace OOD_Week5_Assignment
             if (newAdoption.ShowDialog() == DialogResult.OK)
             {
                 shelterManager.AddAdoption(newAdoption.AdoptedAnimals, newAdoption.AdoptionCustomer, newAdoption.AdoptionMoment, newAdoption.AdoptionFee);
+                newChanges = true;
             }
             UpdateListboxes();
         }
@@ -236,6 +240,20 @@ namespace OOD_Week5_Assignment
                 viewCustomer.ShowDialog();
             }
         }
+
+        // Checks for unsaved changes and asks the user whether they want to save or not.
+        private void CheckForUnsavedChanges()
+        {
+            if (newChanges)
+            {
+                if (MessageBox.Show("There are unsaved changes. Do you want to save before exiting?", "Unsaved changes",
+                   MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    SaveData();
+                }
+
+            }
+        }
         #endregion
 
         #region Control event handlers
@@ -286,19 +304,7 @@ namespace OOD_Week5_Assignment
 
         private void Main_FormClosing(Object sender, FormClosingEventArgs e)
         {
-            // Determine if text has changed in the textbox by comparing to original text.
-            //if (textBox1.Text != strMyOriginalText)
-            //{
-            //    // Display a MsgBox asking the user to save changes or abort.
-            //    if (MessageBox.Show("Do you want to save changes to your text?", "My Application",
-            //       MessageBoxButtons.YesNo) == DialogResult.Yes)
-            //    {
-            //        // Cancel the Closing event from closing the form.
-            //        e.Cancel = true;
-            //        // Call method to save file...
-            //    }
-            //}
-            MessageBox.Show("Closing");
+            CheckForUnsavedChanges();
         }
         #endregion
     }
