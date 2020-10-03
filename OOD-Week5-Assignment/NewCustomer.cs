@@ -53,21 +53,25 @@ namespace OOD_Week5_Assignment
                 buttonConfirm.Enabled = false;
             }
         }
-        #endregion
 
-        #region Control event handlers
-        private void buttonCancel_Click(object sender, EventArgs e)
+        private void Cancel()
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
-        private void buttonConfirm_Click(object sender, EventArgs e)
+        private void Confirm()
         {
             this.DialogResult = DialogResult.OK;
         }
 
-        private void textBoxName_TextChanged(object sender, EventArgs e)
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            Cancel();
+        }
+
+        // Checks if the name entered in the textbox confirms to the regex and lets the user know if that is not the case.
+        private void NameChanged()
         {
             if (textBoxName.Text != "" && regexName.IsMatch(textBoxName.Text))
             {
@@ -83,7 +87,8 @@ namespace OOD_Week5_Assignment
             ConfirmButtonEnabler();
         }
 
-        private void textBoxAddress_TextChanged(object sender, EventArgs e)
+        // Checks if the address entered in the textbox confirms to the regex and lets the user know if that is not the case.
+        private void AddressChanged()
         {
             if (textBoxAddress.Text != "" && regexAddress.IsMatch(textBoxAddress.Text))
             {
@@ -99,7 +104,8 @@ namespace OOD_Week5_Assignment
             ConfirmButtonEnabler();
         }
 
-        private void textBoxZipCode_TextChanged(object sender, EventArgs e)
+        // Checks if the zipcode entered in the textbox confirms to the regex and lets the user know if that is not the case.
+        private void ZipCodeChanged()
         {
             if (textBoxZipCode.Text != "" && regexZipCode.IsMatch(textBoxZipCode.Text))
             {
@@ -115,7 +121,8 @@ namespace OOD_Week5_Assignment
             ConfirmButtonEnabler();
         }
 
-        private void textBoxCity_TextChanged(object sender, EventArgs e)
+        // Checks if the city entered in the textbox confirms to the regex and lets the user know if that is not the case.
+        private void CityChanged()
         {
             if (textBoxCity.Text != "" && regexCity.IsMatch(textBoxCity.Text))
             {
@@ -129,6 +136,33 @@ namespace OOD_Week5_Assignment
                 cityCorrect = false;
             }
             ConfirmButtonEnabler();
+        }
+        #endregion
+
+        #region Control event handlers
+        private void buttonConfirm_Click(object sender, EventArgs e)
+        {
+            Confirm();
+        }
+
+        private void textBoxName_TextChanged(object sender, EventArgs e)
+        {
+            NameChanged();
+        }
+
+        private void textBoxAddress_TextChanged(object sender, EventArgs e)
+        {
+            AddressChanged();
+        }
+
+        private void textBoxZipCode_TextChanged(object sender, EventArgs e)
+        {
+            ZipCodeChanged();
+        }
+
+        private void textBoxCity_TextChanged(object sender, EventArgs e)
+        {
+            CityChanged();
         }
         #endregion
     }
