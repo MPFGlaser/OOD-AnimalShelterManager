@@ -109,24 +109,35 @@ namespace OOD_Week5_Assignment
             FileStream fs = null;
             BinaryFormatter bf = null;
 
-            try
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                fs = new FileStream("../../ShelterData.bin", FileMode.Open, FileAccess.Read);
-                bf = new BinaryFormatter();
-                shelterManager = (ShelterManager)(bf.Deserialize(fs));
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-                if (fs != null)
+                openFileDialog.InitialDirectory = "../../";
+                openFileDialog.Filter = "Shelter files (*.bin)|*.bin";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    fs.Close();
+                    try
+                    {
+                        fs = new FileStream(openFileDialog.FileName, FileMode.Open, FileAccess.Read);
+                        bf = new BinaryFormatter();
+                        shelterManager = (ShelterManager)(bf.Deserialize(fs));
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+                    finally
+                    {
+                        if (fs != null)
+                        {
+                            fs.Close();
+                        }
+                    }
+                    UpdateListboxes();
                 }
             }
-            UpdateListboxes();
         }
 
         // Saves the shelter data to a binary file
@@ -134,22 +145,31 @@ namespace OOD_Week5_Assignment
         {
             FileStream fs = null;
             BinaryFormatter bf = null;
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
-            try
+            saveFileDialog1.InitialDirectory = "../../";
+            saveFileDialog1.Filter = "Shelter files (*.bin)|*.bin";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                fs = new FileStream("../../ShelterData.bin", FileMode.Create, FileAccess.Write);
-                bf = new BinaryFormatter();
-                bf.Serialize(fs, shelterManager);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                if (fs != null)
+                try
                 {
-                    fs.Close();
+                    fs = new FileStream(saveFileDialog1.FileName, FileMode.Create, FileAccess.Write);
+                    bf = new BinaryFormatter();
+                    bf.Serialize(fs, shelterManager);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    if (fs != null)
+                    {
+                        fs.Close();
+                    }
                 }
             }
         }
