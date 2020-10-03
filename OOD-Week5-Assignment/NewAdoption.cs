@@ -211,10 +211,8 @@ namespace OOD_Week5_Assignment
                 buttonConfirm.Enabled = false;
             }
         }
-        #endregion
 
-        #region Control event handlers
-        private void buttonConfirm_Click(object sender, EventArgs e)
+        private void Confirm()
         {
             if (comboBoxAnimal1.Enabled && comboBoxAnimal1.SelectedIndex != -1)
             {
@@ -243,14 +241,8 @@ namespace OOD_Week5_Assignment
             this.DialogResult = DialogResult.OK;
         }
 
-        private void buttonCancel_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.Cancel;
-            this.Close();
-        }
-
         // Method to add new comboboxes for extra animals, if desired.
-        private void buttonNewAnimalComboBox_Click(object sender, EventArgs e)
+        private void NewAnimalComboBox()
         {
             if (comboBoxAnimal2.Visible == true)
             {
@@ -277,7 +269,7 @@ namespace OOD_Week5_Assignment
         }
 
         // Method to remove comboBoxAnimal2
-        private void buttonRemoveAnimal2_Click(object sender, EventArgs e)
+        private void RemoveComboBoxAnimal2()
         {
             buttonRemoveAnimal2.Visible = false;
             comboBoxAnimal2.Visible = false;
@@ -291,7 +283,7 @@ namespace OOD_Week5_Assignment
         }
 
         // Method to remove comboBoxAnimal3
-        private void buttonRemoveAnimal3_Click(object sender, EventArgs e)
+        private void RemoveComboBoxAnimal3()
         {
             buttonNewAnimalComboBox.Enabled = true;
             comboBoxAnimal3.Visible = false;
@@ -303,6 +295,48 @@ namespace OOD_Week5_Assignment
             UpdateComboBoxAnimals();
             CalculateAdoptionFee();
             ConfirmButtonEnabler();
+        }
+
+        private void CustomerNameChanged()
+        {
+            if (comboBoxCustomerName.SelectedIndex != -1)
+            {
+                customerCorrect = true;
+                ConfirmButtonEnabler();
+            }
+            else
+            {
+                customerCorrect = false;
+                ConfirmButtonEnabler();
+            }
+        }
+        #endregion
+
+        #region Control event handlers
+        private void buttonConfirm_Click(object sender, EventArgs e)
+        {
+            Confirm();
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
+
+        private void buttonNewAnimalComboBox_Click(object sender, EventArgs e)
+        {
+            NewAnimalComboBox();
+        }
+
+        private void buttonRemoveAnimal2_Click(object sender, EventArgs e)
+        {
+            RemoveComboBoxAnimal2();
+        }
+
+        private void buttonRemoveAnimal3_Click(object sender, EventArgs e)
+        {
+            RemoveComboBoxAnimal3();
         }
 
         // Multiple methods to call for recalculation of the adoption fee when a different animal is selected.
@@ -329,16 +363,7 @@ namespace OOD_Week5_Assignment
 
         private void comboBoxCustomerName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBoxCustomerName.SelectedIndex != -1)
-            {
-                customerCorrect = true;
-                ConfirmButtonEnabler();
-            }
-            else
-            {
-                customerCorrect = false;
-                ConfirmButtonEnabler();
-            }
+            CustomerNameChanged();
         }
         #endregion
 
