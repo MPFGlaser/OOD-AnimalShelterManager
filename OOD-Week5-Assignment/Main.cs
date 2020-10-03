@@ -4,10 +4,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace OOD_Week5_Assignment
 {
@@ -16,6 +19,7 @@ namespace OOD_Week5_Assignment
         private NewAnimal newAnimal;
         private NewCustomer newCustomer;
         private NewAdoption newAdoption;
+        private ViewAdoption viewAdoption;
         private ShelterManager shelterManager;
 
         public Main()
@@ -24,6 +28,7 @@ namespace OOD_Week5_Assignment
             shelterManager = new ShelterManager();
             UpdateListboxes();
         }
+
 
         private void buttonNewAnimal_Click(object sender, EventArgs e)
         {
@@ -80,7 +85,11 @@ namespace OOD_Week5_Assignment
 
         private void buttonAdoptionInfo_Click(object sender, EventArgs e)
         {
-
+            if(listBoxAdoptions.SelectedIndex != -1)
+            {
+                viewAdoption = new ViewAdoption((listBoxAdoptions.SelectedItem as dynamic).Value);
+                viewAdoption.ShowDialog();
+            }
         }
 
         private void buttonAnimalInfo_Click(object sender, EventArgs e)
