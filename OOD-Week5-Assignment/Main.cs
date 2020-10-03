@@ -100,13 +100,13 @@ namespace OOD_Week5_Assignment
                 switch (newAnimal.Type)
                 {
                     case Models.AnimalType.Dog:
-                        shelterManager.AddDog(newAnimal.Name, newAnimal.Age, newAnimal.AnimalGender, newAnimal.Notes);
+                        shelterManager.AddDog(newAnimal.AnimalName, newAnimal.Age, newAnimal.AnimalGender, newAnimal.Notes);
                         break;
                     case Models.AnimalType.Cat:
-                        shelterManager.AddCat(newAnimal.Name, newAnimal.Age, newAnimal.AnimalGender, newAnimal.Notes);
+                        shelterManager.AddCat(newAnimal.AnimalName, newAnimal.Age, newAnimal.AnimalGender, newAnimal.Notes);
                         break;
                     case Models.AnimalType.Bird:
-                        shelterManager.AddBird(newAnimal.Name, newAnimal.Age, newAnimal.AnimalGender, newAnimal.Notes, newAnimal.AnimalSize);
+                        shelterManager.AddBird(newAnimal.AnimalName, newAnimal.Age, newAnimal.AnimalGender, newAnimal.Notes, newAnimal.AnimalSize);
                         break;
                     default:
                         break;
@@ -161,6 +161,10 @@ namespace OOD_Week5_Assignment
                         bf = new BinaryFormatter();
                         shelterManager = (ShelterManager)(bf.Deserialize(fs));
                     }
+                    catch (IOException ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.ToString());
@@ -182,12 +186,13 @@ namespace OOD_Week5_Assignment
         {
             FileStream fs = null;
             BinaryFormatter bf = null;
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-
-            saveFileDialog1.InitialDirectory = "../../";
-            saveFileDialog1.Filter = "Shelter files (*.bin)|*.bin";
-            saveFileDialog1.FilterIndex = 2;
-            saveFileDialog1.RestoreDirectory = true;
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog
+            {
+                InitialDirectory = "../../",
+                Filter = "Shelter files (*.bin)|*.bin",
+                FilterIndex = 2,
+                RestoreDirectory = true
+            };
 
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -196,6 +201,10 @@ namespace OOD_Week5_Assignment
                     fs = new FileStream(saveFileDialog1.FileName, FileMode.Create, FileAccess.Write);
                     bf = new BinaryFormatter();
                     bf.Serialize(fs, shelterManager);
+                }
+                catch (IOException ex)
+                {
+                    MessageBox.Show(ex.ToString());
                 }
                 catch (Exception ex)
                 {
@@ -251,7 +260,6 @@ namespace OOD_Week5_Assignment
                 {
                     SaveData();
                 }
-
             }
         }
         #endregion
