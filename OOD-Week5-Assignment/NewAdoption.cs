@@ -435,6 +435,7 @@ namespace OOD_Week5_Assignment
                     animalsCorrect = true;
                 }
             }
+            // We want nothing to happen here. Literally nothing. The try-catch is just to prevent the universe from imploding.
             catch (Exception) { }
 
             try
@@ -450,6 +451,7 @@ namespace OOD_Week5_Assignment
                     animalsCorrect = true;
                 }
             }
+            // We want nothing to happen here. Literally nothing. The try-catch is just to prevent the universe from imploding.
             catch (Exception) { }
 
             try
@@ -465,6 +467,7 @@ namespace OOD_Week5_Assignment
                     animalsCorrect = true;
                 }
             }
+            // We want nothing to happen here. Literally nothing. The try-catch is just to prevent the universe from imploding.
             catch (Exception) { }
         }
         #endregion
