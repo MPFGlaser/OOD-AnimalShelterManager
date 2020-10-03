@@ -198,6 +198,7 @@
             this.checkBoxShowAdopted.TabIndex = 14;
             this.checkBoxShowAdopted.Text = "Show adopted animals";
             this.checkBoxShowAdopted.UseVisualStyleBackColor = false;
+            this.checkBoxShowAdopted.CheckedChanged += new System.EventHandler(this.checkBoxShowAdopted_CheckedChanged);
             // 
             // Main
             // 

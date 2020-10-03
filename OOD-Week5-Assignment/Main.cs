@@ -50,9 +50,29 @@ namespace OOD_Week5_Assignment
                 listBoxAnimals.ValueMember = "Value";
                 listBoxAnimals.Items.Clear();
 
-                foreach (Animal a in shelterManager.Animals)
+                if (checkBoxShowAdopted.Checked)
                 {
-                    listBoxAnimals.Items.Add(new { Text = a.ToString(), Value = a });
+                    foreach (Animal a in shelterManager.Animals)
+                    {
+                        if (a.Adopted)
+                        {
+                            listBoxAnimals.Items.Add(new { Text = a.ToString() + " [Adopted]", Value = a });
+                        }
+                        else
+                        {
+                            listBoxAnimals.Items.Add(new { Text = a.ToString(), Value = a });
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (Animal a in shelterManager.Animals)
+                    {
+                        if (!a.Adopted)
+                        {
+                            listBoxAnimals.Items.Add(new { Text = a.ToString(), Value = a });
+                        }
+                    }
                 }
             }
         }
@@ -225,6 +245,11 @@ namespace OOD_Week5_Assignment
         private void buttonAnimalInfo_Click(object sender, EventArgs e)
         {
             ShowAnimalInfo();
+        }
+
+        private void checkBoxShowAdopted_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateListboxes();
         }
         #endregion
     }
