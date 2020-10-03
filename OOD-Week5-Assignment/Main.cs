@@ -22,6 +22,7 @@ namespace OOD_Week5_Assignment
         private ViewAdoption viewAdoption;
         private ShelterManager shelterManager;
 
+        #region Logic
         public Main()
         {
             InitializeComponent();
@@ -29,11 +30,38 @@ namespace OOD_Week5_Assignment
             UpdateListboxes();
         }
 
+        // Updates the Adoptions and Animals listboxes, assuming there is data to populate them.
+        private void UpdateListboxes()
+        {
+            if (shelterManager.Adoptions != null)
+            {
+                listBoxAdoptions.DisplayMember = "Text";
+                listBoxAdoptions.ValueMember = "Value";
+                listBoxAdoptions.Items.Clear();
+                foreach (Adoption a in shelterManager.Adoptions)
+                {
+                    listBoxAdoptions.Items.Add(new { Text = a.ToString(), Value = a });
+                }
+            }
 
-        private void buttonNewAnimal_Click(object sender, EventArgs e)
+            if (shelterManager.Animals != null)
+            {
+                listBoxAnimals.DisplayMember = "Text";
+                listBoxAnimals.ValueMember = "Value";
+                listBoxAnimals.Items.Clear();
+
+                foreach (Animal a in shelterManager.Animals)
+                {
+                    listBoxAnimals.Items.Add(new { Text = a.ToString(), Value = a });
+                }
+            }
+        }
+
+        // Shows a dialog with data fields to add a new animal to the system
+        private void CreateAnimal()
         {
             newAnimal = new NewAnimal();
-            if(newAnimal.ShowDialog() == DialogResult.OK)
+            if (newAnimal.ShowDialog() == DialogResult.OK)
             {
                 switch (newAnimal.Type)
                 {
@@ -53,29 +81,31 @@ namespace OOD_Week5_Assignment
             UpdateListboxes();
         }
 
-        private void buttonNewCustomer_Click(object sender, EventArgs e)
+        // Shows a dialog with data fields to add a new customer to the system
+        private void CreateCustomer()
         {
             newCustomer = new NewCustomer();
-            if(newCustomer.ShowDialog() == DialogResult.OK)
+            if (newCustomer.ShowDialog() == DialogResult.OK)
             {
-                shelterManager.AddCustomer(newCustomer.Name, newCustomer.Address, newCustomer.ZipCode, newCustomer.City) ;
+                shelterManager.AddCustomer(newCustomer.Name, newCustomer.Address, newCustomer.ZipCode, newCustomer.City);
             }
             UpdateListboxes();
         }
 
-        private void buttonNewAdoption_Click(object sender, EventArgs e)
+        // Shows a dialog with data fields to add a new adoption to the system
+        private void CreateAdoption()
         {
             newAdoption = new NewAdoption(shelterManager.Customers, shelterManager.Animals);
-            if(newAdoption.ShowDialog() == DialogResult.OK)
+            if (newAdoption.ShowDialog() == DialogResult.OK)
             {
                 shelterManager.AddAdoption(newAdoption.AdoptedAnimals, newAdoption.AdoptionCustomer, newAdoption.AdoptionMoment, newAdoption.AdoptionFee);
             }
             UpdateListboxes();
         }
 
-        private void buttonLoadData_Click(object sender, EventArgs e)
+        // Loads the shelter data from a binary file
+        private void LoadData()
         {
-            // Load data
             FileStream fs = null;
             BinaryFormatter bf = null;
 
@@ -91,7 +121,7 @@ namespace OOD_Week5_Assignment
             }
             finally
             {
-                if(fs != null)
+                if (fs != null)
                 {
                     fs.Close();
                 }
@@ -99,9 +129,9 @@ namespace OOD_Week5_Assignment
             UpdateListboxes();
         }
 
-        private void buttonSaveData_Click(object sender, EventArgs e)
+        // Saves the shelter data to a binary file
+        private void SaveData()
         {
-            // Save data
             FileStream fs = null;
             BinaryFormatter bf = null;
 
@@ -124,55 +154,58 @@ namespace OOD_Week5_Assignment
             }
         }
 
-        private void buttonAdoptionInfo_Click(object sender, EventArgs e)
+        // Shows a popup window with information about the adoption selected in the listbox
+        private void ShowAdoptionInfo()
         {
-            if(listBoxAdoptions.SelectedIndex != -1)
+            if (listBoxAdoptions.SelectedIndex != -1)
             {
                 viewAdoption = new ViewAdoption((listBoxAdoptions.SelectedItem as dynamic).Value);
                 viewAdoption.ShowDialog();
             }
         }
 
+        // Shows a popup window with information about the animal selected in the listbox
+        private void ShowAnimalInfo()
+        {
+            // Add similar popup window as ShowAdoptionInfo, but then for animals.
+        }
+        #endregion
+
+        #region Control event handlers
+        private void buttonNewAnimal_Click(object sender, EventArgs e)
+        {
+            CreateAnimal();
+        }
+
+        private void buttonNewCustomer_Click(object sender, EventArgs e)
+        {
+            CreateCustomer();
+        }
+
+        private void buttonNewAdoption_Click(object sender, EventArgs e)
+        {
+            CreateAdoption();
+        }
+
+        private void buttonLoadData_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void buttonSaveData_Click(object sender, EventArgs e)
+        {
+            SaveData();
+        }
+
+        private void buttonAdoptionInfo_Click(object sender, EventArgs e)
+        {
+            ShowAdoptionInfo();
+        }
+
         private void buttonAnimalInfo_Click(object sender, EventArgs e)
         {
-
+            ShowAnimalInfo();
         }
-
-        private void listBoxAdoptions_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBoxAnimals_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        // Updates the Adoptions and Animals listboxes, assuming there is data to populate them.
-        private void UpdateListboxes()
-        {
-            if(shelterManager.Adoptions != null)
-            {
-                listBoxAdoptions.DisplayMember = "Text";
-                listBoxAdoptions.ValueMember = "Value";
-                listBoxAdoptions.Items.Clear();
-                foreach (Adoption a in shelterManager.Adoptions)
-                {
-                    listBoxAdoptions.Items.Add(new { Text = a.ToString(), Value = a });
-                }
-            }
-
-            if (shelterManager.Animals != null)
-            {
-                listBoxAnimals.DisplayMember = "Text";
-                listBoxAnimals.ValueMember = "Value";
-                listBoxAnimals.Items.Clear();
-
-                foreach(Animal a in shelterManager.Animals)
-                {
-                    listBoxAnimals.Items.Add(new { Text = a.ToString(), Value = a });
-                }
-            }
-        }
+        #endregion
     }
 }

@@ -96,7 +96,6 @@
             this.listBoxAdoptions.Name = "listBoxAdoptions";
             this.listBoxAdoptions.Size = new System.Drawing.Size(263, 342);
             this.listBoxAdoptions.TabIndex = 3;
-            this.listBoxAdoptions.SelectedIndexChanged += new System.EventHandler(this.listBoxAdoptions_SelectedIndexChanged);
             // 
             // listBoxAnimals
             // 
@@ -105,7 +104,6 @@
             this.listBoxAnimals.Name = "listBoxAnimals";
             this.listBoxAnimals.Size = new System.Drawing.Size(263, 342);
             this.listBoxAnimals.TabIndex = 5;
-            this.listBoxAnimals.SelectedIndexChanged += new System.EventHandler(this.listBoxAnimals_SelectedIndexChanged);
             // 
             // buttonAdoptionInfo
             // 
