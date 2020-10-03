@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,6 +19,12 @@ namespace OOD_Week5_Assignment
         bool addressCorrect = false;
         bool zipcodeCorrect = false;
         bool cityCorrect = false;
+
+        // Based on the Dutch formats (https://murani.nl/blog/2015-09-28/nederlandse-reguliere-expressies/)
+        Regex regexName = new Regex(@"^([a-zA-Z]+\s?\b){2,}");
+        Regex regexAddress = new Regex(@"^([1-9][e][\s])*([a-zA-Z]+(([\.][\s])|([\s]))?)+[1-9][0-9]*(([-][1-9][0-9]*)|([\s]?[a-zA-Z]+))?$");
+        Regex regexZipCode = new Regex(@"^[1-9][0-9]{3}[\s]?[A-Za-z]{2}$");
+        Regex regexCity = new Regex(@"^([a-zA-Z]+\s?\b){1,}");
 
         public string Name { get; set; }
         public string Address { get; set; }
@@ -60,61 +67,68 @@ namespace OOD_Week5_Assignment
             this.DialogResult = DialogResult.OK;
         }
 
-        // Checks if the data in the textboxes has changed, then checks if the data is possibly valid. If it is, it saves the data to its corresponding property.
         private void textBoxName_TextChanged(object sender, EventArgs e)
         {
-            ConfirmButtonEnabler();
-            if (textBoxName.Text != null)
+            if (textBoxName.Text != "" && regexName.IsMatch(textBoxName.Text))
             {
                 this.Name = textBoxName.Text;
+                labelNameInvalid.Visible = false;
                 nameCorrect = true;
             }
             else
             {
+                labelNameInvalid.Visible = true;
                 nameCorrect = false;
             }
+            ConfirmButtonEnabler();
         }
 
         private void textBoxAddress_TextChanged(object sender, EventArgs e)
         {
-            ConfirmButtonEnabler();
-            if (textBoxAddress.Text != null)
+            if (textBoxAddress.Text != "" && regexAddress.IsMatch(textBoxAddress.Text))
             {
+                labelAddressInvalid.Visible = false;
                 this.Address = textBoxAddress.Text;
                 addressCorrect = true;
             }
             else
             {
+                labelAddressInvalid.Visible = true;
                 addressCorrect = false;
             }
+            ConfirmButtonEnabler();
         }
 
         private void textBoxZipCode_TextChanged(object sender, EventArgs e)
         {
-            ConfirmButtonEnabler();
-            if (textBoxZipCode.Text != null)
+            if (textBoxZipCode.Text != "" && regexZipCode.IsMatch(textBoxZipCode.Text))
             {
+                labelZipCodeInvalid.Visible = false;
                 this.ZipCode = textBoxZipCode.Text;
                 zipcodeCorrect = true;
             }
             else
             {
+                labelZipCodeInvalid.Visible = true;
                 zipcodeCorrect = false;
             }
+            ConfirmButtonEnabler();
         }
 
         private void textBoxCity_TextChanged(object sender, EventArgs e)
         {
-            ConfirmButtonEnabler();
-            if (textBoxCity.Text != null)
+            if (textBoxCity.Text != "" && regexCity.IsMatch(textBoxCity.Text))
             {
+                labelCityInvalid.Visible = false;
                 this.City = textBoxCity.Text;
                 cityCorrect = true;
             }
             else
             {
+                labelCityInvalid.Visible = true;
                 cityCorrect = false;
             }
+            ConfirmButtonEnabler();
         }
         #endregion
     }

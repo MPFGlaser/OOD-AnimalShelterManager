@@ -38,6 +38,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxCity = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.labelAddressInvalid = new System.Windows.Forms.Label();
+            this.labelZipCodeInvalid = new System.Windows.Forms.Label();
+            this.labelCityInvalid = new System.Windows.Forms.Label();
+            this.labelNameInvalid = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -129,6 +133,46 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "City:";
             // 
+            // labelAddressInvalid
+            // 
+            this.labelAddressInvalid.AutoSize = true;
+            this.labelAddressInvalid.ForeColor = System.Drawing.Color.Red;
+            this.labelAddressInvalid.Location = new System.Drawing.Point(205, 83);
+            this.labelAddressInvalid.Name = "labelAddressInvalid";
+            this.labelAddressInvalid.Size = new System.Drawing.Size(136, 13);
+            this.labelAddressInvalid.TabIndex = 17;
+            this.labelAddressInvalid.Text = "Please fill in a valid address";
+            // 
+            // labelZipCodeInvalid
+            // 
+            this.labelZipCodeInvalid.AutoSize = true;
+            this.labelZipCodeInvalid.ForeColor = System.Drawing.Color.Red;
+            this.labelZipCodeInvalid.Location = new System.Drawing.Point(205, 137);
+            this.labelZipCodeInvalid.Name = "labelZipCodeInvalid";
+            this.labelZipCodeInvalid.Size = new System.Drawing.Size(139, 13);
+            this.labelZipCodeInvalid.TabIndex = 18;
+            this.labelZipCodeInvalid.Text = "Please fill in a valid zip code";
+            // 
+            // labelCityInvalid
+            // 
+            this.labelCityInvalid.AutoSize = true;
+            this.labelCityInvalid.ForeColor = System.Drawing.Color.Red;
+            this.labelCityInvalid.Location = new System.Drawing.Point(205, 194);
+            this.labelCityInvalid.Name = "labelCityInvalid";
+            this.labelCityInvalid.Size = new System.Drawing.Size(115, 13);
+            this.labelCityInvalid.TabIndex = 19;
+            this.labelCityInvalid.Text = "Please fill in a valid city";
+            // 
+            // labelNameInvalid
+            // 
+            this.labelNameInvalid.AutoSize = true;
+            this.labelNameInvalid.ForeColor = System.Drawing.Color.Red;
+            this.labelNameInvalid.Location = new System.Drawing.Point(205, 29);
+            this.labelNameInvalid.Name = "labelNameInvalid";
+            this.labelNameInvalid.Size = new System.Drawing.Size(125, 13);
+            this.labelNameInvalid.TabIndex = 20;
+            this.labelNameInvalid.Text = "Please fill in a valid name";
+            // 
             // NewCustomer
             // 
             this.AcceptButton = this.buttonConfirm;
@@ -136,6 +180,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.buttonCancel;
             this.ClientSize = new System.Drawing.Size(384, 500);
+            this.Controls.Add(this.labelNameInvalid);
+            this.Controls.Add(this.labelCityInvalid);
+            this.Controls.Add(this.labelZipCodeInvalid);
+            this.Controls.Add(this.labelAddressInvalid);
             this.Controls.Add(this.textBoxCity);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxZipCode);
@@ -166,5 +214,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxCity;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelAddressInvalid;
+        private System.Windows.Forms.Label labelZipCodeInvalid;
+        private System.Windows.Forms.Label labelCityInvalid;
+        private System.Windows.Forms.Label labelNameInvalid;
     }
 }
