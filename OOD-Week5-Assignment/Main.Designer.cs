@@ -37,11 +37,17 @@
             this.listBoxAnimals = new System.Windows.Forms.ListBox();
             this.buttonAdoptionInfo = new System.Windows.Forms.Button();
             this.buttonAnimalInfo = new System.Windows.Forms.Button();
+            this.listBoxCustomers = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonNewAnimal
             // 
-            this.buttonNewAnimal.Location = new System.Drawing.Point(644, 12);
+            this.buttonNewAnimal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonNewAnimal.Location = new System.Drawing.Point(257, 366);
             this.buttonNewAnimal.Name = "buttonNewAnimal";
             this.buttonNewAnimal.Size = new System.Drawing.Size(144, 23);
             this.buttonNewAnimal.TabIndex = 0;
@@ -51,7 +57,8 @@
             // 
             // buttonNewCustomer
             // 
-            this.buttonNewCustomer.Location = new System.Drawing.Point(644, 41);
+            this.buttonNewCustomer.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonNewCustomer.Location = new System.Drawing.Point(503, 366);
             this.buttonNewCustomer.Name = "buttonNewCustomer";
             this.buttonNewCustomer.Size = new System.Drawing.Size(144, 23);
             this.buttonNewCustomer.TabIndex = 1;
@@ -61,7 +68,8 @@
             // 
             // buttonNewAdoption
             // 
-            this.buttonNewAdoption.Location = new System.Drawing.Point(644, 70);
+            this.buttonNewAdoption.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonNewAdoption.Location = new System.Drawing.Point(11, 366);
             this.buttonNewAdoption.Name = "buttonNewAdoption";
             this.buttonNewAdoption.Size = new System.Drawing.Size(144, 23);
             this.buttonNewAdoption.TabIndex = 2;
@@ -91,25 +99,28 @@
             // 
             // listBoxAdoptions
             // 
+            this.listBoxAdoptions.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listBoxAdoptions.FormattingEnabled = true;
-            this.listBoxAdoptions.Location = new System.Drawing.Point(12, 41);
+            this.listBoxAdoptions.Location = new System.Drawing.Point(11, 57);
             this.listBoxAdoptions.Name = "listBoxAdoptions";
-            this.listBoxAdoptions.Size = new System.Drawing.Size(263, 342);
+            this.listBoxAdoptions.Size = new System.Drawing.Size(240, 303);
             this.listBoxAdoptions.TabIndex = 3;
             // 
             // listBoxAnimals
             // 
+            this.listBoxAnimals.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listBoxAnimals.FormattingEnabled = true;
-            this.listBoxAnimals.Location = new System.Drawing.Point(281, 41);
+            this.listBoxAnimals.Location = new System.Drawing.Point(257, 57);
             this.listBoxAnimals.Name = "listBoxAnimals";
-            this.listBoxAnimals.Size = new System.Drawing.Size(263, 342);
+            this.listBoxAnimals.Size = new System.Drawing.Size(240, 303);
             this.listBoxAnimals.TabIndex = 5;
             // 
             // buttonAdoptionInfo
             // 
-            this.buttonAdoptionInfo.Location = new System.Drawing.Point(200, 389);
+            this.buttonAdoptionInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonAdoptionInfo.Location = new System.Drawing.Point(161, 366);
             this.buttonAdoptionInfo.Name = "buttonAdoptionInfo";
-            this.buttonAdoptionInfo.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdoptionInfo.Size = new System.Drawing.Size(90, 23);
             this.buttonAdoptionInfo.TabIndex = 4;
             this.buttonAdoptionInfo.Text = "View info";
             this.buttonAdoptionInfo.UseVisualStyleBackColor = true;
@@ -117,19 +128,74 @@
             // 
             // buttonAnimalInfo
             // 
-            this.buttonAnimalInfo.Location = new System.Drawing.Point(469, 389);
+            this.buttonAnimalInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonAnimalInfo.Location = new System.Drawing.Point(407, 366);
             this.buttonAnimalInfo.Name = "buttonAnimalInfo";
-            this.buttonAnimalInfo.Size = new System.Drawing.Size(75, 23);
+            this.buttonAnimalInfo.Size = new System.Drawing.Size(90, 23);
             this.buttonAnimalInfo.TabIndex = 6;
             this.buttonAnimalInfo.Text = "View info";
             this.buttonAnimalInfo.UseVisualStyleBackColor = true;
             this.buttonAnimalInfo.Click += new System.EventHandler(this.buttonAnimalInfo_Click);
             // 
+            // listBoxCustomers
+            // 
+            this.listBoxCustomers.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.listBoxCustomers.FormattingEnabled = true;
+            this.listBoxCustomers.Location = new System.Drawing.Point(503, 57);
+            this.listBoxCustomers.Name = "listBoxCustomers";
+            this.listBoxCustomers.Size = new System.Drawing.Size(240, 303);
+            this.listBoxCustomers.TabIndex = 9;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.Location = new System.Drawing.Point(653, 366);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "View info";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Adoptions";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(254, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Animals";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(500, 38);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Customers";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(755, 400);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.listBoxCustomers);
             this.Controls.Add(this.buttonAnimalInfo);
             this.Controls.Add(this.buttonAdoptionInfo);
             this.Controls.Add(this.listBoxAnimals);
@@ -139,9 +205,12 @@
             this.Controls.Add(this.buttonNewAdoption);
             this.Controls.Add(this.buttonNewCustomer);
             this.Controls.Add(this.buttonNewAnimal);
+            this.MaximumSize = new System.Drawing.Size(771, 439);
+            this.MinimumSize = new System.Drawing.Size(771, 439);
             this.Name = "Main";
             this.Text = "Shelter Manager";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -156,6 +225,11 @@
         private System.Windows.Forms.ListBox listBoxAnimals;
         private System.Windows.Forms.Button buttonAdoptionInfo;
         private System.Windows.Forms.Button buttonAnimalInfo;
+        private System.Windows.Forms.ListBox listBoxCustomers;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 
