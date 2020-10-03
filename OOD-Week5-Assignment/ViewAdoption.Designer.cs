@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAdoption));
             this.groupBoxCustomerDetails = new System.Windows.Forms.GroupBox();
+            this.labelCustomerCity = new System.Windows.Forms.Label();
+            this.labelCustomerZipcode = new System.Windows.Forms.Label();
+            this.labelCustomerAddress = new System.Windows.Forms.Label();
+            this.labelCustomerName = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.labelCustomerName = new System.Windows.Forms.Label();
-            this.labelCustomerAddress = new System.Windows.Forms.Label();
-            this.labelCustomerZipcode = new System.Windows.Forms.Label();
-            this.labelCustomerCity = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.labelAdoptionDateTime = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -63,6 +64,42 @@
             this.groupBoxCustomerDetails.TabIndex = 13;
             this.groupBoxCustomerDetails.TabStop = false;
             this.groupBoxCustomerDetails.Text = "Customer Details";
+            // 
+            // labelCustomerCity
+            // 
+            this.labelCustomerCity.AutoSize = true;
+            this.labelCustomerCity.Location = new System.Drawing.Point(71, 103);
+            this.labelCustomerCity.Name = "labelCustomerCity";
+            this.labelCustomerCity.Size = new System.Drawing.Size(71, 13);
+            this.labelCustomerCity.TabIndex = 7;
+            this.labelCustomerCity.Text = "Customer City";
+            // 
+            // labelCustomerZipcode
+            // 
+            this.labelCustomerZipcode.AutoSize = true;
+            this.labelCustomerZipcode.Location = new System.Drawing.Point(71, 74);
+            this.labelCustomerZipcode.Name = "labelCustomerZipcode";
+            this.labelCustomerZipcode.Size = new System.Drawing.Size(93, 13);
+            this.labelCustomerZipcode.TabIndex = 6;
+            this.labelCustomerZipcode.Text = "Customer Zipcode";
+            // 
+            // labelCustomerAddress
+            // 
+            this.labelCustomerAddress.AutoSize = true;
+            this.labelCustomerAddress.Location = new System.Drawing.Point(71, 44);
+            this.labelCustomerAddress.Name = "labelCustomerAddress";
+            this.labelCustomerAddress.Size = new System.Drawing.Size(92, 13);
+            this.labelCustomerAddress.TabIndex = 5;
+            this.labelCustomerAddress.Text = "Customer Address";
+            // 
+            // labelCustomerName
+            // 
+            this.labelCustomerName.AutoSize = true;
+            this.labelCustomerName.Location = new System.Drawing.Point(71, 16);
+            this.labelCustomerName.Name = "labelCustomerName";
+            this.labelCustomerName.Size = new System.Drawing.Size(82, 13);
+            this.labelCustomerName.TabIndex = 4;
+            this.labelCustomerName.Text = "Customer Name";
             // 
             // label4
             // 
@@ -99,42 +136,6 @@
             this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
-            // 
-            // labelCustomerName
-            // 
-            this.labelCustomerName.AutoSize = true;
-            this.labelCustomerName.Location = new System.Drawing.Point(71, 16);
-            this.labelCustomerName.Name = "labelCustomerName";
-            this.labelCustomerName.Size = new System.Drawing.Size(82, 13);
-            this.labelCustomerName.TabIndex = 4;
-            this.labelCustomerName.Text = "Customer Name";
-            // 
-            // labelCustomerAddress
-            // 
-            this.labelCustomerAddress.AutoSize = true;
-            this.labelCustomerAddress.Location = new System.Drawing.Point(71, 44);
-            this.labelCustomerAddress.Name = "labelCustomerAddress";
-            this.labelCustomerAddress.Size = new System.Drawing.Size(92, 13);
-            this.labelCustomerAddress.TabIndex = 5;
-            this.labelCustomerAddress.Text = "Customer Address";
-            // 
-            // labelCustomerZipcode
-            // 
-            this.labelCustomerZipcode.AutoSize = true;
-            this.labelCustomerZipcode.Location = new System.Drawing.Point(71, 74);
-            this.labelCustomerZipcode.Name = "labelCustomerZipcode";
-            this.labelCustomerZipcode.Size = new System.Drawing.Size(93, 13);
-            this.labelCustomerZipcode.TabIndex = 6;
-            this.labelCustomerZipcode.Text = "Customer Zipcode";
-            // 
-            // labelCustomerCity
-            // 
-            this.labelCustomerCity.AutoSize = true;
-            this.labelCustomerCity.Location = new System.Drawing.Point(71, 103);
-            this.labelCustomerCity.Name = "labelCustomerCity";
-            this.labelCustomerCity.Size = new System.Drawing.Size(71, 13);
-            this.labelCustomerCity.TabIndex = 7;
-            this.labelCustomerCity.Text = "Customer City";
             // 
             // label5
             // 
@@ -201,6 +202,7 @@
             this.Controls.Add(this.labelAdoptionDateTime);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBoxCustomerDetails);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(400, 300);
             this.MinimumSize = new System.Drawing.Size(400, 300);
             this.Name = "ViewAdoption";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewCustomer));
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.buttonConfirm = new System.Windows.Forms.Button();
@@ -194,6 +195,7 @@
             this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(400, 539);
             this.MinimumSize = new System.Drawing.Size(400, 539);
             this.Name = "NewCustomer";
