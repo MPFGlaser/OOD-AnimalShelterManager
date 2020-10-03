@@ -39,7 +39,7 @@
             this.buttonAdoptionInfo = new System.Windows.Forms.Button();
             this.buttonAnimalInfo = new System.Windows.Forms.Button();
             this.listBoxCustomers = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonCustomerInfo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -151,15 +151,16 @@
             this.listBoxCustomers.Sorted = true;
             this.listBoxCustomers.TabIndex = 9;
             // 
-            // button1
+            // buttonCustomerInfo
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(653, 366);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "View info";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonCustomerInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonCustomerInfo.Location = new System.Drawing.Point(653, 366);
+            this.buttonCustomerInfo.Name = "buttonCustomerInfo";
+            this.buttonCustomerInfo.Size = new System.Drawing.Size(90, 23);
+            this.buttonCustomerInfo.TabIndex = 10;
+            this.buttonCustomerInfo.Text = "View info";
+            this.buttonCustomerInfo.UseVisualStyleBackColor = true;
+            this.buttonCustomerInfo.Click += new System.EventHandler(this.buttonCustomerInfo_Click);
             // 
             // label1
             // 
@@ -212,7 +213,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonCustomerInfo);
             this.Controls.Add(this.listBoxCustomers);
             this.Controls.Add(this.buttonAnimalInfo);
             this.Controls.Add(this.buttonAdoptionInfo);
@@ -228,6 +229,7 @@
             this.MinimumSize = new System.Drawing.Size(771, 439);
             this.Name = "Main";
             this.Text = "Shelter Manager";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,7 +247,7 @@
         private System.Windows.Forms.Button buttonAdoptionInfo;
         private System.Windows.Forms.Button buttonAnimalInfo;
         private System.Windows.Forms.ListBox listBoxCustomers;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonCustomerInfo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

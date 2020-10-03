@@ -77,6 +77,17 @@ namespace OOD_Week5_Assignment
                     }
                 }
             }
+
+            if (shelterManager.Customers != null)
+            {
+                listBoxCustomers.DisplayMember = "Text";
+                listBoxCustomers.ValueMember = "Value";
+                listBoxCustomers.Items.Clear();
+                foreach (Customer c in shelterManager.Customers)
+                {
+                    listBoxCustomers.Items.Add(new { Text = c.Name + " (" + c.City + ")", Value = c });
+                }
+            }
         }
 
         // Shows a dialog with data fields to add a new animal to the system
@@ -215,6 +226,16 @@ namespace OOD_Week5_Assignment
                 viewAnimal.ShowDialog();
             }
         }
+
+        // Shows a popup window with information about the customer selected in the listbox
+        private void ShowCustomerInfo()
+        {
+            if (listBoxCustomers.SelectedIndex != -1)
+            {
+                viewCustomer = new ViewCustomer((listBoxCustomers.SelectedItem as dynamic).Value);
+                viewCustomer.ShowDialog();
+            }
+        }
         #endregion
 
         #region Control event handlers
@@ -253,9 +274,31 @@ namespace OOD_Week5_Assignment
             ShowAnimalInfo();
         }
 
+        private void buttonCustomerInfo_Click(object sender, EventArgs e)
+        {
+            ShowCustomerInfo();
+        }
+
         private void checkBoxShowAdopted_CheckedChanged(object sender, EventArgs e)
         {
             UpdateListboxes();
+        }
+
+        private void Main_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+            // Determine if text has changed in the textbox by comparing to original text.
+            //if (textBox1.Text != strMyOriginalText)
+            //{
+            //    // Display a MsgBox asking the user to save changes or abort.
+            //    if (MessageBox.Show("Do you want to save changes to your text?", "My Application",
+            //       MessageBoxButtons.YesNo) == DialogResult.Yes)
+            //    {
+            //        // Cancel the Closing event from closing the form.
+            //        e.Cancel = true;
+            //        // Call method to save file...
+            //    }
+            //}
+            MessageBox.Show("Closing");
         }
         #endregion
     }

@@ -13,28 +13,22 @@ namespace OOD_Week5_Assignment
 {
     public partial class ViewCustomer : Form
     {
-        private Adoption adoption;
+        private Customer customer;
 
-        public ViewCustomer(Adoption adoption)
+        public ViewCustomer(Customer customer)
         {
             InitializeComponent();
-            this.adoption = adoption;
+            this.customer = customer;
             ShowDetails();
         }
 
         // Shows all relevant details about the adoption in the various labels.
         private void ShowDetails()
         {
-            labelCustomerName.Text = adoption.Customer.Name;
-            labelCustomerAddress.Text = adoption.Customer.Address;
-            labelCustomerZipcode.Text = adoption.Customer.Zipcode;
-            labelCustomerCity.Text = adoption.Customer.City;
-            labelAdoptionDateTime.Text = adoption.AdoptionMoment.ToString();
-            labelAdoptionFee.Text = "€" + adoption.AdoptionFee.ToString();
-            foreach(Animal a in adoption.Animals)
-            {
-                listBoxAdoptedAnimals.Items.Add(a.ToString());
-            }
+            labelCustomerName.Text = customer.Name;
+            labelCustomerAddress.Text = customer.Address;
+            labelCustomerZipcode.Text = customer.Zipcode;
+            labelCustomerCity.Text = customer.City;
         }
     }
 }
