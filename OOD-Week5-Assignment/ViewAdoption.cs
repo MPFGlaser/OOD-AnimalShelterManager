@@ -22,6 +22,7 @@ namespace OOD_Week5_Assignment
             ShowDetails();
         }
 
+        // Shows all relevant details about the adoption in the various labels.
         private void ShowDetails()
         {
             labelCustomerName.Text = adoption.Customer.Name;
