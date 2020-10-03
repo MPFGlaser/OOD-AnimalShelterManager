@@ -7,7 +7,7 @@
       <Entity type="Class">
         <Name>Animal</Name>
         <Access>Public</Access>
-        <Location left="618" top="41" />
+        <Location left="659" top="41" />
         <Size width="162" height="298" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private int id</Member>
@@ -80,21 +80,21 @@
         <Name>ShelterManager</Name>
         <Access>Public</Access>
         <Location left="73" top="41" />
-        <Size width="423" height="216" />
+        <Size width="490" height="216" />
         <Collapsed>False</Collapsed>
-        <Member type="Field">list&lt;Adoption&gt; Adoptions</Member>
+        <Member type="Field">list&lt;Adoption&gt; adoptions</Member>
         <Member type="Field">list&lt;Animal&gt; animals</Member>
         <Member type="Method">public void SaveData()</Member>
         <Member type="Method">public void LoadData()</Member>
-        <Member type="Method">public void AddDog(string name, int age, gender gender, bool adopted)</Member>
-        <Member type="Method">public void AddCat(string name, int age, gender gender, bool adopted)</Member>
-        <Member type="Method">public void AddBird(string name, int age, gender gender, bool adopted, size size)</Member>
+        <Member type="Method">public void AddDog(string name, int age, gender gender, bool adopted, string notes)</Member>
+        <Member type="Method">public void AddCat(string name, int age, gender gender, bool adopted, string notes)</Member>
+        <Member type="Method">public void AddBird(string name, int age, gender gender, bool adopted, string notes, size size)</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Enum">
         <Name>Gender</Name>
         <Access>Public</Access>
-        <Location left="852" top="41" />
+        <Location left="872" top="41" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Value>Male</Value>
@@ -159,7 +159,7 @@
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="False">
-          <X>577</X>
+          <X>618</X>
           <Y>157</Y>
         </BendPoint>
         <Direction>Unidirectional</Direction>
@@ -228,8 +228,12 @@
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Vertical</EndOrientation>
         <BendPoint relativeToStartShape="True">
-          <X>699</X>
-          <Y>406</Y>
+          <X>707</X>
+          <Y>405</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>740</X>
+          <Y>364</Y>
         </BendPoint>
       </Relationship>
     </Relationships>

@@ -47,7 +47,7 @@
             this.buttonNewAnimal.TabIndex = 0;
             this.buttonNewAnimal.Text = "New animal";
             this.buttonNewAnimal.UseVisualStyleBackColor = true;
-            this.buttonNewAnimal.Click += new System.EventHandler(this.button1_Click);
+            this.buttonNewAnimal.Click += new System.EventHandler(this.buttonNewAnimal_Click);
             // 
             // buttonNewCustomer
             // 
@@ -57,7 +57,7 @@
             this.buttonNewCustomer.TabIndex = 1;
             this.buttonNewCustomer.Text = "New customer";
             this.buttonNewCustomer.UseVisualStyleBackColor = true;
-            this.buttonNewCustomer.Click += new System.EventHandler(this.button2_Click);
+            this.buttonNewCustomer.Click += new System.EventHandler(this.buttonNewCustomer_Click);
             // 
             // buttonNewAdoption
             // 
@@ -67,14 +67,14 @@
             this.buttonNewAdoption.TabIndex = 2;
             this.buttonNewAdoption.Text = "New Adoption";
             this.buttonNewAdoption.UseVisualStyleBackColor = true;
-            this.buttonNewAdoption.Click += new System.EventHandler(this.button3_Click);
+            this.buttonNewAdoption.Click += new System.EventHandler(this.buttonNewAdoption_Click);
             // 
             // buttonSaveData
             // 
             this.buttonSaveData.Location = new System.Drawing.Point(93, 12);
             this.buttonSaveData.Name = "buttonSaveData";
             this.buttonSaveData.Size = new System.Drawing.Size(75, 23);
-            this.buttonSaveData.TabIndex = 3;
+            this.buttonSaveData.TabIndex = 7;
             this.buttonSaveData.Text = "Save";
             this.buttonSaveData.UseVisualStyleBackColor = true;
             this.buttonSaveData.Click += new System.EventHandler(this.buttonSaveData_Click);
@@ -84,7 +84,7 @@
             this.buttonLoadData.Location = new System.Drawing.Point(12, 12);
             this.buttonLoadData.Name = "buttonLoadData";
             this.buttonLoadData.Size = new System.Drawing.Size(75, 23);
-            this.buttonLoadData.TabIndex = 4;
+            this.buttonLoadData.TabIndex = 8;
             this.buttonLoadData.Text = "Load";
             this.buttonLoadData.UseVisualStyleBackColor = true;
             this.buttonLoadData.Click += new System.EventHandler(this.buttonLoadData_Click);
@@ -95,8 +95,7 @@
             this.listBoxAdoptions.Location = new System.Drawing.Point(12, 41);
             this.listBoxAdoptions.Name = "listBoxAdoptions";
             this.listBoxAdoptions.Size = new System.Drawing.Size(263, 342);
-            this.listBoxAdoptions.TabIndex = 5;
-            this.listBoxAdoptions.SelectedIndexChanged += new System.EventHandler(this.listBoxAdoptions_SelectedIndexChanged);
+            this.listBoxAdoptions.TabIndex = 3;
             // 
             // listBoxAnimals
             // 
@@ -104,15 +103,14 @@
             this.listBoxAnimals.Location = new System.Drawing.Point(281, 41);
             this.listBoxAnimals.Name = "listBoxAnimals";
             this.listBoxAnimals.Size = new System.Drawing.Size(263, 342);
-            this.listBoxAnimals.TabIndex = 6;
-            this.listBoxAnimals.SelectedIndexChanged += new System.EventHandler(this.listBoxAnimals_SelectedIndexChanged);
+            this.listBoxAnimals.TabIndex = 5;
             // 
             // buttonAdoptionInfo
             // 
             this.buttonAdoptionInfo.Location = new System.Drawing.Point(200, 389);
             this.buttonAdoptionInfo.Name = "buttonAdoptionInfo";
             this.buttonAdoptionInfo.Size = new System.Drawing.Size(75, 23);
-            this.buttonAdoptionInfo.TabIndex = 7;
+            this.buttonAdoptionInfo.TabIndex = 4;
             this.buttonAdoptionInfo.Text = "View info";
             this.buttonAdoptionInfo.UseVisualStyleBackColor = true;
             this.buttonAdoptionInfo.Click += new System.EventHandler(this.buttonAdoptionInfo_Click);
@@ -122,7 +120,7 @@
             this.buttonAnimalInfo.Location = new System.Drawing.Point(469, 389);
             this.buttonAnimalInfo.Name = "buttonAnimalInfo";
             this.buttonAnimalInfo.Size = new System.Drawing.Size(75, 23);
-            this.buttonAnimalInfo.TabIndex = 8;
+            this.buttonAnimalInfo.TabIndex = 6;
             this.buttonAnimalInfo.Text = "View info";
             this.buttonAnimalInfo.UseVisualStyleBackColor = true;
             this.buttonAnimalInfo.Click += new System.EventHandler(this.buttonAnimalInfo_Click);
@@ -142,7 +140,7 @@
             this.Controls.Add(this.buttonNewCustomer);
             this.Controls.Add(this.buttonNewAnimal);
             this.Name = "Main";
-            this.Text = "Form1";
+            this.Text = "Shelter Manager";
             this.ResumeLayout(false);
 
         }
