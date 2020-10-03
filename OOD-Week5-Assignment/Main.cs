@@ -111,7 +111,7 @@ namespace OOD_Week5_Assignment
 
             try
             {
-                fs = new FileStream("../../ShelterData.txt", FileMode.Open, FileAccess.Read);
+                fs = new FileStream("../../ShelterData.bin", FileMode.Open, FileAccess.Read);
                 bf = new BinaryFormatter();
                 shelterManager = (ShelterManager)(bf.Deserialize(fs));
             }
@@ -137,7 +137,7 @@ namespace OOD_Week5_Assignment
 
             try
             {
-                fs = new FileStream("../../ShelterData.txt", FileMode.Create, FileAccess.Write);
+                fs = new FileStream("../../ShelterData.bin", FileMode.Create, FileAccess.Write);
                 bf = new BinaryFormatter();
                 bf.Serialize(fs, shelterManager);
             }
