@@ -26,7 +26,7 @@ namespace OOD_Week5_Assignment
         Regex regexZipCode = new Regex(@"^[1-9][0-9]{3}[\s]?[A-Za-z]{2}$");
         Regex regexCity = new Regex(@"^([a-zA-Z]+\s?\b){1,}");
 
-        public string Name { get; set; }
+        public string CustomerName { get; set; }
         public string Address { get; set; }
         public string ZipCode { get; set; }
         public string City { get; set; }
@@ -71,7 +71,7 @@ namespace OOD_Week5_Assignment
         {
             if (textBoxName.Text != "" && regexName.IsMatch(textBoxName.Text))
             {
-                this.Name = textBoxName.Text;
+                this.CustomerName = textBoxName.Text;
                 labelNameInvalid.Visible = false;
                 nameCorrect = true;
             }

@@ -185,11 +185,11 @@ namespace OOD_Week5_Assignment
             // Is this a cumulative discount (so 10% per animal, stacking) or not? Wasn't entirely sure.
             if(comboBoxAnimal2.Enabled && comboBoxAnimal3.Enabled)
             {
-                calculatedFee = calculatedFee * 0.8;
+                calculatedFee *= 0.8;
             }
             else if (comboBoxAnimal2.Enabled)
             {
-                calculatedFee = calculatedFee * 0.9;
+                calculatedFee *= 0.9;
             }
 
             // Rounds the price to two decimal places and updates the label
@@ -391,11 +391,11 @@ namespace OOD_Week5_Assignment
 
         }
 
-        // Method to remove already chosen animals from the other comboboxes
+        // Method to prevent selection of already selected animals
         private void UpdateComboBoxAnimals()
         {
             // Idea is to eventually remove the animals from the next listboxes if its already chosen, but for now disabling the confirm button as well as showing a warning will have to do.
-
+            // Looks a bit shoddy, but it works!
             animalsCorrect = true;
             try
             {

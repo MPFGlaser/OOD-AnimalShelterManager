@@ -87,7 +87,7 @@ namespace OOD_Week5_Assignment
             newCustomer = new NewCustomer();
             if (newCustomer.ShowDialog() == DialogResult.OK)
             {
-                shelterManager.AddCustomer(newCustomer.Name, newCustomer.Address, newCustomer.ZipCode, newCustomer.City);
+                shelterManager.AddCustomer(newCustomer.CustomerName, newCustomer.Address, newCustomer.ZipCode, newCustomer.City);
             }
             UpdateListboxes();
         }
