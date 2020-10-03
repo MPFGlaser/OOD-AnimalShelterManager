@@ -16,7 +16,6 @@ namespace OOD_Week5_Assignment
     public partial class NewAnimal : Form
     {
         #region Fields and properties
-        private bool typeCorrect;
         private bool nameCorrect;
 
         Regex regexName = new Regex(@"^([a-zA-Z]+\s?\b){1,}");
