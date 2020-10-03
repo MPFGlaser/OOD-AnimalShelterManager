@@ -65,7 +65,7 @@ namespace OOD_Week5_Assignment
         private void Confirm()
         {
             this.Type = (AnimalType)comboBoxAnimalType.SelectedItem;
-            this.Name = textBoxName.Text;
+            this.AnimalName = textBoxName.Text;
             this.Age = Convert.ToInt32(numericUpDownAge.Value);
             this.AnimalSize = (Models.Size)comboBoxSize.SelectedItem;
             this.AnimalGender = (Gender)comboBoxGender.SelectedItem;
@@ -94,7 +94,7 @@ namespace OOD_Week5_Assignment
             if (textBoxName.Text != "" && regexName.IsMatch(textBoxName.Text))
             {
                 labelNameInvalid.Visible = false;
-                this.Name = textBoxName.Text;
+                this.AnimalName = textBoxName.Text;
                 nameCorrect = true;
             }
             else
