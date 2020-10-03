@@ -161,6 +161,10 @@ namespace OOD_Week5_Assignment
                         bf = new BinaryFormatter();
                         shelterManager = (ShelterManager)(bf.Deserialize(fs));
                     }
+                    catch (IOException ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.ToString());
@@ -197,6 +201,10 @@ namespace OOD_Week5_Assignment
                     fs = new FileStream(saveFileDialog1.FileName, FileMode.Create, FileAccess.Write);
                     bf = new BinaryFormatter();
                     bf.Serialize(fs, shelterManager);
+                }
+                catch (IOException ex)
+                {
+                    MessageBox.Show(ex.ToString());
                 }
                 catch (Exception ex)
                 {
