@@ -55,16 +55,15 @@ namespace OOD_Week5_Assignment
                 buttonConfirm.Enabled = false;
             }
         }
-        #endregion
 
-        #region Control event handlers
-        private void buttonCancel_Click(object sender, EventArgs e)
+        private void Cancel()
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
-        private void buttonConfirm_Click(object sender, EventArgs e)
+        // Sets all the properties to the appropriate values and exits with an OK result.
+        private void Confirm()
         {
             this.Type = (AnimalType)comboBoxAnimalType.SelectedItem;
             this.Name = textBoxName.Text;
@@ -75,7 +74,8 @@ namespace OOD_Week5_Assignment
             this.DialogResult = DialogResult.OK;
         }
 
-        private void comboBoxAnimalType_SelectedIndexChanged(object sender, EventArgs e)
+        // Allows the user to select a size if the type of animal is Bird.
+        private void AnimalTypeChanged()
         {
             if ((AnimalType)comboBoxAnimalType.SelectedItem == AnimalType.Bird)
             {
@@ -89,7 +89,8 @@ namespace OOD_Week5_Assignment
             }
         }
 
-        private void textBoxName_TextChanged(object sender, EventArgs e)
+        // Checks if the name entered conforms to the regex.
+        private void NameChanged()
         {
             if (textBoxName.Text != "" && regexName.IsMatch(textBoxName.Text))
             {
@@ -103,6 +104,28 @@ namespace OOD_Week5_Assignment
                 nameCorrect = false;
             }
             ConfirmButtonEnabler();
+        }
+        #endregion
+
+        #region Control event handlers
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            Cancel();
+        }
+
+        private void buttonConfirm_Click(object sender, EventArgs e)
+        {
+            Confirm();
+        }
+
+        private void comboBoxAnimalType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AnimalTypeChanged();
+        }
+
+        private void textBoxName_TextChanged(object sender, EventArgs e)
+        {
+            NameChanged();
         }
         #endregion
     }
