@@ -43,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.checkBoxShowAdopted = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // buttonNewAnimal
@@ -187,11 +188,23 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Customers";
             // 
+            // checkBoxShowAdopted
+            // 
+            this.checkBoxShowAdopted.AutoSize = true;
+            this.checkBoxShowAdopted.BackColor = System.Drawing.Color.Transparent;
+            this.checkBoxShowAdopted.Location = new System.Drawing.Point(361, 40);
+            this.checkBoxShowAdopted.Name = "checkBoxShowAdopted";
+            this.checkBoxShowAdopted.Size = new System.Drawing.Size(133, 17);
+            this.checkBoxShowAdopted.TabIndex = 14;
+            this.checkBoxShowAdopted.Text = "Show adopted animals";
+            this.checkBoxShowAdopted.UseVisualStyleBackColor = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(755, 400);
+            this.Controls.Add(this.checkBoxShowAdopted);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -232,6 +245,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox checkBoxShowAdopted;
     }
 }
 
